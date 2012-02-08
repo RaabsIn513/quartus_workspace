@@ -1,0 +1,7 @@
+module ALU_testBench;
+  
+  reg clock;
+  
+  initial begin
+    #5 clock = 0;
+  end

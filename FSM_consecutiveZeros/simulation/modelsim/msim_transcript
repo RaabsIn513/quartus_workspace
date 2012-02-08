@@ -1,0 +1,142 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do FSM_consecZeros_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/FSM_consecutiveZeros {E:/quartus_workspace/FSM_consecutiveZeros/FSM_consecZeros.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module FSM_consecZeros
+# 
+# Top level modules:
+# 	FSM_consecZeros
+# 
+#  
+vsim work.FSM_consecZeros
+# vsim work.FSM_consecZeros 
+# Loading work.FSM_consecZeros
+wave create -driver freeze -pattern repeater -initialvalue HiZ -period 50ps -sequence { 010011000100  } -repeat forever -starttime 0ps -endtime 1000ps sim:/FSM_consecZeros/inBit
+wave create -driver freeze -pattern repeater -initialvalue HiZ -period 50ps -sequence { 0 1 0 0 1 0 0 0 1  } -repeat forever -starttime 0ps -endtime 1000ps sim:/FSM_consecZeros/inBit
+# /FSM_consecZeros/inBit already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave create -driver freeze -pattern repeater -initialvalue HiZ -period 50ps -sequence { 0 1 0 0 1 1 0 0  } -repeat 1 -starttime 0ps -endtime 1000ps sim:/FSM_consecZeros/inBit
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/FSM_consecZeros/clock
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000ps sim:/FSM_consecZeros/reset
+add wave  \
+sim:/FSM_consecZeros/outBit
+run -all
+wave modify -driver freeze -pattern repeater -initialvalue HiZ -period 50ps -sequence { St0 St1 St0 St0 St1 St1 St0 St0  } -repeat 3 -starttime 0ps -endtime 1000ps Edit:/FSM_consecZeros/inBit
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps Edit:/FSM_consecZeros/clock
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+# Load canceled
+wave modify -driver freeze -pattern clock -initialvalue St0 -period 25ps -dutycycle 50 -starttime 0ps -endtime 1000ps Edit:/FSM_consecZeros/clock
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+add wave  \
+sim:/FSM_consecZeros/outBit
+wave modify -driver freeze -pattern repeater -initialvalue (no value) -period 50ps -sequence { 1 0 0 0 0 0 0 0 0 0  } -repeat 2 -starttime 0ps -endtime 1000ps Edit:/FSM_consecZeros/reset
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+add wave  \
+sim:/FSM_consecZeros/state
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+wave create -pattern repeater -initialvalue 10 -period 50ps -sequence { 00 01 10 11  } -repeat 2 -range 1 0 -starttime 0ps -endtime 1000ps sim:/FSM_consecZeros/state
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+# Break key hit 
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/clock "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /FSM_consecZeros/reset ""
+wave editwrite -file E:/quartus_workspace/FSM_consecutiveZeros/simulation/modelsim/wave.do

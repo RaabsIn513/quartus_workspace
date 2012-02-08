@@ -1,0 +1,55 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do blockEd_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/Fooling_w_blockEditor {E:/quartus_workspace/Fooling_w_blockEditor/blockEd.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module blockEd
+# 
+# Top level modules:
+# 	blockEd
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim {E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module aTB
+# 
+# Top level modules:
+# 	aTB
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  aTestBench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps aTestBench 
+# ** Error: (vsim-3170) Could not find 'E:\quartus_workspace\Fooling_w_blockEditor\simulation\modelsim\rtl_work.aTestBench'.
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./blockEd_run_msim_rtl_verilog.do PAUSED at line 12
+vsim work.blockEd
+# vsim work.blockEd 
+# Loading work.blockEd
+vlog -reportprogress 300 -work work E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module aTestBench
+# 
+# Top level modules:
+# 	aTestBench
+vlog -reportprogress 300 -work work E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module aTestBench
+# 
+# Top level modules:
+# 	aTestBench
+vsim work.aTestBench
+# vsim work.aTestBench 
+# Loading work.aTestBench
+# Loading work.blockEd
+run
+# ** Note: $finish    : E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v(14)
+#    Time: 0 ps  Iteration: 0  Instance: /aTestBench

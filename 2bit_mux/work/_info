@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\11.1\modelsim_ase
+vsimpleMux
+!s100 MZ:njQN55cd:P98DISck@1
+I<8m[Q`0PFlKHOi5CWghoB1
+V@eRcm3Rh7TmeIb3ed59852
+dE:\quartus_workspace\2bit_mux
+w1326750419
+8E:/quartus_workspace/2bit_mux/simpleMux.v
+FE:/quartus_workspace/2bit_mux/simpleMux.v
+L0 1
+OV;L;10.0c;49
+r1
+!s85 0
+31
+!s108 1326768748.949000
+!s107 E:/quartus_workspace/2bit_mux/simpleMux.v|
+!s90 -reportprogress|300|-work|work|-nocovercells|E:/quartus_workspace/2bit_mux/simpleMux.v|
+!s101 -O0
+!s102 -nocovercells
+o-work work -nocovercells -O0
+nsimple@mux

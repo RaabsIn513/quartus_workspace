@@ -1,0 +1,4 @@
+|blockEd
+in_pin => out_pin.DATAIN
+
+

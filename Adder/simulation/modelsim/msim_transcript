@@ -1,0 +1,44 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Adder_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/Adder {E:/quartus_workspace/Adder/Adder.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Adder
+# 
+# Top level modules:
+# 	Adder
+# 
+#  
+vlog -reportprogress 300 -work work E:/quartus_workspace/Adder/simulation/modelsim/Adder_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Adder_TestBench
+# 
+# Top level modules:
+# 	Adder_TestBench
+vlog -reportprogress 300 -work work E:/quartus_workspace/Adder/simulation/modelsim/Adder_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Adder_TestBench
+# 
+# Top level modules:
+# 	Adder_TestBench
+vsim work.Adder_TestBench
+# vsim work.Adder_TestBench 
+# Loading work.Adder_TestBench
+# Loading work.Adder
+# ** Warning: (vsim-3015) E:/quartus_workspace/Adder/simulation/modelsim/Adder_TestBench.v(24): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'result'. The port definition is at: E:/quartus_workspace/Adder/Adder.v(6).
+#         Region: /Adder_TestBench/U0
+add wave -position end  sim:/Adder_TestBench/clock
+add wave -position end  sim:/Adder_TestBench/datA
+add wave -position end  sim:/Adder_TestBench/datB
+add wave -position end  sim:/Adder_TestBench/datZ
+run -all
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/quartus_workspace/Adder/simulation/modelsim/wave.do

@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\2bit_mux
+vsimpleRAM
+!s100 <U<:^@onPJlS]V4];A3PI3
+Iiz<d=?VJ4S]WaT6JIMCj=3
+VDOnj2LPiA>6;DFeS]OiE>1
+dE:\quartus_workspace\8bit_RAM
+w1326767397
+8E:/quartus_workspace/8bit_RAM/simpleRAM.v
+FE:/quartus_workspace/8bit_RAM/simpleRAM.v
+L0 1
+OV;L;10.0c;49
+r1
+!s85 0
+31
+!s108 1326769673.488000
+!s107 E:/quartus_workspace/8bit_RAM/simpleRAM.v|
+!s90 -reportprogress|300|-work|work|-nocovercells|E:/quartus_workspace/8bit_RAM/simpleRAM.v|
+!s101 -O0
+!s102 -nocovercells
+o-work work -nocovercells -O0
+nsimple@r@a@m

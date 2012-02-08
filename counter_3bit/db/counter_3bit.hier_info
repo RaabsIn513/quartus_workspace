@@ -1,0 +1,7 @@
+|counter_3bit
+pin_name2 => inst.ACLR
+pin_name2 => inst1.ACLR
+pin_name2 => inst2.ACLR
+cnt_clk_in => inst.CLK
+
+

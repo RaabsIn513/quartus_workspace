@@ -1,0 +1,6 @@
+vendor_name = ModelSim
+source_file = 1, E:/quartus_workspace/Fooling_w_blockEditor/blockEd.v
+source_file = 1, E:/quartus_workspace/Fooling_w_blockEditor/db/blockEd.cbx.xml
+design_name = blockEd
+instance = comp, \out_pin~output , out_pin~output, blockEd, 1
+instance = comp, \in_pin~input , in_pin~input, blockEd, 1

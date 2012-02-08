@@ -1,0 +1,17 @@
+module SimpleCounter( clock, reset, max-count, count );
+	input clock; 
+	input reset; 
+	input  [7:0] max-count; 
+	output [7:0] count; 
+	reg [7:0]  count; 
+	/* use positive clock edge for counter */ 
+	always @(posedge clock or  posedge reset) 
+	begin 
+	if  (reset) 
+	count = 0;  /* Reset Counter */ 
+	else if  (count < max-count)  /* Check for maximum count */
+	count = count + 1;  /* Increment Counter */ 
+	else 
+	count = 0;  P  Counter set back to 0*/ 
+	end 
+endmodule

@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\counter_3bit\simulation\modelsim
+vcounter_3bit
+I?]cHVb^_aPRnG?_j[cX`Q1
+VNd3]H]e[``Ma]j[;]_Tz?3
+Z1 dE:\quartus_workspace\counter_3bit\simulation\modelsim
+w1328464471
+8E:/quartus_workspace/counter_3bit/simulation/modelsim/counter_3bit.vo
+FE:/quartus_workspace/counter_3bit/simulation/modelsim/counter_3bit.vo
+L0 31
+OV;L;10.0c;49
+r1
+31
+Z2 o-work work -O0
+!s100 bgfjXQHL=DKIA]jGbJQ0A3
+!s85 0
+!s108 1328464984.871000
+!s107 E:/quartus_workspace/counter_3bit/simulation/modelsim/counter_3bit.vo|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/counter_3bit/simulation/modelsim/counter_3bit.vo|
+!s101 -O0
+Etest_counter_3bit
+w1328465075
+Z3 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+DPx5 maxii 15 maxii_atom_pack 0 22 PLPD]I^M_THV<eBf8_LW02
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+DPx5 maxii 16 maxii_components 0 22 I^n;el5emLkBT8M>L1e;O0
+Z5 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R1
+8E:/quartus_workspace/counter_3bit/simulation/modelsim/test_counter_3bit.vhd
+FE:/quartus_workspace/counter_3bit/simulation/modelsim/test_counter_3bit.vhd
+l0
+L7
+V;8[`j`zof=E48?;X2l<]Q2
+!s100 HJchdzhio9hK4a4ML0d>22
+Z7 OV;C;10.0c;49
+32
+!s108 1328465325.978000
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/counter_3bit/simulation/modelsim/test_counter_3bit.vhd|
+!s107 E:/quartus_workspace/counter_3bit/simulation/modelsim/test_counter_3bit.vhd|
+R2
+Z8 tExplicit 1

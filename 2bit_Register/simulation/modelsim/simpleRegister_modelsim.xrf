@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, E:/quartus_workspace/2bit_Register/simpleRegister.v
+source_file = 1, E:/quartus_workspace/2bit_Register/db/simpleRegister.cbx.xml
+design_name = simpleRegister
+instance = comp, \dataOut[0]~output\, dataOut[0]~output, simpleRegister, 1
+instance = comp, \dataOut[1]~output\, dataOut[1]~output, simpleRegister, 1
+instance = comp, \clock~input\, clock~input, simpleRegister, 1
+instance = comp, \clock~inputclkctrl\, clock~inputclkctrl, simpleRegister, 1
+instance = comp, \dataIn[0]~input\, dataIn[0]~input, simpleRegister, 1
+instance = comp, \dataOut[0]~reg0feeder\, dataOut[0]~reg0feeder, simpleRegister, 1
+instance = comp, \reset~input\, reset~input, simpleRegister, 1
+instance = comp, \reset~inputclkctrl\, reset~inputclkctrl, simpleRegister, 1
+instance = comp, \enable~input\, enable~input, simpleRegister, 1
+instance = comp, \dataOut[0]~reg0\, dataOut[0]~reg0, simpleRegister, 1
+instance = comp, \dataIn[1]~input\, dataIn[1]~input, simpleRegister, 1
+instance = comp, \dataOut[1]~reg0feeder\, dataOut[1]~reg0feeder, simpleRegister, 1
+instance = comp, \dataOut[1]~reg0\, dataOut[1]~reg0, simpleRegister, 1

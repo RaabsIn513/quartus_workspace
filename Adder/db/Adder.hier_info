@@ -1,0 +1,28 @@
+|Adder
+dataa[0] => Add0.IN8
+dataa[1] => Add0.IN7
+dataa[2] => Add0.IN6
+dataa[3] => Add0.IN5
+dataa[4] => Add0.IN4
+dataa[5] => Add0.IN3
+dataa[6] => Add0.IN2
+dataa[7] => Add0.IN1
+datab[0] => Add0.IN16
+datab[1] => Add0.IN15
+datab[2] => Add0.IN14
+datab[3] => Add0.IN13
+datab[4] => Add0.IN12
+datab[5] => Add0.IN11
+datab[6] => Add0.IN10
+datab[7] => Add0.IN9
+clk => result[0]~reg0.CLK
+clk => result[1]~reg0.CLK
+clk => result[2]~reg0.CLK
+clk => result[3]~reg0.CLK
+clk => result[4]~reg0.CLK
+clk => result[5]~reg0.CLK
+clk => result[6]~reg0.CLK
+clk => result[7]~reg0.CLK
+clk => result[8]~reg0.CLK
+
+

@@ -1,0 +1,6 @@
+// Simple test bench
+module aTB;
+  reg inStim; // input stim for the one button
+  wire outMon; // monitor the output
+  
+  

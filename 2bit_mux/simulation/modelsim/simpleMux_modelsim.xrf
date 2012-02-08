@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, E:/quartus_workspace/2bit_mux/simpleMux.v
+source_file = 1, E:/quartus_workspace/2bit_mux/db/simpleMux.cbx.xml
+design_name = simpleMux
+instance = comp, \mux_out~output\, mux_out~output, simpleMux, 1
+instance = comp, \A~input\, A~input, simpleMux, 1
+instance = comp, \mux_control~input\, mux_control~input, simpleMux, 1
+instance = comp, \B~input\, B~input, simpleMux, 1
+instance = comp, \mux_out~0\, mux_out~0, simpleMux, 1

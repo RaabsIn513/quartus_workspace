@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, E:/quartus_workspace/3bit_Counter/SimpleCounter.v
+source_file = 1, E:/quartus_workspace/3bit_Counter/db/SimpleCounter.cbx.xml
+design_name = SimpleCounter
+instance = comp, \count[0]~output\, count[0]~output, SimpleCounter, 1
+instance = comp, \count[1]~output\, count[1]~output, SimpleCounter, 1
+instance = comp, \count[2]~output\, count[2]~output, SimpleCounter, 1
+instance = comp, \clock~input\, clock~input, SimpleCounter, 1
+instance = comp, \clock~inputclkctrl\, clock~inputclkctrl, SimpleCounter, 1
+instance = comp, \count[0]~2\, count[0]~2, SimpleCounter, 1
+instance = comp, \reset~input\, reset~input, SimpleCounter, 1
+instance = comp, \reset~inputclkctrl\, reset~inputclkctrl, SimpleCounter, 1
+instance = comp, \count[0]~reg0\, count[0]~reg0, SimpleCounter, 1
+instance = comp, \count[1]~0\, count[1]~0, SimpleCounter, 1
+instance = comp, \count[1]~reg0\, count[1]~reg0, SimpleCounter, 1
+instance = comp, \count[2]~1\, count[2]~1, SimpleCounter, 1
+instance = comp, \count[2]~reg0\, count[2]~reg0, SimpleCounter, 1

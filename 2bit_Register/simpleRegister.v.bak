@@ -1,0 +1,16 @@
+module simpleRegister
+( input [1:0] dataIn, 
+  input enable, 
+  input reset,
+  output [1:0] dataOut
+ );
+ 
+ reg dataOut;
+ 
+ always @(enable or reset)
+	begin
+		if ( reset )
+			dataOut = 2'b00;
+		else if ( enable && !reset )
+			data
+		

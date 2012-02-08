@@ -1,0 +1,8 @@
+|FSM_consecZeros
+inBit => Selector0.IN1
+inBit => state.DATAB
+inBit => state.DATAB
+clock => state~3.DATAIN
+reset => state~5.DATAIN
+
+

@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, E:/quartus_workspace/FSM_consecutiveZeros/FSM_consecZeros.v
+source_file = 1, E:/quartus_workspace/FSM_consecutiveZeros/db/FSM_consecZeros.cbx.xml
+design_name = FSM_consecZeros
+instance = comp, \outBit~output\, outBit~output, FSM_consecZeros, 1
+instance = comp, \clock~input\, clock~input, FSM_consecZeros, 1
+instance = comp, \clock~inputclkctrl\, clock~inputclkctrl, FSM_consecZeros, 1
+instance = comp, \inBit~input\, inBit~input, FSM_consecZeros, 1
+instance = comp, \Selector0~0\, Selector0~0, FSM_consecZeros, 1
+instance = comp, \reset~input\, reset~input, FSM_consecZeros, 1
+instance = comp, \reset~inputclkctrl\, reset~inputclkctrl, FSM_consecZeros, 1
+instance = comp, \state.q0\, state.q0, FSM_consecZeros, 1
+instance = comp, \state~10\, state~10, FSM_consecZeros, 1
+instance = comp, \state.q1\, state.q1, FSM_consecZeros, 1
+instance = comp, \state~9\, state~9, FSM_consecZeros, 1
+instance = comp, \state.qf\, state.qf, FSM_consecZeros, 1

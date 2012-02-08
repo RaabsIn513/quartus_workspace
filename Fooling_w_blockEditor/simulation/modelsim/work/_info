@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\Fooling_w_blockEditor\simulation\modelsim
+vaTB
+Z1 !s100 HB6^TbiD@3gnDkKmcFzPV3
+Z2 IedKbYWYMU8QRCe5ZmEiOK1
+Z3 VmZ1jba6VU@:Om<W[H[IXQ0
+Z4 dE:\quartus_workspace\Fooling_w_blockEditor\simulation\modelsim
+Z5 w1328469659
+Z6 8E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v
+Z7 FE:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v
+L0 2
+Z8 OV;L;10.0c;49
+r1
+!s85 0
+31
+!s108 1328469663.532000
+!s107 E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v|
+Z9 !s90 -reportprogress|300|-work|work|E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v|
+!s101 -O0
+Z10 o-work work -O0
+Z11 na@t@b
+Eblocked
+Z12 w1328467442
+Z13 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z14 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 YWUJcj5T;N1d=oboLVUmo0
+Z15 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z16 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z17 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z18 DPx10 cycloneiii 21 cycloneiii_components 0 22 bYa^:1VV1^ZI6E5fi6?AH2
+R4
+Z19 8E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd.vho
+Z20 FE:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd.vho
+l0
+L34
+Z21 VdA47aMCA7;M`o3Q;<`[kM3
+Z22 OV;C;10.0c;49
+32
+Z23 !s108 1328469400.519000
+Z24 !s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd.vho|
+Z25 !s107 E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd.vho|
+R10
+Z26 tExplicit 1
+Z27 !s100 NiaznPg;>YQQOP8RaC>M:2
+Astructure
+R13
+R14
+R15
+R16
+R17
+R18
+Z28 DEx4 work 7 blocked 0 22 dA47aMCA7;M`o3Q;<`[kM3
+l61
+L46
+Z29 V;BODfX>EZidE9o?3d1O6E3
+Z30 !s100 WWRGMd9J_Hoo;lXgS78XL3
+R22
+32
+R23
+R24
+R25
+R10
+R26

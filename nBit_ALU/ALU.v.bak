@@ -1,0 +1,7 @@
+// Input Width n
+parameter n = 18;
+
+module ALU( A, B, ALU_out, overflow, isZero, clk );
+
+	input[n-1:0] A;
+	

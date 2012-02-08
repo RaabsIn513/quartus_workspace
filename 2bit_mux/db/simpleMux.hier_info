@@ -1,0 +1,6 @@
+|simpleMux
+A => mux_out.DATAA
+B => mux_out.DATAB
+mux_control => Decoder0.IN0
+
+

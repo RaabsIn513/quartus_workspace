@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\nBit_ALU\simulation\modelsim
+vALU
+Im`6ofg_UjjodNPSS`3jGR1
+V?=F[WbhIYAEz0D:SHb=Bz3
+Z1 dE:\quartus_workspace\nBit_ALU\simulation\modelsim
+w1328638165
+8E:/quartus_workspace/nBit_ALU/ALU.v
+FE:/quartus_workspace/nBit_ALU/ALU.v
+L0 3
+Z2 OV;L;10.0c;49
+r1
+31
+o-vlog01compat -work work -O0
+n@a@l@u
+!s100 4HCBmnLV^I:bCG_WW92n@2
+!s85 0
+!s108 1328638190.007000
+!s107 E:/quartus_workspace/nBit_ALU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/nBit_ALU|E:/quartus_workspace/nBit_ALU/ALU.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+E:/quartus_workspace/nBit_ALU -O0
+vALU_testBench
+!s100 ?d81;3bc=nCO@5_mgElYU3
+I=Q[5JI=>H^Pb2K;<l1UGe0
+V@3Sd;abQc^@PQ81`7@Mz92
+R1
+w1328638225
+8E:/quartus_workspace/nBit_ALU/simulation/modelsim/ALU_testBench.v
+FE:/quartus_workspace/nBit_ALU/simulation/modelsim/ALU_testBench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1328638230.639000
+!s107 E:/quartus_workspace/nBit_ALU/simulation/modelsim/ALU_testBench.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/nBit_ALU/simulation/modelsim/ALU_testBench.v|
+!s101 -O0
+o-work work -O0
+n@a@l@u_test@bench

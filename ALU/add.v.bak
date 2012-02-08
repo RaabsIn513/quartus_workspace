@@ -1,0 +1,13 @@
+module add();
+
+	task tadd;
+		input [17:0] dataa;
+		input [17:0] datab;
+		output reg [18:0] result;
+
+		begin
+			result = dataa + datab;	
+		end
+	endtask
+	
+endmodule

@@ -1,0 +1,6 @@
+
+State Machine - |FSM_consecZeros|state
+Name state.q0 state.qf state.q1 
+state.q0 0 0 0 
+state.q1 1 0 1 
+state.qf 1 1 0 

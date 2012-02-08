@@ -1,0 +1,13 @@
+# clk_0
+# cpu_0
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu_0.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.ocp]
+# null
+# onchip_memory2_0
+# Switches
+# LEDs
+# jtag_uart_0
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID "CCAF78F37114000001354F4CA7EF"
+set_global_assignment -entity "nios_system" -name IP_TOOL_NAME "sopc"
+set_global_assignment -entity "nios_system" -name IP_TOOL_VERSION "11.1sp1"
+set_global_assignment -entity "nios_system" -name IP_TOOL_ENV "sopc"

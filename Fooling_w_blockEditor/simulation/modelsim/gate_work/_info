@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\Fooling_w_blockEditor\simulation\modelsim
+vaTB
+!s100 ]gRk`aS6En>z@0C97h`<<0
+Ifj<8cE_]BP_K4OQjA[O9^0
+Z1 VmZ1jba6VU@:Om<W[H[IXQ0
+Z2 dE:\quartus_workspace\Fooling_w_blockEditor\simulation\modelsim
+w1328469995
+Z3 8E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v
+Z4 FE:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v
+L0 2
+Z5 OV;L;10.0c;49
+r1
+!s85 0
+31
+!s108 1328470019.404000
+!s107 E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim|-O0|E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/testBench.v|
+!s101 -O0
+Z6 o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim -O0
+Z7 na@t@b
+vblockEd
+IM3XeoD;NUOH3AOoBMP>hL3
+VLg0:azn^hEbBeIjz[TYVX2
+R2
+w1328469376
+8E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd_6_1200mv_85c_slow.vo
+FE:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd_6_1200mv_85c_slow.vo
+L0 31
+R5
+r1
+31
+R6
+nblock@ed
+!s100 k9Rh<]4l;@:@OYK;2k=>b0
+!s85 0
+!s108 1328470016.207000
+!s107 E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd_6_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|-O0|E:/quartus_workspace/Fooling_w_blockEditor/simulation/modelsim/blockEd_6_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0

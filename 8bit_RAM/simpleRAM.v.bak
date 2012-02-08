@@ -1,0 +1,42 @@
+module simpleRAM ( read-data, read-address, write-data, write-address, 
+	memwrite, clock, reset); 
+
+	output [7:0] read-data;
+	input [2:0] read-address;
+	input [7:0] write-data;
+	input [2:0] write-address;
+	input memwrite;
+	input clock; 
+	input reset; 
+	reg [7:0] read-data,  memo, meml; 
+	
+	/* Block for memory read */ 
+	always @(read-address  o r  memO or meml) 
+		begin 
+			case(read-address) 
+				3'b 000: read-data  = mem0; 
+				3'b 001: read-data  = mem1; 
+				/*  Unimplemented memory */ 
+				default: read-data  = 8'h FF; 
+			endcase 
+		end 
+
+		/* Block for memory write */ 
+		always @(posedge clock or posedge reset) 
+			begin 
+				if (reset) 
+					begin 
+						/* Initial v a l i ~ e s   for memory (optional) */ 
+						mem0 = 8'hAA; 
+						mem1 = 8'h55; 
+					end 
+				else if  (memwrite) 
+
+				/*  write new value to memory */ 
+				case (write-address) 
+					3'b  000 : mem0 = write-data; 
+					3'b 001 : mem1 = write-data; 
+				endcase 
+			end 
+			
+endmodule 

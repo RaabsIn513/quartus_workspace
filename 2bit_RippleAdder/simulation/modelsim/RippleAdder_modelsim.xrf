@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, E:/quartus_workspace/2bit_RippleAdder/RippleAdder.v
+source_file = 1, E:/quartus_workspace/2bit_RippleAdder/db/RippleAdder.cbx.xml
+design_name = RippleAdder
+instance = comp, \sum[0]~output\, sum[0]~output, RippleAdder, 1
+instance = comp, \sum[1]~output\, sum[1]~output, RippleAdder, 1
+instance = comp, \sum[2]~output\, sum[2]~output, RippleAdder, 1
+instance = comp, \B[0]~input\, B[0]~input, RippleAdder, 1
+instance = comp, \A[0]~input\, A[0]~input, RippleAdder, 1
+instance = comp, \fa0|sum~0\, fa0|sum~0, RippleAdder, 1
+instance = comp, \B[1]~input\, B[1]~input, RippleAdder, 1
+instance = comp, \A[1]~input\, A[1]~input, RippleAdder, 1
+instance = comp, \fa1|sum~0\, fa1|sum~0, RippleAdder, 1
+instance = comp, \fa1|cout~0\, fa1|cout~0, RippleAdder, 1
