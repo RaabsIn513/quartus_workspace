@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\Memory\simulation\modelsim
+vMemory
+!s100 _7ZRSG?a>L2FgiXi^khY10
+In=fj:5Q;<cRnZ][zbd3Z62
+VPGGN[5kl>JjN`3SBdoD[@3
+Z1 dE:\quartus_workspace\Memory\simulation\modelsim
+w1329584816
+8E:/quartus_workspace/Memory/Memory.v
+FE:/quartus_workspace/Memory/Memory.v
+L0 6
+Z2 OV;L;10.0c;49
+r1
+!s85 0
+31
+!s108 1329584845.689000
+!s107 E:/quartus_workspace/Memory/Memory.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/Memory/Memory.v|
+!s101 -O0
+Z3 o-work work -O0
+n@memory
+vMemory_TestBench
+I_N7RLiRz]M`Md<9l>f7Z_2
+V2^_D=_ajno__B7Oi>jbGn0
+R1
+w1329583016
+8E:/quartus_workspace/Memory/simulation/modelsim/Memory_TestBench2.v
+FE:/quartus_workspace/Memory/simulation/modelsim/Memory_TestBench2.v
+L0 1
+R2
+r1
+31
+R3
+n@memory_@test@bench
+!s100 BM2Lf4khbBF>n9Ca:Laa<1
+!s85 0
+!s108 1329584712.177000
+!s107 E:/quartus_workspace/Memory/simulation/modelsim/Memory_TestBench2.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/Memory/simulation/modelsim/Memory_TestBench2.v|
+!s101 -O0

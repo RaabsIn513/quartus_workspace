@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Tue Feb 14 20:24:50 2012
+Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition
+Revision Name : TOP
+Top-level Entity Name : TOP
+Family : Cyclone IV GX
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 20
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

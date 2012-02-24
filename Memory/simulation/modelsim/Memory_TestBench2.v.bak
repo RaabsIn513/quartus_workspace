@@ -1,0 +1,48 @@
+module Memory_TestBench;
+  //ouD_add, inD, in_adrs, clk, rst, re_en, wr_en
+  reg clock, reset, enR, enW;
+  reg[17:0] count;
+  reg[17:0] dataIn;
+  reg[12:0] dataAddr;
+  wire[17:0] dataOut;
+  
+  initial begin
+     dataIn = 18'd666;   // start with dataIn = 666;
+     dataAddr = 13'd0;  // start at address 0
+     enW = 0;           // intial Read
+     enR = 1;   
+     reset = 1;
+     count = 0;
+     clock = 0;   
+  end
+  
+  always begin
+    #5 clock = !clock;
+  end
+  
+  always begin
+    
+    if( reset == 1 ) begin
+      #40 reset = 0;
+    end
+    
+    if( enR == 1 ) begin
+      //#10 dataIn = dataIn + 1;
+      #10 dataAddr = dataAddr + 1;  // increment the address we're reading
+    end
+    
+  end
+    
+  // insert instance
+  //ouD_add, inD, in_adrs, clk, rst, re_en, wr_en
+  Memory U0 (
+  .ouD_add(dataOut), 
+  .inD(dataIn), 
+  .in_adrs(dataAddr), 
+  .clk(clock), 
+  .rst(reset), 
+  .re_en(enR),
+  .wr_en(enW)
+  );
+  
+endmodule

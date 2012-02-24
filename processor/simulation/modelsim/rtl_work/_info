@@ -1,0 +1,180 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\processor\simulation\modelsim
+vALU
+IX>8ISo^_gkjF?a;]LYI5_3
+V`j:GDgnPi9jZ5^@V1MDbJ1
+Z1 dE:\quartus_workspace\processor\simulation\modelsim
+w1329774203
+8E:/quartus_workspace/processor/ALU.v
+FE:/quartus_workspace/processor/ALU.v
+L0 5
+Z2 OV;L;10.0c;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/processor -O0
+n@a@l@u
+!s100 SIfz9P8:RVb>A0ZDT?^`C1
+!s85 0
+!s108 1329929106.045000
+!s107 E:/quartus_workspace/processor/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/ALU.v|
+!s101 -O0
+vControlBlock
+IFCjkL2WAnaXMLiQSXAz]g3
+VCnICFFN=6P0VZMc@G8:SH2
+R1
+w1329587587
+8E:/quartus_workspace/processor/ControlBlock.v
+FE:/quartus_workspace/processor/ControlBlock.v
+L0 9
+R2
+r1
+31
+R3
+R4
+n@control@block
+!s100 Yf_<QI2<eojY>[kzJJ^ZU1
+!s85 0
+!s108 1329929106.113000
+!s107 E:/quartus_workspace/processor/ControlBlock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/ControlBlock.v|
+!s101 -O0
+vMAR
+Im5>T]genV>IO<AX_Wkl=c0
+VD:DnZIm4kE_g<M>]h>SD`0
+R1
+w1329291234
+8E:/quartus_workspace/processor/MAR.v
+FE:/quartus_workspace/processor/MAR.v
+L0 6
+R2
+r1
+31
+R3
+R4
+n@m@a@r
+!s100 oH6o`iXD3GkW_2]7V`YGU1
+!s85 0
+!s108 1329929105.855000
+!s107 E:/quartus_workspace/processor/MAR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/MAR.v|
+!s101 -O0
+vMemory
+IVWTNgWz6O2oM0DBiC3XcH3
+VDzaVi7@fUNIAIjeeiP2KY2
+R1
+w1329928656
+8E:/quartus_workspace/processor/Memory.v
+FE:/quartus_workspace/processor/Memory.v
+L0 6
+R2
+r1
+31
+R3
+R4
+n@memory
+!s100 dTXHQ2am7RNELzzS]92fb3
+!s85 0
+!s108 1329929105.913000
+!s107 E:/quartus_workspace/processor/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/Memory.v|
+!s101 -O0
+vmux21
+IFf68PbdGHk1E:OQ]aeE]S3
+VefGj::7A8Do3<F3Ha4D^>1
+R1
+w1329760633
+8E:/quartus_workspace/processor/mux21.v
+FE:/quartus_workspace/processor/mux21.v
+L0 11
+R2
+r1
+31
+R3
+R4
+!s100 Eza0>Ko_:K8d>RFIkmJo30
+!s85 0
+!s108 1329929105.981000
+!s107 E:/quartus_workspace/processor/mux21.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/mux21.v|
+!s101 -O0
+vmux41
+I@K[c5_>lDTHL=QAh1_JH33
+VW_@>V3Q?^JY^zZZe>Xc341
+R1
+w1329290105
+8E:/quartus_workspace/processor/mux41.v
+FE:/quartus_workspace/processor/mux41.v
+L0 6
+R2
+r1
+31
+R3
+R4
+!s100 jm07OzK<]l7A_9DW>6GPa3
+!s85 0
+!s108 1329929105.791000
+!s107 E:/quartus_workspace/processor/mux41.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/mux41.v|
+!s101 -O0
+vStack
+Ile3`InXc66G>B9NATNHJD3
+V@Q<?icA`g[c<WkiTKNM@01
+R1
+w1329290096
+8E:/quartus_workspace/processor/Stack.v
+FE:/quartus_workspace/processor/Stack.v
+L0 7
+R2
+r1
+31
+R3
+n@stack
+R4
+!s100 dkb@Ghh`;ob9Lh95n>PC`0
+!s85 0
+!s108 1329929105.637000
+!s107 E:/quartus_workspace/processor/Stack.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/Stack.v|
+!s101 -O0
+vtb_top
+!s100 lP>R_E^PeMLMz1H<WHPDb3
+IR>gliK>1>aeP7464]gHCL1
+V[LcaLh[SJXomY3Ki^RaI?1
+R1
+w1329759618
+8E:/quartus_workspace/processor/tb_top.v
+FE:/quartus_workspace/processor/tb_top.v
+L0 6
+R2
+r1
+!s85 0
+31
+!s108 1329929168.155000
+!s107 E:/quartus_workspace/processor/tb_top.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/processor/tb_top.v|
+!s101 -O0
+o-work work -O0
+vtop
+IJeK]5kin_K[5Bhmb:4Ceg3
+VCHM8>PQKcdeGJKoNLJHJW1
+R1
+w1329774425
+8E:/quartus_workspace/processor/top.v
+FE:/quartus_workspace/processor/top.v
+L0 11
+R2
+r1
+31
+R3
+R4
+!s100 4JO@ahNHYaPmjClOH_>Wn1
+!s85 0
+!s108 1329929106.208000
+!s107 E:/quartus_workspace/processor/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor|E:/quartus_workspace/processor/top.v|
+!s101 -O0

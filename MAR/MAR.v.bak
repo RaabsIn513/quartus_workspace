@@ -1,0 +1,5 @@
+module MAR(MAR_read_en, MAR_write_en, clk, rst, MAR_in, MAR_out);
+
+input MAR_read_en, MAR_write_en;
+input[12:0] MAR_in;
+output[12:0] MAR_out;

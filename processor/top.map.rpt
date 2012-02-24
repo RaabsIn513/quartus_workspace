@@ -1,0 +1,462 @@
+Analysis & Synthesis report for top
+Wed Feb 22 12:18:26 2012
+Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Feb 22 12:18:26 2012         ;
+; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
+; Revision Name                      ; top                                           ;
+; Top-level Entity Name              ; top                                           ;
+; Family                             ; Cyclone III                                   ;
+; Total logic elements               ; 4,456                                         ;
+;     Total combinational functions  ; 2,066                                         ;
+;     Dedicated logic registers      ; 2,585                                         ;
+; Total registers                    ; 2585                                          ;
+; Total pins                         ; 18                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; top                ; top                ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+
+; Stack.v                          ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/Stack.v        ;
+; mux41.v                          ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/mux41.v        ;
+; MAR.v                            ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/MAR.v          ;
+; Memory.v                         ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/Memory.v       ;
+; mux21.v                          ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/mux21.v        ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/ALU.v          ;
+; ControlBlock.v                   ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/ControlBlock.v ;
+; top.v                            ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/processor/top.v          ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,456     ;
+;                                             ;           ;
+; Total combinational functions               ; 2066      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1825      ;
+;     -- 3 input functions                    ; 157       ;
+;     -- <=2 input functions                  ; 84        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2037      ;
+;     -- arithmetic mode                      ; 29        ;
+;                                             ;           ;
+; Total registers                             ; 2585      ;
+;     -- Dedicated logic registers            ; 2585      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 18        ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2585      ;
+; Total fan-out                               ; 15775     ;
+; Average fan-out                             ; 3.37      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; |top                       ; 2066 (18)         ; 2585 (16)    ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |top                 ;              ;
+;    |ALU:alu1|              ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu1        ;              ;
+;    |ControlBlock:cb|       ; 105 (105)         ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlBlock:cb ;              ;
+;    |MAR:mar1|              ; 15 (15)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|MAR:mar1        ;              ;
+;    |Memory:mem|            ; 1700 (1700)       ; 2322 (2322)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Memory:mem      ;              ;
+;    |Stack:stack1|          ; 45 (45)           ; 92 (92)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Stack:stack1    ;              ;
+;    |mux21:mux|             ; 44 (44)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mux21:mux       ;              ;
+;    |mux41:mux1|            ; 67 (67)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mux41:mux1      ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; ALU:alu1|out[0]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[1]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[2]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[3]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[4]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[5]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[6]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[7]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[8]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[9]                                     ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[10]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[11]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[12]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[13]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[14]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[15]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[16]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; ALU:alu1|out[17]                                    ; ALU:alu1|out[17]    ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; ControlBlock:cb|re_inpr                ; Stuck at GND due to stuck port data_in ;
+; mux21:mux|inpr[0..17]                  ; Lost fanout                            ;
+; ControlBlock:cb|aluop[2]               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 20 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                  ;
++-------------------------+---------------------------+----------------------------------------+
+; Register name           ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------+---------------------------+----------------------------------------+
+; ControlBlock:cb|re_inpr ; Stuck at GND              ; mux21:mux|inpr[17]                     ;
+;                         ; due to stuck port data_in ;                                        ;
++-------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2585  ;
+; Number of registers using Synchronous Clear  ; 82    ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2546  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                    ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------+----------------------------+
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; |top|Stack:stack1|ou_stckD[3] ;                            ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; |top|MAR:mar1|ou_MAR[9]       ;                            ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; |top|mux21:mux|AC[4]          ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; |top|mux21:mux|ouD[1]         ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; |top|mux41:mux1|MD[0]         ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[21][3]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[20][5]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[12][3]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[11][13]   ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[10][11]   ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[9][5]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[8][3]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[7][16]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[6][1]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[5][1]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[4][11]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[3][16]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[2][11]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[1][11]    ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |top|Memory:mem|Mem[0][14]    ;                            ;
+; 6:1                ; 18 bits   ; 72 LEs        ; 18 LEs               ; 54 LEs                 ; |top|mux21:mux|IR[9]          ;                            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; |top|mux41:mux1|out_data[16]  ;                            ;
+; 6:1                ; 13 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; |top|mux41:mux1|out_data[8]   ;                            ;
+; 8:1                ; 13 bits   ; 65 LEs        ; 26 LEs               ; 39 LEs                 ; |top|mux41:mux1|PC[5]         ;                            ;
+; 128:1              ; 18 bits   ; 1530 LEs      ; 1530 LEs             ; 0 LEs                  ; |top|Memory:mem|outD[5]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; |top|ALU:alu1|Mux4            ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:45     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Feb 22 12:17:59 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file stack.v
+    Info (12023): Found entity 1: Stack
+Warning (12090): Entity "mux41" obtained from "mux41.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file mux41.v
+    Info (12023): Found entity 1: mux41
+Info (12021): Found 1 design units, including 1 entities, in source file mar.v
+    Info (12023): Found entity 1: MAR
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: Memory
+Info (12021): Found 1 design units, including 1 entities, in source file mux21.v
+    Info (12023): Found entity 1: mux21
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file controlblock.v
+    Info (12023): Found entity 1: ControlBlock
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: top
+Warning (10236): Verilog HDL Implicit Net warning at top.v(35): created implicit net for "flg_i"
+Warning (10236): Verilog HDL Implicit Net warning at top.v(35): created implicit net for "flg_o"
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "mux41" for hierarchy "mux41:mux1"
+Warning (10230): Verilog HDL assignment warning at mux41.v(36): truncated value with size 32 to match size of target (13)
+Info (12128): Elaborating entity "MAR" for hierarchy "MAR:mar1"
+Info (12128): Elaborating entity "mux21" for hierarchy "mux21:mux"
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:mem"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu1"
+Warning (10036): Verilog HDL or VHDL warning at ALU.v(15): object "CF" assigned a value but never read
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(19): variable "en" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(21): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(17): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out[0]" at ALU.v(17)
+Info (10041): Inferred latch for "out[1]" at ALU.v(17)
+Info (10041): Inferred latch for "out[2]" at ALU.v(17)
+Info (10041): Inferred latch for "out[3]" at ALU.v(17)
+Info (10041): Inferred latch for "out[4]" at ALU.v(17)
+Info (10041): Inferred latch for "out[5]" at ALU.v(17)
+Info (10041): Inferred latch for "out[6]" at ALU.v(17)
+Info (10041): Inferred latch for "out[7]" at ALU.v(17)
+Info (10041): Inferred latch for "out[8]" at ALU.v(17)
+Info (10041): Inferred latch for "out[9]" at ALU.v(17)
+Info (10041): Inferred latch for "out[10]" at ALU.v(17)
+Info (10041): Inferred latch for "out[11]" at ALU.v(17)
+Info (10041): Inferred latch for "out[12]" at ALU.v(17)
+Info (10041): Inferred latch for "out[13]" at ALU.v(17)
+Info (10041): Inferred latch for "out[14]" at ALU.v(17)
+Info (10041): Inferred latch for "out[15]" at ALU.v(17)
+Info (10041): Inferred latch for "out[16]" at ALU.v(17)
+Info (10041): Inferred latch for "out[17]" at ALU.v(17)
+Info (12128): Elaborating entity "ControlBlock" for hierarchy "ControlBlock:cb"
+Warning (10034): Output port "wr_ouR" at ControlBlock.v(15) has no driver
+Info (12128): Elaborating entity "Stack" for hierarchy "Stack:stack1"
+Warning (10230): Verilog HDL assignment warning at Stack.v(26): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Stack.v(32): truncated value with size 32 to match size of target (2)
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "Stack:stack1|Stack" is uninferred due to inappropriate RAM size
+Warning (13012): Latch ALU:alu1|out[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Warning (13012): Latch ALU:alu1|out[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlBlock:cb|aluop[2]
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 18 registers lost all their fanouts during netlist optimizations. The first 18 are displayed below.
+    Info (17050): Register "mux21:mux|inpr[17]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[16]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[15]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[14]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[13]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[12]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[11]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[10]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[9]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[8]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[7]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[6]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[5]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[4]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[3]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[2]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[1]" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "mux21:mux|inpr[0]" lost all its fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+Info (21057): Implemented 4519 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 4501 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 303 megabytes
+    Info: Processing ended: Wed Feb 22 12:18:26 2012
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:27
+
+

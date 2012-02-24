@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/ControlBlock.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/top.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/mux41.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/mar.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/mux21.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/memory.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/alu.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/processor {E:/quartus_workspace/processor/stack.v}
+

@@ -1,0 +1,182 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\processor_copy\simulation\modelsim
+vALU
+IXKoBE7j0FmBMYW<KlV6:e0
+V`j:GDgnPi9jZ5^@V1MDbJ1
+Z1 dE:\quartus_workspace\processor_copy\simulation\modelsim
+w1329774203
+8E:/quartus_workspace/processor_copy/ALU.v
+FE:/quartus_workspace/processor_copy/ALU.v
+L0 5
+Z2 OV;L;10.0c;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/processor_copy -O0
+n@a@l@u
+!s100 SIfz9P8:RVb>A0ZDT?^`C1
+!s85 0
+!s108 1329922995.169000
+!s107 E:/quartus_workspace/processor_copy/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/ALU.v|
+!s101 -O0
+vControlBlock
+IQld;QI_ZXHHen9D7FDe>[2
+VCnICFFN=6P0VZMc@G8:SH2
+R1
+w1329790871
+8E:/quartus_workspace/processor_copy/ControlBlock.v
+FE:/quartus_workspace/processor_copy/ControlBlock.v
+L0 9
+R2
+r1
+31
+R3
+R4
+n@control@block
+!s100 gY;knM[0=MbacYLXeLZPl1
+!s85 0
+!s108 1329922995.214000
+!s107 E:/quartus_workspace/processor_copy/ControlBlock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/ControlBlock.v|
+!s101 -O0
+vIR_AC
+IGXM@WS59TeX@ej`4JXBP>1
+VfRKlLD5n4o<TlhlA0=o5_1
+R1
+w1329787945
+8E:/quartus_workspace/processor_copy/IR_AC.v
+FE:/quartus_workspace/processor_copy/IR_AC.v
+L0 11
+R2
+r1
+31
+R3
+R4
+n@i@r_@a@c
+!s100 HD:YTR0>M0Cg8_e0XnYfL3
+!s85 0
+!s108 1329922995.499000
+!s107 E:/quartus_workspace/processor_copy/IR_AC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/IR_AC.v|
+!s101 -O0
+vMAR
+I8lR>L4oa<_:Rf:WgnMGKY0
+VD:DnZIm4kE_g<M>]h>SD`0
+R1
+w1329291234
+8E:/quartus_workspace/processor_copy/MAR.v
+FE:/quartus_workspace/processor_copy/MAR.v
+L0 6
+R2
+r1
+31
+R3
+R4
+n@m@a@r
+!s100 oH6o`iXD3GkW_2]7V`YGU1
+!s85 0
+!s108 1329922995.292000
+!s107 E:/quartus_workspace/processor_copy/MAR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/MAR.v|
+!s101 -O0
+vMemory
+IIY42L@RMkOO<=nn<TaV<_1
+VDzaVi7@fUNIAIjeeiP2KY2
+R1
+w1329790455
+8E:/quartus_workspace/processor_copy/Memory.v
+FE:/quartus_workspace/processor_copy/Memory.v
+L0 6
+R2
+r1
+31
+R3
+R4
+n@memory
+!s100 B=2CD6m6ighh05Q;lcb3E3
+!s85 0
+!s108 1329922995.338000
+!s107 E:/quartus_workspace/processor_copy/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/Memory.v|
+!s101 -O0
+vPC_MD
+I3;mZD:dDmQ8<TQI0lb9V20
+V@;NOzBZGP=0blJTShNiZU2
+R1
+w1329787914
+8E:/quartus_workspace/processor_copy/PC_MD.v
+FE:/quartus_workspace/processor_copy/PC_MD.v
+L0 6
+R2
+r1
+31
+R3
+R4
+n@p@c_@m@d
+!s100 C>l=_XmEUD?fb3W`SF?S52
+!s85 0
+!s108 1329922995.451000
+!s107 E:/quartus_workspace/processor_copy/PC_MD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/PC_MD.v|
+!s101 -O0
+vStack
+I><Y:IHX2TCEN:oJUo^TTQ0
+V@Q<?icA`g[c<WkiTKNM@01
+R1
+w1329775145
+8E:/quartus_workspace/processor_copy/Stack.v
+FE:/quartus_workspace/processor_copy/Stack.v
+L0 7
+R2
+r1
+31
+R3
+R4
+n@stack
+!s100 dkb@Ghh`;ob9Lh95n>PC`0
+!s85 0
+!s108 1329922995.390000
+!s107 E:/quartus_workspace/processor_copy/Stack.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/Stack.v|
+!s101 -O0
+vtb_top
+!s100 ;=EFnWRQGMRCYmV`TCab@2
+I1M8c17S7IEfDDbbYOU?372
+V[LcaLh[SJXomY3Ki^RaI?1
+R1
+w1329790365
+8E:/quartus_workspace/processor_copy/tb_top.v
+FE:/quartus_workspace/processor_copy/tb_top.v
+L0 6
+R2
+r1
+!s85 0
+31
+!s108 1329923006.724000
+!s107 E:/quartus_workspace/processor_copy/tb_top.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/processor_copy/tb_top.v|
+!s101 -O0
+o-work work -O0
+vtop
+ImVAQWSmOSec^G?j=iRi;J2
+VCHM8>PQKcdeGJKoNLJHJW1
+R1
+w1329922863
+8E:/quartus_workspace/processor_copy/Top.v
+FE:/quartus_workspace/processor_copy/Top.v
+L0 9
+R2
+r1
+31
+R3
+R4
+!s100 O>XoOCTXO[lIf;Cz6AUL_0
+!s85 0
+!s108 1329922995.117000
+!s107 E:/quartus_workspace/processor_copy/Top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/processor_copy|E:/quartus_workspace/processor_copy/Top.v|
+!s101 -O0

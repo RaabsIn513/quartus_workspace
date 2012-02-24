@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\ALU\simulation\modelsim
+vALU
+I>D0ldo9`9?d5z71IF5V?60
+V8fzdUQ??fj540KTLOiz8D0
+Z1 dE:\quartus_workspace\ALU\simulation\modelsim
+w1328743109
+8E:/quartus_workspace/ALU/ALU.v
+FE:/quartus_workspace/ALU/ALU.v
+L0 1
+Z2 OV;L;10.0c;49
+r1
+31
+o-vlog01compat -work work -O0
+n@a@l@u
+!s100 N_GbS>hX0]On>P46]=2Lb0
+!s85 0
+!s108 1328743154.483000
+!s107 E:/quartus_workspace/ALU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/ALU|E:/quartus_workspace/ALU/ALU.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+E:/quartus_workspace/ALU -O0
+vALU_TestBench
+!s100 T^bn5[7n^M`H[Zo9OP?A^0
+I4>a_zGi[1XmRiT[JFQj913
+V0HXIdW<4OkOOBcbjj]=c:3
+R1
+w1328667075
+8E:/quartus_workspace/ALU/simulation/modelsim/ALU_TestBench.v
+FE:/quartus_workspace/ALU/simulation/modelsim/ALU_TestBench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1328743178.604000
+!s107 E:/quartus_workspace/ALU/simulation/modelsim/ALU_TestBench.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/ALU/simulation/modelsim/ALU_TestBench.v|
+!s101 -O0
+o-work work -O0
+n@a@l@u_@test@bench

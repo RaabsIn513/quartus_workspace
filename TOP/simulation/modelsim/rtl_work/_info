@@ -1,0 +1,184 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\TOP\simulation\modelsim
+vAC_IR
+IY8j;n[?dP:PoEKPcjeWbl1
+VU_kV?e7TT9^mCg3dP9`TE3
+Z1 dE:\quartus_workspace\TOP\simulation\modelsim
+w1329265569
+8E:/quartus_workspace/TOP/ac_ir.v
+FE:/quartus_workspace/TOP/ac_ir.v
+L0 1
+Z2 OV;L;10.0c;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/TOP -O0
+n@a@c_@i@r
+!s100 lDCTA==F=`B_mPPU7I?bg3
+!s85 0
+!s108 1329269122.282000
+!s107 E:/quartus_workspace/TOP/ac_ir.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|E:/quartus_workspace/TOP/ac_ir.v|
+!s101 -O0
+vALU
+I1j?gdK`X5kCC1mn>idnM:3
+V;P:44_F1eQ8H8ZGKAezlo1
+R1
+w1329265762
+8E:/quartus_workspace/TOP/alu.v
+FE:/quartus_workspace/TOP/alu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@a@l@u
+!s100 baOd3mc0Dm=[YIX2ZLIfR2
+!s85 0
+!s108 1329269122.329000
+!s107 E:/quartus_workspace/TOP/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|E:/quartus_workspace/TOP/alu.v|
+!s101 -O0
+vControlBlock
+IKOfAT9VidY8fKZD;bOo1[0
+VZ]XGjFOTU@b8_J>40IC6b0
+R1
+w1329269055
+8E:/quartus_workspace/TOP/controlblock.v
+FE:/quartus_workspace/TOP/controlblock.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@control@block
+!s100 jO4Z1gII6nV@C9QJ]i29n1
+!s85 0
+!s108 1329269122.386000
+!s107 E:/quartus_workspace/TOP/controlblock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|E:/quartus_workspace/TOP/controlblock.v|
+!s101 -O0
+vMAR
+IcOAC>AomLBc@VAmNW[HBd1
+VBkJ1g^ReFBe0CEc3YLL:n0
+R1
+w1329264499
+8E:/quartus_workspace/TOP/mar.v
+FE:/quartus_workspace/TOP/mar.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@m@a@r
+!s100 0B?@9@2M;oK:nhf4ED3gI1
+!s85 0
+!s108 1329269122.236000
+!s107 E:/quartus_workspace/TOP/mar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|E:/quartus_workspace/TOP/mar.v|
+!s101 -O0
+vMemory
+I8^fJKf_K9U@S_im[;8zN>3
+V_d0PWa_S>Ec9;3d6M0nQD1
+R1
+w1329267324
+8E:/quartus_workspace/TOP/Memory.v
+FE:/quartus_workspace/TOP/Memory.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@memory
+!s100 ;dkb<ZLSN11M@M36IzXFb0
+!s85 0
+!s108 1329273096.002000
+!s107 E:/quartus_workspace/TOP/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|-O0|E:/quartus_workspace/TOP/Memory.v|
+!s101 -O0
+vPC_MD
+IhbP6K_?gD:_YA?<`zWKDn0
+V@;NOzBZGP=0blJTShNiZU2
+R1
+w1329265124
+8E:/quartus_workspace/TOP/pc_md.v
+FE:/quartus_workspace/TOP/pc_md.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@p@c_@m@d
+!s100 hQ7zee`MA7cMBI6ZZjkNN3
+!s85 0
+!s108 1329269122.189000
+!s107 E:/quartus_workspace/TOP/pc_md.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|E:/quartus_workspace/TOP/pc_md.v|
+!s101 -O0
+vStack
+IB7hjoNgCHSTm:=HH5O_Nj0
+VLZNaABcJe<f0DAbBWLk_71
+R1
+w1329265285
+8E:/quartus_workspace/TOP/stack.v
+FE:/quartus_workspace/TOP/stack.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@stack
+!s100 5XOY5Ge4]@<FI?JOXjnac2
+!s85 0
+!s108 1329269122.455000
+!s107 E:/quartus_workspace/TOP/stack.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|E:/quartus_workspace/TOP/stack.v|
+!s101 -O0
+vTOP
+I]P[6jNPX[lLj1BEW0W1lW2
+VkaJ=370`h_<_IbKGDdYXe0
+R1
+w1329269082
+8E:/quartus_workspace/TOP/TOP.v
+FE:/quartus_workspace/TOP/TOP.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@t@o@p
+!s100 D^HCDJILTU0_8zQ1KCb1k1
+!s85 0
+!s108 1329273092.938000
+!s107 E:/quartus_workspace/TOP/TOP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP|-O0|E:/quartus_workspace/TOP/TOP.v|
+!s101 -O0
+vTOP_TestBench
+!s100 71XE06o>@O<:Q3cHoQS;<1
+IcO97a5g2?60Dfh3z=W3bR2
+VPA_i1R2QV2lo=hBeW_B>g0
+R1
+w1329269215
+8E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v
+FE:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1329273103.491000
+!s107 E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v|
+!s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v|
+!s101 -O0
+o-work work -O0
+n@t@o@p_@test@bench

@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -6.298
+TNS   : -12298.142
+
+Type  : Slow 1200mV 85C Model Setup 'ControlBlock:cb|en_alu'
+Slack : -5.032
+TNS   : -85.005
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ControlBlock:cb|en_alu'
+Slack : 1.604
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -2588.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ControlBlock:cb|en_alu'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -5.597
+TNS   : -10898.604
+
+Type  : Slow 1200mV 0C Model Setup 'ControlBlock:cb|en_alu'
+Slack : -4.595
+TNS   : -78.143
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ControlBlock:cb|en_alu'
+Slack : 1.669
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -2588.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ControlBlock:cb|en_alu'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -3.405
+TNS   : -6249.608
+
+Type  : Fast 1200mV 0C Model Setup 'ControlBlock:cb|en_alu'
+Slack : -2.636
+TNS   : -44.206
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ControlBlock:cb|en_alu'
+Slack : 0.957
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -3107.337
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ControlBlock:cb|en_alu'
+Slack : 0.356
+TNS   : 0.000
+
+------------------------------------------------------------

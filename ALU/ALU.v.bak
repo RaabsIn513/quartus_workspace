@@ -1,63 +1,20 @@
-module ALU(
-
-	input[17:0] datA,
-	input[17:0] datB,
-	input[3:0]  ctrl,
-	input       clk,
-	output reg[17:0] result,
-	output reg  ovf,
-	output reg  AgtB,				// A greater than B 
-	output reg  N,
-	output reg  Z
-);
-	reg[17:0] alu_out;
-	reg Neg;
-	
-	// ALU operations
-	always @( ctrl or datA or datB )
-	case ( ctrl )
-		0: alu_out = datA + datB;
-		1: alu_out = datA - datB;
-		2: alu_out = datA * datB;
-		3: alu_out = datA / datB; // remainder situation?
-		4: alu_out = datA % datB; // modulus for the remainder situation?
-		5: alu_out = datA | datB;
-		6: alu_out = datA & datB;
-		default: alu_out = 0;
-	endcase
-	
-	// Appropriate signals determined by the result.
-	always @( alu_out ) begin
-		if ( alu_out[17] == 1)  // if output is negative
-			N = 1;
-		else
-			N = 0;
-		if ( alu_out == 0 ) 		// if output is zeros 
-			Z = 1;
-		else
-			Z = 0;
-		if (alu_out > 131071 || alu_out < -131071) // if the answer is > or < max, min signal overflow
-			ovf = 1;
-		else
-			ovf = 0;
-		if ( datA > datB )
-			AgtB = 1;
-		else
-			AgtB = 0;
-	end
-	// ALU shift and final output. 
-	always @( posedge clk )
-		if( ctrl[3] == 1)
-			result = alu_out << 1;
-		else
-			result = alu_out;
-
-endmodule
-
-
-
-
-
-
-
-
+module ALU(in1,in2,sel,out,enable);
+input [17:0] in1,in2; //Inputs to the ALU
+wire [17:0] in1,in2;
+input enable; //Enable to the ALU
+input [2:0]sel; // Select lines
+output [17:0] out; //Output
+reg [17:0]out;
+reg CF;
+always @(sel or in1 or in2)
+begin
+if(enable)
+begin
+case(sel)
+3'd0:{CF,out}<=in1+in2; //add
+3'd1:out<=in1; //load
+3'd2:out<=in1; //store
+3'd3:out<=in2; //call
+3'd4:out<=in2; //Return
+endcase
+end

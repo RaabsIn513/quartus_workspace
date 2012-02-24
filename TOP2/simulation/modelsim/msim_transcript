@@ -1,0 +1,275 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do TOP_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/TOP.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP
+# 
+# Top level modules:
+# 	TOP
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/pc_md.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PC_MD
+# 
+# Top level modules:
+# 	PC_MD
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/mar.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module MAR
+# 
+# Top level modules:
+# 	MAR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/ac_ir.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module AC_IR
+# 
+# Top level modules:
+# 	AC_IR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/controlblock.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ControlBlock
+# 
+# Top level modules:
+# 	ControlBlock
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/stack.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Stack
+# 
+# Top level modules:
+# 	Stack
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 {E:/quartus_workspace/TOP2/memory.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# 
+#  
+vlog -reportprogress 300 -work work E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vlog -reportprogress 300 -work work E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Warning: (vsim-3017) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): [TFMPC] - Too few port connections. Expected 3, found 2.
+#         Region: /TOP_TestBench/top1
+# ** Warning: (vsim-3722) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): [TFMPC] - Missing connection for port 'aluOut'.
+add wave -position end  sim:/TOP_TestBench/clk
+add wave -position end  sim:/TOP_TestBench/rst
+run
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 5 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 15 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 25 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 35 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 45 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 55 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+quit -sim
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Warning: (vsim-3017) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): [TFMPC] - Too few port connections. Expected 3, found 2.
+#         Region: /TOP_TestBench/top1
+# ** Warning: (vsim-3722) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): [TFMPC] - Missing connection for port 'aluOut'.
+add wave sim:/TOP_TestBench/*
+add wave -r /*
+run
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 5 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 15 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 25 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 35 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 45 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 55 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+vlog -work work -O0 E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Error: (vsim-3053) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): Illegal output or inout port connection for "port 'aluOut'".
+#         Region: /TOP_TestBench/top1
+# Error loading design
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Error: (vsim-3053) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): Illegal output or inout port connection for "port 'aluOut'".
+#         Region: /TOP_TestBench/top1
+# Error loading design
+vlog -work work -O0 E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Error: (vsim-3053) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): Illegal output or inout port connection for "port 'aluOut'".
+#         Region: /TOP_TestBench/top1
+# Error loading design
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Error: (vsim-3053) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): Illegal output or inout port connection for "port 'aluOut'".
+#         Region: /TOP_TestBench/top1
+# Error loading design
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+# ** Error: (vsim-3053) E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v(5): Illegal output or inout port connection for "port 'aluOut'".
+#         Region: /TOP_TestBench/top1
+# Error loading design
+vlog -work work -O0 E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+add wave -r /*
+run
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 5 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 15 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 25 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 35 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 45 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem
+# ** Warning: (vsim-7) Failed to open readmem file "Test.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : E:/quartus_workspace/TOP2/memory.v(13)
+#    Time: 55 ps  Iteration: 1  Instance: /TOP_TestBench/top1/mem

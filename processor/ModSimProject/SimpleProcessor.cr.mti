@@ -1,0 +1,64 @@
+{C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Top.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Top.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/mux41.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/mux41.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module mux41
+
+Top level modules:
+	mux41
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/tb_top.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/tb_top.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/MAR.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/MAR.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module MAR
+
+Top level modules:
+	MAR
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/mux21.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/mux21.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module mux21
+
+Top level modules:
+	mux21
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Memory.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Memory.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module Memory
+
+Top level modules:
+	Memory
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Control.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Control.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module ControlBlock
+
+Top level modules:
+	ControlBlock
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Stack.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/Stack.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module Stack
+
+Top level modules:
+	Stack
+
+} {} {}} {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/ALU.v} {1 {vlog -work work -nocovercells {C:/Users/Suhas Cherukuri/Desktop/EmbSys/processor 1/ALU.v}
+Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}

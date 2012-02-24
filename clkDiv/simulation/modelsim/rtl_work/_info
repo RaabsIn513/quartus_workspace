@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\clkDiv\simulation\modelsim
+vclkDiv
+I:`KJC5mH6R=?bDnaEcLB10
+VH9ofh2d>0ZTP0O0cLWeNH3
+Z1 dE:\quartus_workspace\clkDiv\simulation\modelsim
+w1329875194
+8E:/quartus_workspace/clkDiv/clkDiv.v
+FE:/quartus_workspace/clkDiv/clkDiv.v
+L0 1
+Z2 OV;L;10.0c;49
+r1
+31
+o-vlog01compat -work work -O0
+nclk@div
+!s100 7DF60BieOA^eEDmCc;K5;0
+!s85 0
+!s108 1329875201.592000
+!s107 E:/quartus_workspace/clkDiv/clkDiv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/clkDiv|-O0|E:/quartus_workspace/clkDiv/clkDiv.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+E:/quartus_workspace/clkDiv -O0
+vclkDiv_TestBench
+!s100 SkoAEX=`=zGh7WJ37dXM70
+I4m6076IWeY`0bMf46zj@=1
+VGO3R5Wi11N?Qg>gB=2BlC0
+R1
+w1329851875
+8E:/quartus_workspace/clkDiv/simulation/modelsim/clkDiv_TestBench.v
+FE:/quartus_workspace/clkDiv/simulation/modelsim/clkDiv_TestBench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1329875203.275000
+!s107 E:/quartus_workspace/clkDiv/simulation/modelsim/clkDiv_TestBench.v|
+!s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/clkDiv/simulation/modelsim/clkDiv_TestBench.v|
+!s101 -O0
+o-work work -O0
+nclk@div_@test@bench

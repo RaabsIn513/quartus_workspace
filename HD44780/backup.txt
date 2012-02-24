@@ -1,0 +1,169 @@
+module LCD_Driver(dataIn, dataOut, clk, en, RW, RS, rst, BLON, LEDs );
+
+	input [7:0] dataIn;
+	output[7:0] dataOut;
+	reg   [7:0] dataOut;
+	output[7:0] LEDs;
+	reg   [7:0] LEDs;
+	output BLON;
+	reg BLON;
+	input rst, clk;
+	output en, RW, RS;
+	reg    en, RW, RS;
+	wire  [7:0] dataIn;
+	reg   [7:0] count;
+	wire slowClk;
+	reg [7:0] rstVec [11:0]; 
+
+	initial begin
+		count <= 0;
+		BLON <= 1;
+		en <= 0;
+		RW <= 0;
+		RS <= 0;
+		//LED <= 0;
+	end
+	
+		clkDiv U0( clk, slowClk );
+	
+	
+	
+	always @( posedge slowClk )	begin
+		LEDs <= dataOut;
+		if( rst ) begin
+			case( count )
+				8'd0: 
+				begin
+					RS <= 0;
+					RW <= 0;
+					en <= 0;
+					dataOut <= 8'b00001111;
+					count <= count + 1;
+				end
+				8'd1:
+				begin
+					en <= 1;
+					dataOut <= 8'b00001111;
+					count <= count + 1;
+				end
+				8'd2:
+				begin
+					en <= 0;
+					dataOut <= 8'b00001111;
+					count <= count + 1;
+				end
+				8'd3: 
+				begin
+					RS <= 0;
+					RW <= 0;
+					en <= 0;
+					dataOut <= 8'b00000111;
+					count <= count + 1;
+				end
+				8'd4:
+				begin
+					en <= 1;
+					dataOut <= 8'b00000111;
+					count <= count + 1;
+				end
+				8'd5:
+				begin
+					en <= 0;
+					dataOut <= 8'b00000111;
+					count <= count + 1;
+				end
+				8'd6: 
+				begin
+					RS <= 0;
+					RW <= 0;
+					en <= 0;
+					dataOut <= 8'b00000011;
+					count <= count + 1;
+				end
+				8'd7:
+				begin
+					en <= 1;
+					dataOut <= 8'b00000011;
+					count <= count + 1;
+				end
+				8'd8:
+				begin
+					en <= 0;
+					dataOut <= 8'b00000011;
+					count <= count + 1;
+				end
+				8'd6: 
+				begin
+					RS <= 0;
+					RW <= 0;
+					en <= 0;
+					dataOut <= 8'b00000001;
+					count <= count + 1;
+				end
+				8'd7:
+				begin
+					en <= 1;
+					dataOut <= 8'b00000001;
+					count <= count + 1;
+				end
+				8'd8:
+				begin
+					en <= 0;
+					dataOut <= 8'b00000001;
+					count <= count + 1;
+				end
+				8'd9:
+				begin
+					en <= 1;
+					dataOut <= 8'b00000001;
+					count <= count + 1;
+				end
+				8'd10:
+				begin
+					en <= 0;
+					dataOut <= 8'b00000001;
+					count <= count + 1;
+				end
+				default:
+				begin
+					en <= 0;
+					dataOut <= 0;
+					count <= 0;
+				end
+			endcase
+		end	// ifReset
+		else begin
+			case( count )
+				8'd0:
+				begin
+					dataOut <= 8'b01000011;
+					//dataOut <= dataIn;
+					RS <= 1;
+					en <= 0;
+					count <= count + 1;
+				end
+				8'd1:
+				begin
+					dataOut <= 8'b01000011;
+					//dataOut <= dataIn;
+					RS <= 1;
+					en <= 1;
+					count <= count + 1;
+				end
+				8'd2:
+				begin
+					dataOut <= 8'b01000011;
+					//dataOut <= dataIn;
+					RS <= 1;
+					en <= 0;
+					count <= count + 1;
+				end
+				default:
+				begin
+					count <= 0;
+				end
+			endcase
+		end // endElse
+	end	// endAlways
+	
+endmodule

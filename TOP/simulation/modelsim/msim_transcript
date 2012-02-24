@@ -1,0 +1,157 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do TOP_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/TOP.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP
+# 
+# Top level modules:
+# 	TOP
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/pc_md.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PC_MD
+# 
+# Top level modules:
+# 	PC_MD
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/mar.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module MAR
+# 
+# Top level modules:
+# 	MAR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/ac_ir.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module AC_IR
+# 
+# Top level modules:
+# 	AC_IR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/controlblock.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ControlBlock
+# 
+# Top level modules:
+# 	ControlBlock
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP {E:/quartus_workspace/TOP/stack.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Stack
+# 
+# Top level modules:
+# 	Stack
+# 
+#  
+vlog -reportprogress 300 -work work E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vlog -reportprogress 300 -work work E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+add wave -position end  sim:/TOP_TestBench/clk
+add wave -position end  sim:/TOP_TestBench/rst
+add wave -position end  sim:/TOP_TestBench/inpr_input
+run
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP -O0 E:/quartus_workspace/TOP/TOP.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP
+# 
+# Top level modules:
+# 	TOP
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/TOP -O0 E:/quartus_workspace/TOP/Memory.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+vlog -work work -O0 E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vlog -work work -O0 E:/quartus_workspace/TOP/simulation/modelsim/TOP_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module TOP_TestBench
+# 
+# Top level modules:
+# 	TOP_TestBench
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+add wave -position end  sim:/TOP_TestBench/clk
+add wave -position end  sim:/TOP_TestBench/rst
+add wave -position end  sim:/TOP_TestBench/inpr_input
+run
+run
+quit -sim
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+run
+quit -sim
+vsim work.TOP_TestBench
+# vsim work.TOP_TestBench 
+# Loading work.TOP_TestBench
+# Loading work.TOP
+# Loading work.PC_MD
+# Loading work.MAR
+# Loading work.AC_IR
+# Loading work.Memory
+# Loading work.ALU
+# Loading work.ControlBlock
+# Loading work.Stack
+add wave -r sim:/TOP_TestBench/*
+run

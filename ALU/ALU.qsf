@@ -18,7 +18,7 @@
 #
 # Quartus II 32-bit
 # Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-# Date created = 13:20:06  February 07, 2012
+# Date created = 19:27:59  February 14, 2012
 #
 # -------------------------------------------------------------------------- #
 #
@@ -36,16 +36,12 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone III"
-set_global_assignment -name DEVICE EP3C16F484C6
+set_global_assignment -name FAMILY "Cyclone IV GX"
+set_global_assignment -name DEVICE auto
 set_global_assignment -name TOP_LEVEL_ENTITY ALU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "11.1 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:20:06  FEBRUARY 07, 2012"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:27:59  FEBRUARY 14, 2012"
 set_global_assignment -name LAST_QUARTUS_VERSION "11.1 SP1"
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE ALU.v

@@ -1,0 +1,9 @@
+module useClkDiv(clk50, LED );
+
+	input clk50;
+	output LED;
+	reg LED;
+	
+	
+
+endmodule

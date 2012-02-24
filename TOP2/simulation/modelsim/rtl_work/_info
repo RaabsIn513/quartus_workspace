@@ -1,0 +1,184 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\TOP2\simulation\modelsim
+vAC_IR
+IYEE0:^hUbSFV:`UMMN_;F0
+VU_kV?e7TT9^mCg3dP9`TE3
+Z1 dE:\quartus_workspace\TOP2\simulation\modelsim
+w1329271313
+8E:/quartus_workspace/TOP2/ac_ir.v
+FE:/quartus_workspace/TOP2/ac_ir.v
+L0 1
+Z2 OV;L;10.0c;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/TOP2 -O0
+n@a@c_@i@r
+!s100 lDCTA==F=`B_mPPU7I?bg3
+!s85 0
+!s108 1329277685.115000
+!s107 E:/quartus_workspace/TOP2/ac_ir.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/ac_ir.v|
+!s101 -O0
+vALU
+I^<[HcOZjojjJjTd_dzmYV1
+V;P:44_F1eQ8H8ZGKAezlo1
+R1
+w1329265762
+8E:/quartus_workspace/TOP2/alu.v
+FE:/quartus_workspace/TOP2/alu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@a@l@u
+!s100 baOd3mc0Dm=[YIX2ZLIfR2
+!s85 0
+!s108 1329277685.145000
+!s107 E:/quartus_workspace/TOP2/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/alu.v|
+!s101 -O0
+vControlBlock
+I0nKnn]TAEQ>feZCi:CBZJ0
+VZ]XGjFOTU@b8_J>40IC6b0
+R1
+w1329269055
+8E:/quartus_workspace/TOP2/controlblock.v
+FE:/quartus_workspace/TOP2/controlblock.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@control@block
+!s100 jO4Z1gII6nV@C9QJ]i29n1
+!s85 0
+!s108 1329277685.172000
+!s107 E:/quartus_workspace/TOP2/controlblock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/controlblock.v|
+!s101 -O0
+vMAR
+I3eNh8oS<NCk]@cbT7;KM@0
+VBkJ1g^ReFBe0CEc3YLL:n0
+R1
+w1329264499
+8E:/quartus_workspace/TOP2/mar.v
+FE:/quartus_workspace/TOP2/mar.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@m@a@r
+!s100 0B?@9@2M;oK:nhf4ED3gI1
+!s85 0
+!s108 1329277685.091000
+!s107 E:/quartus_workspace/TOP2/mar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/mar.v|
+!s101 -O0
+vMemory
+IOOdSJAlFL9f@_DBImP^Lb2
+V_d0PWa_S>Ec9;3d6M0nQD1
+R1
+w1329272593
+8E:/quartus_workspace/TOP2/memory.v
+FE:/quartus_workspace/TOP2/memory.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@memory
+!s100 kkQ@??dUnEW]hMZ@jkmgQ1
+!s85 0
+!s108 1329277685.277000
+!s107 E:/quartus_workspace/TOP2/memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/memory.v|
+!s101 -O0
+vPC_MD
+I>i5^?jEOfL`82lT:hcC]d2
+V@;NOzBZGP=0blJTShNiZU2
+R1
+w1329265124
+8E:/quartus_workspace/TOP2/pc_md.v
+FE:/quartus_workspace/TOP2/pc_md.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@p@c_@m@d
+!s100 hQ7zee`MA7cMBI6ZZjkNN3
+!s85 0
+!s108 1329277685.067000
+!s107 E:/quartus_workspace/TOP2/pc_md.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/pc_md.v|
+!s101 -O0
+vStack
+IjD[0NXzO`4^BffNGgl8Qn1
+VLZNaABcJe<f0DAbBWLk_71
+R1
+w1329265285
+8E:/quartus_workspace/TOP2/stack.v
+FE:/quartus_workspace/TOP2/stack.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@stack
+!s100 5XOY5Ge4]@<FI?JOXjnac2
+!s85 0
+!s108 1329277685.231000
+!s107 E:/quartus_workspace/TOP2/stack.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/stack.v|
+!s101 -O0
+vTOP
+IW>MZZmeL3Ve3^cIV77f`31
+VW?3z_;@c8aAY29_gNoV7B3
+R1
+w1329277039
+8E:/quartus_workspace/TOP2/TOP.v
+FE:/quartus_workspace/TOP2/TOP.v
+L0 1
+R2
+r1
+31
+R3
+n@t@o@p
+R4
+!s100 :aF]^M@zKY6ZDR6ehJfz<1
+!s85 0
+!s108 1329277685.041000
+!s107 E:/quartus_workspace/TOP2/TOP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/TOP2|E:/quartus_workspace/TOP2/TOP.v|
+!s101 -O0
+vTOP_TestBench
+!s100 5?o<UOojGTcz^k;DX<W::3
+IE7aU=jNN4YIHF5U>?5`G40
+VPA_i1R2QV2lo=hBeW_B>g0
+R1
+w1329278144
+8E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+FE:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1329278149.167000
+!s107 E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v|
+!s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/TOP2/simulation/modelsim/TOP_TestBench.v|
+!s101 -O0
+o-work work -O0
+n@t@o@p_@test@bench

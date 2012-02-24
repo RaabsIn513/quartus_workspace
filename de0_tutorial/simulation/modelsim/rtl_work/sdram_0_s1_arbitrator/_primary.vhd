@@ -1,0 +1,43 @@
+library verilog;
+use verilog.vl_types.all;
+entity sdram_0_s1_arbitrator is
+    port(
+        clk             : in     vl_logic;
+        cpu_0_data_master_address_to_slave: in     vl_logic_vector(24 downto 0);
+        cpu_0_data_master_byteenable: in     vl_logic_vector(3 downto 0);
+        cpu_0_data_master_dbs_address: in     vl_logic_vector(1 downto 0);
+        cpu_0_data_master_dbs_write_16: in     vl_logic_vector(15 downto 0);
+        cpu_0_data_master_no_byte_enables_and_last_term: in     vl_logic;
+        cpu_0_data_master_read: in     vl_logic;
+        cpu_0_data_master_waitrequest: in     vl_logic;
+        cpu_0_data_master_write: in     vl_logic;
+        cpu_0_instruction_master_address_to_slave: in     vl_logic_vector(24 downto 0);
+        cpu_0_instruction_master_dbs_address: in     vl_logic_vector(1 downto 0);
+        cpu_0_instruction_master_read: in     vl_logic;
+        reset_n         : in     vl_logic;
+        sdram_0_s1_readdata: in     vl_logic_vector(15 downto 0);
+        sdram_0_s1_readdatavalid: in     vl_logic;
+        sdram_0_s1_waitrequest: in     vl_logic;
+        cpu_0_data_master_byteenable_sdram_0_s1: out    vl_logic_vector(1 downto 0);
+        cpu_0_data_master_granted_sdram_0_s1: out    vl_logic;
+        cpu_0_data_master_qualified_request_sdram_0_s1: out    vl_logic;
+        cpu_0_data_master_read_data_valid_sdram_0_s1: out    vl_logic;
+        cpu_0_data_master_read_data_valid_sdram_0_s1_shift_register: out    vl_logic;
+        cpu_0_data_master_requests_sdram_0_s1: out    vl_logic;
+        cpu_0_instruction_master_granted_sdram_0_s1: out    vl_logic;
+        cpu_0_instruction_master_qualified_request_sdram_0_s1: out    vl_logic;
+        cpu_0_instruction_master_read_data_valid_sdram_0_s1: out    vl_logic;
+        cpu_0_instruction_master_read_data_valid_sdram_0_s1_shift_register: out    vl_logic;
+        cpu_0_instruction_master_requests_sdram_0_s1: out    vl_logic;
+        d1_sdram_0_s1_end_xfer: out    vl_logic;
+        sdram_0_s1_address: out    vl_logic_vector(21 downto 0);
+        sdram_0_s1_byteenable_n: out    vl_logic_vector(1 downto 0);
+        sdram_0_s1_chipselect: out    vl_logic;
+        sdram_0_s1_read_n: out    vl_logic;
+        sdram_0_s1_readdata_from_sa: out    vl_logic_vector(15 downto 0);
+        sdram_0_s1_reset_n: out    vl_logic;
+        sdram_0_s1_waitrequest_from_sa: out    vl_logic;
+        sdram_0_s1_write_n: out    vl_logic;
+        sdram_0_s1_writedata: out    vl_logic_vector(15 downto 0)
+    );
+end sdram_0_s1_arbitrator;
