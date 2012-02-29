@@ -25,7 +25,7 @@ module Memory(DataOut,DataIn,address,clk,rst,re_en,wr_en);
 		  Mem[1]  <= 18'b000000000000001011;			// ADD  contents of Mem address 21 with AC
 		  Mem[2]  <= 18'b000000000000111000;
 		  Mem[3]  <= 18'b001010000000010100;			// LOAD contents of Mem address 20 into AC
-		  Mem[4]  <= 18'b111000000000000000;
+		  Mem[4]  <= 18'b000010000000010101;			// ADD  contents of mem address 21 with AC			
 		  Mem[5]  <= 18'b000000000000000000;
 		  Mem[6]  <= 18'b000000000000000000;
 		  Mem[7]  <= 18'b000000000000000000;
@@ -33,8 +33,8 @@ module Memory(DataOut,DataIn,address,clk,rst,re_en,wr_en);
 		  Mem[9]  <= 18'b000000000000000000;
 		  Mem[10] <= 18'b000000000000000000;
 		  Mem[11] <= 18'b000000000000000000;
-		  Mem[12] <= 18'b111111111111111111;
-		  Mem[20] <= 18'b111111111111111111;			//The integer 42
+		  Mem[12] <= 18'b000000000000000000;
+		  Mem[20] <= 18'b000000000000101010;			//The integer 42
 		  Mem[21] <= 18'b000000000000000011;			//The integer 3
       end
     else

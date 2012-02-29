@@ -52,6 +52,12 @@
 # 
 # Top level modules:
 # 	PC
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/AC.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module AC
+# 
+# Top level modules:
+# 	AC
 # vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/ControlBlock.v}
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
 # -- Compiling module ControlBlock
@@ -77,16 +83,14 @@ vsim -voptargs=+acc work.proc_TestBench
 # Loading work.MDR
 # Loading work.PC
 # Loading work.IR
+# Loading work.AC
 # Loading work.ALU
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftkkkbzs".
+#           Attempting to use alternate WLF file "./wlft94xza6".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftkkkbzs
+#           Using alternate file: ./wlft94xza6
 # ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(38): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
 #         Region: /proc_TestBench/U0/alu
 add wave -r /*
 run
-restart
-# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(38): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
-#         Region: /proc_TestBench/U0/alu

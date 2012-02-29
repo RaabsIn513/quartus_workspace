@@ -196,10 +196,10 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD (AC + aNumber)
 						begin
-							if( instruction[14:13] == 2'b00) // if address mode is literal (in the instruction)
-								begin
-									incPC <= 1'b0;
-									rPC   <= 1'b0;
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// MAR <- #IR[12:0]
+									incPC <= 1'b0;					// MDR <- Mem[MAR]
+									rPC   <= 1'b0;					// AC  <- MDR + AC
 									wPC   <= 1'b0;
 									rMAR	<= 1'b0;
 									wMAR	<= 1'b0;
@@ -208,17 +208,17 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									rMDR  <= 1'b0;				// 
 									wMDRmem <= 1'b0;
 									wMDRbus <= 1'b0;
-									rIR   <= 1'b1;				// Read IR to aBus
+									rIR   <= 1'b1;				// 
 									wIR   <= 1'b0;
 									rAC   <= 1'b0;
 									wAC   <= 1'b0;
-									cALU  <= 3'd0;				// Pass through aBus
+									cALU  <= 3'b000;			// Pass through aBus
 									eALU  <= 1'b1;
 									count <=count+1'b1;
 								end
 						end
 					if( instruction[17:15] == 3'b001 )		// LOAD (AC <- aNumber)
-						begin											
+						begin			
 							if( instruction[14:13] == 2'b01) // if address mode is mem (address in the instruction)
 								begin									// MAR <- #IR[12:0]
 									incPC <= 1'b0;					// MDR <- Mem[MAR]
@@ -235,7 +235,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									wIR   <= 1'b0;
 									rAC   <= 1'b0;
 									wAC   <= 1'b0;
-									cALU  <= 3'd0;				// Pass through aBus
+									cALU  <= 3'b000;			// Pass through aBus
 									eALU  <= 1'b1;
 									count <=count+1'b1;
 								end
@@ -246,24 +246,24 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD (AC + aNumber)
 						begin
-							if( instruction[14:13] == 2'b00) // if address mode is literal (in the instruction)
-								begin
-									incPC <= 1'b0;
-									rPC   <= 1'b0;
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// #MAR <- IR[12:0]
+									incPC <= 1'b0;					// MDR <- Mem[MAR]
+									rPC   <= 1'b0;					// AC  <- MDR + AC
 									wPC   <= 1'b0;
 									rMAR	<= 1'b0;
-									wMAR	<= 1'b0;
+									wMAR	<= 1'b1;
 									rMem  <= 1'b0;
 									wMem  <= 1'b0;
 									rMDR  <= 1'b0;				// 
 									wMDRmem <= 1'b0;
-									wMDRbus <= 1'b1;			// write bus data to MDR
-									rIR   <= 1'b1;
+									wMDRbus <= 1'b0;
+									rIR   <= 1'b0;				// 
 									wIR   <= 1'b0;
 									rAC   <= 1'b0;
 									wAC   <= 1'b0;
-									cALU  <= 3'b000;				// Pass through aBus
-									eALU  <= 1'b1;
+									cALU  <= 3'b000;			// Pass through aBus
+									eALU  <= 1'b0;
 									count <=count+1'b1;
 								end
 						end
@@ -296,24 +296,24 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD (AC + aNumber)
 						begin
-							if( instruction[14:13] == 2'b00) // if address mode is literal (in the instruction)
-								begin
-									incPC <= 1'b0;
-									rPC   <= 1'b0;
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// MAR <- IR[12:0]
+									incPC <= 1'b0;					// MDR <- #Mem[#MAR]
+									rPC   <= 1'b0;					// AC  <- MDR + AC
 									wPC   <= 1'b0;
-									rMAR	<= 1'b0;
+									rMAR	<= 1'b1;
 									wMAR	<= 1'b0;
-									rMem  <= 1'b0;
+									rMem  <= 1'b1;
 									wMem  <= 1'b0;
-									rMDR  <= 1'b1;				// to bBus
+									rMDR  <= 1'b0;				
 									wMDRmem <= 1'b0;
 									wMDRbus <= 1'b0;
 									rIR   <= 1'b0;
 									wIR   <= 1'b0;
-									rAC   <= 1'b1;				// to aBus
+									rAC   <= 1'b0;				
 									wAC   <= 1'b0;
-									cALU  <= 3'd3;				// A + B
-									eALU  <= 1'b1;
+									cALU  <= 3'b011;				// A + B
+									eALU  <= 1'b0;
 									count <=count+1'b1;
 								end
 						end
@@ -322,10 +322,10 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 						begin											
 							if( instruction[14:13] == 2'b01) // if address mode is mem (address in the instruction)
 								begin									// MAR <- IR[12:0]
-									incPC <= 1'b0;					// MDR <- #Mem[MAR]
+									incPC <= 1'b0;					// MDR <- #Mem[#MAR]
 									rPC   <= 1'b0;					// AC  <- MDR
 									wPC   <= 1'b0;
-									rMAR	<= 1'b0;
+									rMAR	<= 1'b1;
 									wMAR	<= 1'b0;
 									rMem  <= 1'b1;
 									wMem  <= 1'b0;
@@ -347,10 +347,10 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD (AC + aNumber)
 						begin
-							if( instruction[14:13] == 2'b00) // if address mode is literal (in the instruction)
-								begin
-									incPC <= 1'b0;
-									rPC   <= 1'b0;
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// MAR <- IR[12:0]
+									incPC <= 1'b0;					// MDR <- #Mem[#MAR]
+									rPC   <= 1'b0;					// AC  <- MDR + AC
 									wPC   <= 1'b0;
 									rMAR	<= 1'b0;
 									wMAR	<= 1'b0;
@@ -363,7 +363,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									wIR   <= 1'b0;
 									rAC   <= 1'b0;				// 
 									wAC   <= 1'b1;
-									cALU  <= 3'd3;				// A + B
+									cALU  <= 3'b011;
 									eALU  <= 1'b0;
 									count <=count+1'b1;
 								end
@@ -398,10 +398,28 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD (AC + aNumber)
 						begin
-							if( instruction[14:13] == 2'b00 )
-								begin
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// MAR <- IR[12:0]
+									incPC <= 1'b0;					// #MDR <- Mem[MAR]
+									rPC   <= 1'b0;					// AC  <- MDR + AC
+									wPC   <= 1'b0;
+									rMAR	<= 1'b0;
+									wMAR	<= 1'b0;
+									rMem  <= 1'b0;
+									wMem  <= 1'b0;
+									rMDR  <= 1'b0;				// to bBus
+									wMDRmem <= 1'b1;
+									wMDRbus <= 1'b0;
+									rIR   <= 1'b0;
+									wIR   <= 1'b0;
+									rAC   <= 1'b0;				// 
+									wAC   <= 1'b0;
+									cALU  <= 3'b011;			// A + B
+									eALU  <= 1'b1;
+									count <=count+1'b1;
 							end
 					end
+					
 					if( instruction[17:15] == 3'b001 )		// LOAD (AC <- aNumber)
 						begin
 							if( instruction[14:13] == 3'b01 )
@@ -431,6 +449,26 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD
 						begin
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// MAR <- IR[12:0]
+									incPC <= 1'b0;					// MDR <- Mem[MAR]
+									rPC   <= 1'b0;					// AC  <- #MDR + #AC
+									wPC   <= 1'b0;
+									rMAR	<= 1'b0;
+									wMAR	<= 1'b0;
+									rMem  <= 1'b0;
+									wMem  <= 1'b0;
+									rMDR  <= 1'b1;				// read MDR
+									wMDRmem <= 1'b0;
+									wMDRbus <= 1'b0;
+									rIR   <= 1'b0;
+									wIR   <= 1'b0;
+									rAC   <= 1'b1;				// read AC
+									wAC   <= 1'b0;
+									cALU  <= 3'b011;			// A + B
+									eALU  <= 1'b1;
+									count <=count+1'b1;
+							end
 					end
 					if( instruction[17:15] == 3'b001 )		// LOAD (AC <- aNumber)
 						begin
@@ -461,7 +499,28 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				begin
 					if( instruction[17:15] == 3'b000 )		// ADD
 						begin
+							if( instruction[14:13] == 2'b01 )// if address mode is mem (address in the instruction)
+								begin									// MAR <- IR[12:0]
+									incPC <= 1'b0;					// MDR <- Mem[MAR]
+									rPC   <= 1'b0;					// #AC  <- MDR + AC
+									wPC   <= 1'b0;
+									rMAR	<= 1'b0;
+									wMAR	<= 1'b0;
+									rMem  <= 1'b0;
+									wMem  <= 1'b0;
+									rMDR  <= 1'b0;				// to bBus
+									wMDRmem <= 1'b0;
+									wMDRbus <= 1'b0;
+									rIR   <= 1'b0;
+									wIR   <= 1'b0;
+									rAC   <= 1'b0;				// 
+									wAC   <= 1'b1;
+									cALU  <= 3'b011;			// A + B
+									eALU  <= 1'b0;
+									count <=count+1'b1;
+							end
 					end
+					
 					if( instruction[17:15] == 3'b001 )		// LOAD (AC <- aNumber)
 						begin
 							if( instruction[14:13] == 3'b01 )
@@ -481,7 +540,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									rAC   <= 1'b0;
 									wAC   <= 1'b1;
 									cALU  <= 3'b001;				// 
-									eALU  <= 1'b1;
+									eALU  <= 1'b0;
 									count <=count+1'b1;									
 							end
 					end
@@ -490,8 +549,23 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 				// --------------------------------------------------------------
 				default:
 				begin
+					incPC <= 1'b0;					// 
+					rPC   <= 1'b0;					// 
+					wPC   <= 1'b0;
+					rMAR	<= 1'b0;
+					wMAR	<= 1'b0;
+					rMem  <= 1'b0;
+					wMem  <= 1'b0;
+					rMDR  <= 1'b0;					// 
+					wMDRmem <= 1'b0;
+					wMDRbus <= 1'b0;
+					rIR   <= 1'b0;					// 
+					wIR   <= 1'b0;
+					rAC   <= 1'b0;
+					wAC   <= 1'b0;
+					cALU  <= 3'b001;				// 
 					eALU  <= 1'b0;
-					count <= 1'b0;
+					count <= 4'd0;	
 				end
 				endcase
 			end
