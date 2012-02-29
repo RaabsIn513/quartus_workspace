@@ -47,63 +47,7 @@ module ControlBlock(clk,rst,opcode,wr_pc,re_pc,pc_inc,re_ir,wr_ir,re_ma,
 			en_alu<=0;
 			re_inpr<=1'b0;
 		end
-/*
-		else if(en_glbe)                   //When global interrupt enable is present.
-			begin
-				 if(en_i & flg_i)     //Checking input interrupt
-					begin
-					  en_alu<=1'b1;
-					  case(count)
-						4'd0:
-						begin
-						 re_ir<=1'b0;   //Read the input into the bus
-						 re_inpr<=1'b1;
-						 aluop<=3'd1;
-						 count<=count+1'b1;
-						end
-						4'd1:
-						begin
-						 wr_ac<=1'b1;
-						 re_inpr<=1'b0;  //Store it into the accumulator
-						 count<=count+1'b1;
-						end  
-						4'd2:
-						begin
-						  wr_ac<=1'b0;  
-						  count<=4'd0;
-					  end
-					endcase
-				end
-			
-				 else if(en_o & flg_o)    //Output interrupt
-				 begin             
-				case(count)
-					4'd0:
-					begin
-					 re_ir<=1'b0;        //Read the accumulator and put it into the bus
-					 re_ac<=1'b1;
-					 aluop<=3'd1;
-					 count<=count+1'b1;
-					end
-							
-					4'd1:
-				  begin
-					re_ac<=1'b0;        //Write it into the accumulator
-					wr_ouR<=1'b1;
-					count<=count+1'b1;
-					end  
-					
-					4'd2:
-					begin
-					wr_ouR<=1'b0;
-					count<=4'd0;
-				 end  
-				 endcase
-			  end
-			end	  
-		  else        
-		
-	*/		
+	
 			begin
 			  case(count)
 			  4'd0:                    //Count=0

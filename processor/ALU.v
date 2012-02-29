@@ -24,7 +24,6 @@ module ALU(ina,inb,sig,out,en);
 			3'd2:out<=ina;          //store
 			3'd3:out<=inb;          //call
 			3'd4:out<=inb;          //Return
-
 			endcase
 		end
 	end

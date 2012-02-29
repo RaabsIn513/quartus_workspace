@@ -1,0 +1,92 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do proc_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/proc.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/MAR.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module MAR
+# 
+# Top level modules:
+# 	MAR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/MDR.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module MDR
+# 
+# Top level modules:
+# 	MDR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/IR.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module IR
+# 
+# Top level modules:
+# 	IR
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/PC.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/ControlBlock.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ControlBlock
+# ** Warning: E:/quartus_workspace/rob_processor/ControlBlock.v(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ControlBlock
+# 
+#  
+vlog -reportprogress 300 -work work E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc_TestBench
+# 
+# Top level modules:
+# 	proc_TestBench
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.ControlBlock
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.ALU
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 10
+#           Attempting to use alternate WLF file "./wlftkkkbzs".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkkkbzs
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(38): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#         Region: /proc_TestBench/U0/alu
+add wave -r /*
+run
+restart
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(38): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#         Region: /proc_TestBench/U0/alu

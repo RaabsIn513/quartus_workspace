@@ -1,0 +1,44 @@
+module proc( clk, reset, LEDs );
+
+	input clk, reset;
+	output[9:0] LEDs;
+	reg[9:0] LEDs;
+	
+	wire marR, marW;
+	wire memR, memW;
+	wire mdrR, mdrW;
+	wire pcR, pcW, pcInc;
+	wire irR, irW;
+	wire acR, acW;
+	wire aluEn, ovf, AgtB, Neg, Zero;
+	wire[2:0]  aluCtrl;
+	wire[17:0] aBus;
+	wire[17:0] bBus;
+	wire[17:0] aluOutBus;
+	wire[12:0] alu_to_MAR;
+	wire[12:0] MAR_to_mem;
+	wire[17:0] mem_to_MDR;
+	
+	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDR, rPC, wPC, incPC,	rIR, wIR, rAC, wAC, cALU, eALU );
+	ControlBlock ctrlBlock( clk, rst, marR, marW, memR, memW, mdrR, mdrW, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn );
+	
+	//MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
+	MAR 	 mar( marR, marW, clk, reset, aluOutBus[12:0], MAR_to_mem );
+	//Memory(DataOut,DataIn,address,clk,rst,re_en,wr_en);
+	Memory mem( mem_to_MDR, aluOutBus, MAR_to_mem, clk, reset, memR, memW );
+	//MRD(re_MDR,wr_MDR,clk,rst,MDRin,MDRout);
+	MDR	 mdr( mdrR, mdrW, clk, reset, mem_to_MDR, bBus );
+	//PCPC( re_PC, wr_PC, clk, rst, PCin, PCout);
+	PC		 pc( pcR, pcW, clk, reset, aluOutBus, bBus );
+	//IR(re_IR,wr_IR,clk,rst,IRin,IRout);
+	IR		 ir( irR, irW, clk, reset, aluOutBus, aBus );
+	//AC(re_AC,wr_AC,clk,rst,ACin,ACout);
+	AC		 ac( acR, acW, clk, reset, aluOutBus, aBus );
+	//	ALU ( datA, datB, ctrl, enable, alu_out, ovf, AgtB, N, Z );
+	ALU	 alu( aBus, bBus, aluCtrl, aluEn, aluOutBus, ovf, AgtB, Neg, Zero );
+		
+	always @(posedge clk ) begin
+		LEDs <= mem_to_MDR[9:0];
+	end
+	
+endmodule

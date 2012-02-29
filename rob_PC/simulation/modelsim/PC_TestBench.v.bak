@@ -1,0 +1,25 @@
+//PC(re_PC,wr_PC,clk,rst,PCin,PCout);
+module PC_TestBench;
+  
+  reg rPC, wPC, clock, reset;
+  reg[17:0] inPC;
+  wire[17:0] outPC;
+  
+  initial begin
+    
+    #10 rPC <= 1'b0;
+    #10 wPC <= 1'b0;
+    #10 clock <= 1'b0;
+    #10 inPC <= 18'd0;
+    #10 reset <= 1'b0;
+    #20 reset <= 1'b1;
+    #30 reset <= 1'b0;    
+  end
+  
+  always begin
+    #5 clock = !clock;
+  end
+  
+  PC pc( rPC, wPC, clock, reset, inPC, outPC );
+  
+endmodule

@@ -1,0 +1,64 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\quartus_workspace\usePC\simulation\modelsim
+vPC
+I@Fedi2DoN1chB]:G?[UHl0
+Vao1EW6oM9iYaz>1oa??7<2
+Z1 dE:\quartus_workspace\usePC\simulation\modelsim
+w1330318528
+8E:/quartus_workspace/usePC/PC.v
+FE:/quartus_workspace/usePC/PC.v
+L0 1
+Z2 OV;L;10.0c;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@p@c
+Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/usePC -O0
+!s100 :ebG5YOz]DSQ0^`i[kGkd2
+!s85 0
+!s108 1330358365.049000
+!s107 E:/quartus_workspace/usePC/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/usePC|E:/quartus_workspace/usePC/PC.v|
+!s101 -O0
+vPCtop
+I=c1DT2TF_n]Q<nO8ja:L22
+VTmQlaj]1OE7bYj2[PlNHz0
+R1
+w1330317988
+8E:/quartus_workspace/usePC/PCtop.v
+FE:/quartus_workspace/usePC/PCtop.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@p@ctop
+!s100 h]zLdGa=eScUFm71R[M]k0
+!s85 0
+!s108 1330358365.221000
+!s107 E:/quartus_workspace/usePC/PCtop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/usePC|E:/quartus_workspace/usePC/PCtop.v|
+!s101 -O0
+vusePC_TestBench
+!s100 0S=YoIQhUTWkfUmZ9DW0D3
+I[<foC<d0CabX^TVE8z]mN3
+VB1iknXGNfn]gYYX;;6oUk0
+R1
+w1330317922
+8E:/quartus_workspace/usePC/simulation/modelsim/usePC_TestBench.v
+FE:/quartus_workspace/usePC/simulation/modelsim/usePC_TestBench.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1330358408.436000
+!s107 E:/quartus_workspace/usePC/simulation/modelsim/usePC_TestBench.v|
+!s90 -reportprogress|300|-work|work|E:/quartus_workspace/usePC/simulation/modelsim/usePC_TestBench.v|
+!s101 -O0
+o-work work -O0
+nuse@p@c_@test@bench

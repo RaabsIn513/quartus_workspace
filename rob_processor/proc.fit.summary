@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Feb 28 19:41:18 2012
+Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition
+Revision Name : proc
+Top-level Entity Name : proc
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 272 / 15,408 ( 2 % )
+    Total combinational functions : 236 / 15,408 ( 2 % )
+    Dedicated logic registers : 125 / 15,408 ( < 1 % )
+Total registers : 125
+Total pins : 12 / 347 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

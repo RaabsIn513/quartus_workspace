@@ -1,0 +1,27 @@
+module IR(re_MDR,wr_MDR,clk,rst,MDRin,MDRout);
+
+	input re_MDR,wr_MDR,clk,rst;
+	input [17:0] MDRin;    	//Input to the memory address register
+	output [17:0] MDRout;   //Output of the MD register
+	reg [17:0] MDRout,MDR;
+	
+	always @ (posedge clk)
+	begin
+	if(rst)               //Reset condition
+		begin
+			MDRout <= 17'd0;
+		end
+	
+	else if(re_MDR)  		//Reading the Memory data value
+		begin
+			MDRout <= MDR;
+		end
+	
+	else if(wr_MDR) 		//Writing into MDR.
+		begin
+			MDR <= MDRin;
+		end
+	
+	end
+
+endmodule

@@ -66,6 +66,18 @@ vlog -reportprogress 300 -work work E:/quartus_workspace/processor/tb_top.v
 # 
 # Top level modules:
 # 	tb_top
+vlog -reportprogress 300 -work work E:/quartus_workspace/processor/tb_top.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+vlog -work work -O0 E:/quartus_workspace/processor/tb_top.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
 vsim -voptargs=+acc work.tb_top
 # vsim -voptargs=+acc work.tb_top 
 # Loading work.tb_top
@@ -82,15 +94,13 @@ vsim -voptargs=+acc work.tb_top
 # ** Warning: (vsim-3722) E:/quartus_workspace/processor/tb_top.v(10): [TFMPC] - Missing connection for port 'LEDout'.
 add wave -r /*
 run
-# 1304635279
-#          x
-# 1304602513
-# 1304602515
+# 1304635262
+# 1304602497
+# 1304602496
+# 1304831871
 # 1304831869
-# 1304635279
-# 1304635279
-# 1304635279
-#          x
-# 1304602513
-# 1304602515
-# 1304831869
+# 1304635262
+# 1304635262
+vsim work.ControlBlock
+# vsim work.ControlBlock 
+# Loading work.ControlBlock

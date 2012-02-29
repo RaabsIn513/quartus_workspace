@@ -1,0 +1,32 @@
+# Reading C:/altera/11.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do PC_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\11.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_PC {E:/quartus_workspace/rob_PC/PC.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# 
+#  
+vlog -reportprogress 300 -work work E:/quartus_workspace/rob_PC/simulation/modelsim/PC_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module PC_TestBench
+# 
+# Top level modules:
+# 	PC_TestBench
+vsim -voptargs=+acc work.PC_TestBench
+# vsim -voptargs=+acc work.PC_TestBench 
+# Loading work.PC_TestBench
+# Loading work.PC
+add wave -r /*
+run
