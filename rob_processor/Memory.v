@@ -21,13 +21,13 @@ module Memory(DataOut,DataIn,address,clk,rst,re_en,wr_en);
         //$readmemb ("Test.dat",Mem); // <--- I don't think this works!
 		  
 		  // *** This is how we program *** //
-		  Mem[0]  <= 18'b001000000000010100;			// LOAD contents of Mem address 20 into AC
-		  Mem[1]  <= 18'b000000000000001011;			// ADD  contents of Mem address 21 with AC
-		  Mem[2]  <= 18'b000000000000111000;
-		  Mem[3]  <= 18'b001010000000010100;			// LOAD contents of Mem address 20 into AC
-		  Mem[4]  <= 18'b000010000000010101;			// ADD  contents of mem address 21 with AC			
-		  Mem[5]  <= 18'b000000000000000000;
-		  Mem[6]  <= 18'b000000000000000000;
+		  Mem[0]  <= 18'b001010000000010100;			// LOAD  contents of Mem address 20 into AC
+		  Mem[1]  <= 18'b000010000000010101;			// ADD   contents of Mem address 21 with AC
+		  Mem[2]  <= 18'b010010000000010110;			// STORE contents of AC to Mem address 22
+		  Mem[3]  <= 18'b111000000000000000;			// NOP   No Operation
+		  Mem[4]  <= 18'b111000000000000000;			// NOP   No Operation			
+		  Mem[5]  <= 18'b111000000000000000;			// NOP   No Operation
+		  Mem[6]  <= 18'b111000000000000000;			// NOP   No Operation
 		  Mem[7]  <= 18'b000000000000000000;
 		  Mem[8]  <= 18'b000000000000000000;
 		  Mem[9]  <= 18'b000000000000000000;

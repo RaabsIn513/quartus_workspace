@@ -19,7 +19,7 @@ Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0
 n@a@c
 !s100 ;Go=@`:ilb_c:N66JnB802
 !s85 0
-!s108 1330492801.744000
+!s108 1330534590.480000
 !s107 E:/quartus_workspace/rob_processor/AC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/AC.v|
 !s101 -O0
@@ -39,15 +39,15 @@ R4
 n@a@l@u
 !s100 >R0b>hoL<QNd1FLo^8_5f1
 !s85 0
-!s108 1330492801.649000
+!s108 1330534590.400000
 !s107 E:/quartus_workspace/rob_processor/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/ALU.v|
 !s101 -O0
 vControlBlock
-I0;IS6nKR47G^2^l@i]4Nl0
+I^[8G?:dAN8YlzeeDe@P962
 VnAeXFA2:<UZ=I6UC^ob8N3
 R1
-w1330492745
+w1330532932
 8E:/quartus_workspace/rob_processor/ControlBlock.v
 FE:/quartus_workspace/rob_processor/ControlBlock.v
 L0 1
@@ -57,9 +57,9 @@ r1
 R3
 R4
 n@control@block
-!s100 CJ12J8RM9MFIn0^F6f4FO1
+!s100 TTMIW:W6c>e00OHn7Y?1g3
 !s85 0
-!s108 1330492801.768000
+!s108 1330534590.510000
 !s107 E:/quartus_workspace/rob_processor/ControlBlock.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/ControlBlock.v|
 !s101 -O0
@@ -79,7 +79,7 @@ R4
 n@i@r
 !s100 e[G;2?6]7A68GV:F<oeRc3
 !s85 0
-!s108 1330492801.686000
+!s108 1330534590.430000
 !s107 E:/quartus_workspace/rob_processor/IR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/IR.v|
 !s101 -O0
@@ -99,7 +99,7 @@ R4
 n@m@a@r
 !s100 M[hgY<AGDGoE=eZ_OZRg?2
 !s85 0
-!s108 1330492801.575000
+!s108 1330534590.320000
 !s107 E:/quartus_workspace/rob_processor/MAR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/MAR.v|
 !s101 -O0
@@ -119,15 +119,15 @@ R4
 n@m@d@r
 !s100 _1ICF[5DMmhR>[LNA6gFI0
 !s85 0
-!s108 1330492801.624000
+!s108 1330534590.380000
 !s107 E:/quartus_workspace/rob_processor/MDR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/MDR.v|
 !s101 -O0
 vMemory
-IAV4>=Z3<P:l>HNJdK_z0M3
+IU2O5F<LKD6`bfN__[dM=z2
 VFiDTD7`@k=@4HkFc9`GmL2
 R1
-w1330492045
+w1330534325
 8E:/quartus_workspace/rob_processor/Memory.v
 FE:/quartus_workspace/rob_processor/Memory.v
 L0 6
@@ -137,17 +137,17 @@ r1
 R3
 R4
 n@memory
-!s100 ScYjKd5>:jg2loe:Lhfkh3
+!s100 [i26G:SBdV;h2E=4GEYMo1
 !s85 0
-!s108 1330492801.599000
+!s108 1330534590.350000
 !s107 E:/quartus_workspace/rob_processor/Memory.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/Memory.v|
 !s101 -O0
 vPC
-I5BGPRcAYjn1KTSY5aQnS40
+Il_:BK5e<P0HTb2W9O6imL3
 VBI1E=TC=Hz;5DdS4>fZnM0
 R1
-w1330480478
+w1330531552
 8E:/quartus_workspace/rob_processor/PC.v
 FE:/quartus_workspace/rob_processor/PC.v
 L0 1
@@ -157,9 +157,9 @@ r1
 R3
 R4
 n@p@c
-!s100 gU0IijPf2oaF18J;==g3g0
+!s100 ae=zS<3P`ke;:AfM`Xz>N3
 !s85 0
-!s108 1330492801.719000
+!s108 1330534590.460000
 !s107 E:/quartus_workspace/rob_processor/PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/PC.v|
 !s101 -O0
@@ -178,7 +178,7 @@ R3
 R4
 !s100 RTa8m24:K`akn_S]GOAah3
 !s85 0
-!s108 1330492801.548000
+!s108 1330534590.300000
 !s107 E:/quartus_workspace/rob_processor/proc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/proc.v|
 !s101 -O0
@@ -195,9 +195,9 @@ R2
 r1
 !s85 0
 31
-!s108 1330492808.922000
+!s108 1330534629.130000
 !s107 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
-!s90 -reportprogress|300|-work|work|E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
+!s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
 !s101 -O0
 o-work work -O0
 nproc_@test@bench

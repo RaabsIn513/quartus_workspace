@@ -9,7 +9,7 @@ module PC(re_PC,wr_PC, PCinc, clk,rst,PCin,PCout);
 	begin
 	if(rst)               	//Reset condition
 		begin
-			PC <= 18'd3;
+			PC <= 18'd0;
 		end
 	
 	else if(re_PC)  			//Reading the Memory data value

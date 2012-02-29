@@ -1,5 +1,5 @@
 Flow report for proc
-Wed Feb 29 00:19:26 2012
+Wed Feb 29 11:52:18 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Wed Feb 29 00:19:26 2012         ;
+; Flow Status                        ; Successful - Wed Feb 29 11:52:18 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; proc                                          ;
 ; Top-level Entity Name              ; proc                                          ;
 ; Family                             ; Cyclone III                                   ;
 ; Device                             ; EP3C16F484C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 310                                           ;
-;     Total combinational functions  ; 247                                           ;
-;     Dedicated logic registers      ; 176                                           ;
-; Total registers                    ; 176                                           ;
+; Total logic elements               ; 4,408                                         ;
+;     Total combinational functions  ; 2,067                                         ;
+;     Dedicated logic registers      ; 2,528                                         ;
+; Total registers                    ; 2528                                          ;
 ; Total pins                         ; 12                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/29/2012 00:19:21 ;
+; Start date & time ; 02/29/2012 11:52:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proc                ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 202795272491843.133049276109536 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 202795272491843.133053432806596 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -90,8 +90,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 301 MB              ; 00:00:05                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 305 MB              ; 00:00:10                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
