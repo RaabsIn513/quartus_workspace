@@ -1,6 +1,6 @@
 <sld_project_info>
   <file_info>
-    <file checksum="0x000EE836" device="EP3C16F484C6" path="proc.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x0030CC92" device="EP3C16F484C6" path="proc.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info ir_width="0" node_count="0"/>
   <node_info/>

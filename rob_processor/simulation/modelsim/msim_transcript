@@ -73,12 +73,6 @@ vlog -reportprogress 300 -work work E:/quartus_workspace/rob_processor/simulatio
 # 
 # Top level modules:
 # 	proc_TestBench
-vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module proc_TestBench
-# 
-# Top level modules:
-# 	proc_TestBench
 vsim -voptargs=+acc work.proc_TestBench
 # vsim -voptargs=+acc work.proc_TestBench 
 # Loading work.proc_TestBench
@@ -93,9 +87,9 @@ vsim -voptargs=+acc work.proc_TestBench
 # Loading work.ALU
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlft11yqy2".
+#           Attempting to use alternate WLF file "./wlftfhxvr0".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft11yqy2
+#           Using alternate file: ./wlftfhxvr0
 # ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(38): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
 #         Region: /proc_TestBench/U0/alu
 add wave -r /*

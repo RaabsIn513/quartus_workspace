@@ -1,0 +1,96 @@
+|LCD_top
+clk => clk.IN1
+switches[0] => switches[0].IN1
+switches[1] => switches[1].IN1
+switches[2] => switches[2].IN1
+switches[3] => switches[3].IN1
+switches[4] => switches[4].IN1
+switches[5] => switches[5].IN1
+switches[6] => switches[6].IN1
+switches[7] => switches[7].IN1
+switches[8] => switches[8].IN1
+switches[9] => switches[9].IN1
+rstBt => _.IN1
+
+
+|LCD_top|clkDiv:U0
+clkIn => clkOut~reg0.CLK
+clkIn => count1[0].CLK
+clkIn => count1[1].CLK
+clkIn => count1[2].CLK
+clkIn => count1[3].CLK
+clkIn => count1[4].CLK
+clkIn => count1[5].CLK
+clkIn => count1[6].CLK
+clkIn => count1[7].CLK
+clkIn => count1[8].CLK
+clkIn => count1[9].CLK
+clkIn => count1[10].CLK
+clkIn => count1[11].CLK
+clkIn => count1[12].CLK
+clkIn => count1[13].CLK
+clkIn => count1[14].CLK
+clkIn => count1[15].CLK
+clkIn => count1[16].CLK
+clkIn => count1[17].CLK
+clkIn => count1[18].CLK
+clkIn => count1[19].CLK
+clkIn => count1[20].CLK
+clkIn => count1[21].CLK
+clkIn => count1[22].CLK
+clkIn => count1[23].CLK
+clkIn => count1[24].CLK
+clkIn => count1[25].CLK
+
+
+|LCD_top|LCD_Driver:U1
+enable => ~NO_FANOUT~
+clk => preOut[0].CLK
+clk => preOut[1].CLK
+clk => preOut[2].CLK
+clk => preOut[3].CLK
+clk => preOut[4].CLK
+clk => preOut[5].CLK
+clk => preOut[6].CLK
+clk => preOut[7].CLK
+clk => RW~reg0.CLK
+clk => RS~reg0.CLK
+clk => enableOut~reg0.CLK
+clk => dataOut[0]~reg0.CLK
+clk => dataOut[1]~reg0.CLK
+clk => dataOut[2]~reg0.CLK
+clk => dataOut[3]~reg0.CLK
+clk => dataOut[4]~reg0.CLK
+clk => dataOut[5]~reg0.CLK
+clk => dataOut[6]~reg0.CLK
+clk => dataOut[7]~reg0.CLK
+clk => bitNum[0].CLK
+clk => bitNum[1].CLK
+clk => bitNum[2].CLK
+clk => bitNum[3].CLK
+clk => bitNum[4].CLK
+clk => bitNum[5].CLK
+clk => bitNum[6].CLK
+clk => bitNum[7].CLK
+clk => irst.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+rst => irst.OUTPUTSELECT
+dataIn[0] => Mux0.IN18
+dataIn[1] => Mux0.IN19
+dataIn[2] => Mux0.IN16
+dataIn[3] => Mux0.IN17
+dataIn[4] => Mux0.IN14
+dataIn[5] => Mux0.IN15
+dataIn[6] => Mux0.IN12
+dataIn[7] => Mux0.IN13
+dataIn[8] => Mux0.IN10
+dataIn[9] => Mux0.IN11
+
+
