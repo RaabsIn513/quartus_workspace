@@ -11,7 +11,7 @@ module LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, se
 	reg[7:0] count, cntCurPos;					// count - blah blah, cntCurPos - used to set cursor position
 	reg[7:0] bitNum;
 	reg irst, isetLine, iline, ienable;
-	
+		
 	always @( negedge clk ) begin
 		// Trigger for reset
 		if( rst ) begin								//External reset signal (rst) needs to go high for a short period
@@ -162,6 +162,7 @@ module LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, se
 					cntCurPos <= 8'd0;
 					iline <= 1'b0;							// default top line
 					ienable <= 1'b0;
+					isetLine <= 1'b0;
 				end
 //				default:
 //				begin
@@ -223,94 +224,90 @@ module LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, se
 		
 		// Writing bits
 		if( ~irst && ~isetLine && ienable ) begin	// Don't interfear reset procedure
-			
-			// first check if our bitNum is 0 or 3 so we can set our cursor address before writing 
-			if( bitNum == 8'd0 || bitNum == 8'd3 ) begin		// put the 3 msb on the second line
-				if( bitNum == 8'd0 ) begin
-					iline <= 1'b1;										// set to line 2
-				end
-				if( bitNum == 8'd3 ) begin
-					iline <= 1'b0;										// put the 3 msb on the second line, rest on first
-				end
-				case( cntCurPos )					// use top or bottom line by setting ddram address (overwrite any existing)
-					8'd0:
-					begin
-						if( iline == 1'b0 ) begin
-							dataOut <= 8'b10000000;
-						end
-						else if( iline == 1'b1 ) begin
-							dataOut <= 8'b11000000;
-						end
-						RS <= 1'b0;
-						enableOut <= 1'b0;
-						cntCurPos <= cntCurPos + 1'b1;
-					end
-					8'd1:
-					begin
-						if( iline == 1'b0 ) begin
-							dataOut <= 8'b10000000;
-						end
-						else if( iline == 1'b1 ) begin
-							dataOut <= 8'b11000000;
-						end
-						RS <= 1'b0;
-						enableOut <= 1'b1;
-						cntCurPos <= cntCurPos + 1'b1;
-					end
-					8'd2:
-					begin
-						if( iline == 1'b0 ) begin
-							dataOut <= 8'b10000000;
-						end
-						else if( iline == 1'b1 ) begin
-							dataOut <= 8'b11000000;
-						end
-						RS <= 1'b0;
-						enableOut <= 1'b0;
-						cntCurPos <= cntCurPos + 1'b1;
-					end
-					8'd3:
-					begin
-						cntCurPos <= 8'd0;							// make ready for next time
-					end
-				endcase
-			end
+					
 			
 			// Finally write bit
-			if( bitNum < 8'd18 ) begin					// Make sure we're within the dataIn
-				bit <= dataIn[17 - bitNum];			// Zero or one
-				case( count )								// We're writing the binary value of each bit to the LCD
+			if( bitNum < 8'd18 ) begin								// Make sure we're within the dataIn
+				bit <= dataIn[17 - bitNum];						// Zero or one
+				case( count )											// We're writing the binary value of each bit to the LCD
 					8'd0:
 					begin
-						dataOut <= 8'b00110000 + bit;
-						RS <= 1'b1;
-						enableOut <= 1'b0;
-						count <= count + 1'b1;
+						if( bitNum == 8'd0 || bitNum == 8'd3 ) begin // determine if we should switch lines
+							case( cntCurPos )					
+								8'd0:
+								begin
+									if( bitNum == 8'd3 ) begin
+										dataOut <= 8'b10000000;
+									end
+									else if( bitNum == 8'd0 ) begin
+										dataOut <= 8'b11000000;
+									end
+									RS <= 1'b0;
+									enableOut <= 1'b0;
+									cntCurPos <= cntCurPos + 8'd1;
+								end
+								8'd1:
+								begin
+									if( bitNum == 8'd3 ) begin
+										dataOut <= 8'b10000000;
+									end
+									else if( bitNum == 8'd0 ) begin
+										dataOut <= 8'b11000000;
+									end
+									RS <= 1'b0;
+									enableOut <= 1'b1;
+									cntCurPos <= cntCurPos + 8'd1;
+								end
+								8'd2:
+								begin
+									if( bitNum == 8'd3 ) begin
+										dataOut <= 8'b10000000;
+									end
+									else if( bitNum == 8'd0 ) begin
+										dataOut <= 8'b11000000;
+									end
+									RS <= 1'b0;
+									enableOut <= 1'b0;
+									cntCurPos <= cntCurPos + 8'd1;
+								end
+								8'd3:
+								begin
+									cntCurPos <= 8'd0;
+									count <= count + 8'd1;
+								end
+							endcase
+						end
+						else begin
+							count <= count + 8'd1;
+						end
 					end
 					8'd1:
 					begin
 						dataOut <= 8'b00110000 + bit;
 						RS <= 1'b1;
-						enableOut <= 1'b1;
-						count <= count + 1'b1;
+						enableOut <= 1'b0;
+						count <= count + 8'd1;
 					end
 					8'd2:
 					begin
 						dataOut <= 8'b00110000 + bit;
 						RS <= 1'b1;
-						enableOut <= 1'b0;
-						count <= count + 1'b1;
+						enableOut <= 1'b1;
+						count <= count + 8'd1;
 					end
 					8'd3:
 					begin
-						bitNum <= bitNum + 1'b1;
+						dataOut <= 8'b00110000 + bit;
+						RS <= 1'b1;
+						enableOut <= 1'b0;
+						count <= count + 8'd1;
+					end
+					8'd4:
+					begin
+						bitNum <= bitNum + 8'd1;
 						count <= 8'd0;
 					end
-					default:
-					begin
-						count <= 8'd0;								// ready for next time
-					end
-				endcase
+				endcase				
 			end														// End bitNum check
 			else if( bitNum >= 8'd18 ) begin
 				ienable <= 1'b0;

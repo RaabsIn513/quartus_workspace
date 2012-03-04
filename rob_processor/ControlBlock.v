@@ -103,7 +103,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 					eALU  <= 1'b1;
 					lcdLineSel <= 1'b0;
 					lcdLine	<= 1'b0;
-					lcdRst <= 1'b1;					
+					lcdRst <= 1'b0;					
 					lcdW	 <= 1'b0;
 					count <=count+1'b1;
 				end
@@ -176,7 +176,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 					lcdLineSel <= 1'b0;
 					lcdLine	<= 1'b0;
 					lcdRst <= 1'b0;					
-					lcdW	 <= 1'b1;
+					lcdW	 <= 1'b0;
 					count <=count+1'b1;
 				end
 				4'd5:
@@ -199,7 +199,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 					eALU  <= 1'b1;
 					lcdLineSel <= 1'b0;
 					lcdLine	<= 1'b0;
-					lcdRst <= 1'b1;					
+					lcdRst <= 1'b0;					
 					lcdW	 <= 1'b0;
 					count <=count+1'b1;
 				end
@@ -253,7 +253,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 								end
 						end
@@ -280,7 +280,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 								end
 						end
@@ -307,7 +307,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 							end
 					end
@@ -337,7 +337,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									eALU  <= 1'b0;
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
-									lcdRst <= 1'b1;					
+									lcdRst <= 1'b0;					
 									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 								end
@@ -364,7 +364,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									eALU  <= 1'b0;
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
-									lcdRst <= 1'b1;					
+									lcdRst <= 1'b0;					
 									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 								end
@@ -392,7 +392,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									eALU  <= 1'b0;
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
-									lcdRst <= 1'b1;					
+									lcdRst <= 1'b0;					
 									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 							end
@@ -598,7 +598,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 							end
 					end
@@ -626,7 +626,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;									
 							end
 					end
@@ -686,7 +686,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 							end
 					end
@@ -713,7 +713,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;									
 							end
 					end
@@ -744,7 +744,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;
 							end
 					end
@@ -772,7 +772,7 @@ module ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus,
 									lcdLineSel <= 1'b0;
 									lcdLine	<= 1'b0;
 									lcdRst <= 1'b0;					
-									lcdW	 <= 1'b1;
+									lcdW	 <= 1'b0;
 									count <=count+1'b1;									
 							end
 					end

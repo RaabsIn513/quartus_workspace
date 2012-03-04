@@ -346,18 +346,18 @@ clkDiv10Khz:U1
 
 # end
 # entity
-proc
+LCD_Driver
 # storage
-db|proc.(0).cnf
-db|proc.(0).cnf
+db|proc.(11).cnf
+db|proc.(11).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-proc.v
-c2e7ba7ccc85281e9f5a2df6585db0
+lcd_driver.v
+2e3199c570b321861fe4c9763283bb49
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -376,7 +376,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-|
+LCD_Driver:lcd
 }
 # macro_sequence
 
@@ -393,7 +393,7 @@ ON
 # case_sensitive
 # source_file
 controlblock.v
-8b5b41c54d4f4c1e6e04e4527cc3d1
+436983bb25b46ea08958b2f32f63e05d
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -418,18 +418,51 @@ ControlBlock:ctrlBlock
 
 # end
 # entity
-LCD_Driver
+PushButton_Debouncer
 # storage
-db|proc.(11).cnf
-db|proc.(11).cnf
+db|proc.(12).cnf
+db|proc.(12).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-lcd_driver.v
-2686cb44f91c1467e2bdeee5e427125
+pushbutton_debouncer.v
+b0a5cdc538a0383d485c25c1426a44fc
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+proc
+# storage
+db|proc.(0).cnf
+db|proc.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+proc.v
+3a2c787f5f30aaf0c3d4a309caaab7
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -448,7 +481,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-LCD_Driver:lcd
+|
 }
 # macro_sequence
 

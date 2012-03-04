@@ -7,6 +7,7 @@ entity proc is
         LCD             : out    vl_logic_vector(7 downto 0);
         lcdRS           : out    vl_logic;
         lcdRW           : out    vl_logic;
-        lcdEn           : out    vl_logic
+        lcdEn           : out    vl_logic;
+        LED             : out    vl_logic
     );
 end proc;

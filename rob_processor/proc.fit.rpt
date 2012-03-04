@@ -1,5 +1,5 @@
 Fitter report for proc
-Sun Mar 04 12:54:57 2012
+Sun Mar 04 17:13:18 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -11,36 +11,35 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Editio
   3. Fitter Settings
   4. Parallel Compilation
   5. I/O Assignment Warnings
-  6. Ignored Assignments
-  7. Incremental Compilation Preservation Summary
-  8. Incremental Compilation Partition Settings
-  9. Incremental Compilation Placement Preservation
- 10. Pin-Out File
- 11. Fitter Resource Usage Summary
- 12. Fitter Partition Statistics
- 13. Input Pins
- 14. Output Pins
- 15. Dual Purpose and Dedicated Pins
- 16. I/O Bank Usage
- 17. All Package Pins
- 18. Fitter Resource Utilization by Entity
- 19. Delay Chain Summary
- 20. Pad To Core Delay Chain Fanout
- 21. Control Signals
- 22. Global & Other Fast Signals
- 23. Non-Global High Fan-Out Signals
- 24. Interconnect Usage Summary
- 25. LAB Logic Elements
- 26. LAB-wide Signals
- 27. LAB Signals Sourced
- 28. LAB Signals Sourced Out
- 29. LAB Distinct Inputs
- 30. I/O Rules Summary
- 31. I/O Rules Details
- 32. I/O Rules Matrix
- 33. Fitter Device Options
- 34. Operating Settings and Conditions
- 35. Fitter Messages
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. Dual Purpose and Dedicated Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pad To Core Delay Chain Fanout
+ 20. Control Signals
+ 21. Global & Other Fast Signals
+ 22. Non-Global High Fan-Out Signals
+ 23. Interconnect Usage Summary
+ 24. LAB Logic Elements
+ 25. LAB-wide Signals
+ 26. LAB Signals Sourced
+ 27. LAB Signals Sourced Out
+ 28. LAB Distinct Inputs
+ 29. I/O Rules Summary
+ 30. I/O Rules Details
+ 31. I/O Rules Matrix
+ 32. Fitter Device Options
+ 33. Operating Settings and Conditions
+ 34. Fitter Messages
 
 
 
@@ -66,18 +65,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Sun Mar 04 12:54:56 2012         ;
+; Fitter Status                      ; Successful - Sun Mar 04 17:13:18 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; proc                                          ;
 ; Top-level Entity Name              ; proc                                          ;
 ; Family                             ; Cyclone III                                   ;
 ; Device                             ; EP3C16F484C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 3,402 / 15,408 ( 22 % )                       ;
-;     Total combinational functions  ; 2,237 / 15,408 ( 15 % )                       ;
-;     Dedicated logic registers      ; 2,601 / 15,408 ( 17 % )                       ;
-; Total registers                    ; 2601                                          ;
-; Total pins                         ; 13 / 347 ( 4 % )                              ;
+; Total logic elements               ; 3,412 / 15,408 ( 22 % )                       ;
+;     Total combinational functions  ; 2,247 / 15,408 ( 15 % )                       ;
+;     Dedicated logic registers      ; 2,600 / 15,408 ( 17 % )                       ;
+; Total registers                    ; 2600                                          ;
+; Total pins                         ; 14 / 347 ( 4 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                               ;
@@ -172,25 +171,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lcdRS    ; Missing drive strength and slew rate ;
 ; lcdRW    ; Missing drive strength and slew rate ;
 ; lcdEn    ; Missing drive strength and slew rate ;
+; LED      ; Missing drive strength and slew rate ;
 +----------+--------------------------------------+
-
-
-+----------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                    ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Location ;                ;              ; LEDs[0]    ; PIN_J1        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[1]    ; PIN_J2        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[2]    ; PIN_J3        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[3]    ; PIN_H1        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[4]    ; PIN_F2        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[5]    ; PIN_E1        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[6]    ; PIN_C1        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[7]    ; PIN_C2        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[8]    ; PIN_B2        ; QSF Assignment ;
-; Location ;                ;              ; LEDs[9]    ; PIN_B1        ; QSF Assignment ;
-+----------+----------------+--------------+------------+---------------+----------------+
 
 
 +----------------------------------------------+
@@ -199,8 +181,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 4879 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 4879 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 4890 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 4890 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -223,7 +205,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 4869    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 4880    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -239,29 +221,29 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 3,402 / 15,408 ( 22 % )  ;
-;     -- Combinational with no register       ; 801                      ;
+; Total logic elements                        ; 3,412 / 15,408 ( 22 % )  ;
+;     -- Combinational with no register       ; 812                      ;
 ;     -- Register only                        ; 1165                     ;
-;     -- Combinational with a register        ; 1436                     ;
+;     -- Combinational with a register        ; 1435                     ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1874                     ;
-;     -- 3 input functions                    ; 148                      ;
-;     -- <=2 input functions                  ; 215                      ;
+;     -- 4 input functions                    ; 1886                     ;
+;     -- 3 input functions                    ; 143                      ;
+;     -- <=2 input functions                  ; 218                      ;
 ;     -- Register only                        ; 1165                     ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2146                     ;
+;     -- normal mode                          ; 2156                     ;
 ;     -- arithmetic mode                      ; 91                       ;
 ;                                             ;                          ;
-; Total registers*                            ; 2,601 / 17,068 ( 15 % )  ;
-;     -- Dedicated logic registers            ; 2,601 / 15,408 ( 17 % )  ;
+; Total registers*                            ; 2,600 / 17,068 ( 15 % )  ;
+;     -- Dedicated logic registers            ; 2,600 / 15,408 ( 17 % )  ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )        ;
 ;                                             ;                          ;
-; Total LABs:  partially or completely used   ; 237 / 963 ( 25 % )       ;
+; Total LABs:  partially or completely used   ; 240 / 963 ( 25 % )       ;
 ; User inserted logic elements                ; 0                        ;
 ; Virtual pins                                ; 0                        ;
-; I/O pins                                    ; 13 / 347 ( 4 % )         ;
+; I/O pins                                    ; 14 / 347 ( 4 % )         ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )           ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )            ;
 ; Global signals                              ; 4                        ;
@@ -275,13 +257,13 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 ; CRC blocks                                  ; 0 / 1 ( 0 % )            ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )            ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )            ;
-; Average interconnect usage (total/H/V)      ; 12% / 12% / 12%          ;
-; Peak interconnect usage (total/H/V)         ; 60% / 59% / 61%          ;
+; Average interconnect usage (total/H/V)      ; 12% / 11% / 14%          ;
+; Peak interconnect usage (total/H/V)         ; 56% / 50% / 64%          ;
 ; Maximum fan-out node                        ; clkDiv:U0|clkOut~clkctrl ;
 ; Maximum fan-out                             ; 2520                     ;
 ; Highest non-global fan-out signal           ; MAR:mar|MARout[4]~reg0   ;
 ; Highest non-global fan-out                  ; 396                      ;
-; Total fan-out                               ; 17319                    ;
+; Total fan-out                               ; 17358                    ;
 ; Average fan-out                             ; 2.87                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -295,29 +277,29 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 3402 / 15408 ( 22 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 801                   ; 0                              ;
+; Total logic elements                        ; 3412 / 15408 ( 22 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 812                   ; 0                              ;
 ;     -- Register only                        ; 1165                  ; 0                              ;
-;     -- Combinational with a register        ; 1436                  ; 0                              ;
+;     -- Combinational with a register        ; 1435                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 1874                  ; 0                              ;
-;     -- 3 input functions                    ; 148                   ; 0                              ;
-;     -- <=2 input functions                  ; 215                   ; 0                              ;
+;     -- 4 input functions                    ; 1886                  ; 0                              ;
+;     -- 3 input functions                    ; 143                   ; 0                              ;
+;     -- <=2 input functions                  ; 218                   ; 0                              ;
 ;     -- Register only                        ; 1165                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 2146                  ; 0                              ;
+;     -- normal mode                          ; 2156                  ; 0                              ;
 ;     -- arithmetic mode                      ; 91                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 2601                  ; 0                              ;
-;     -- Dedicated logic registers            ; 2601 / 15408 ( 16 % ) ; 0 / 15408 ( 0 % )              ;
+; Total registers                             ; 2600                  ; 0                              ;
+;     -- Dedicated logic registers            ; 2600 / 15408 ( 16 % ) ; 0 / 15408 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 237 / 963 ( 24 % )    ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 240 / 963 ( 24 % )    ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 13                    ; 0                              ;
+; I/O pins                                    ; 14                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 112 ( 0 % )       ; 0 / 112 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -330,8 +312,8 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 17314                 ; 5                              ;
-;     -- Registered Connections               ; 5577                  ; 0                              ;
+;     -- Total Connections                    ; 17353                 ; 5                              ;
+;     -- Registered Connections               ; 5600                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -339,7 +321,7 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 2                     ; 0                              ;
-;     -- Output Ports                         ; 11                    ; 0                              ;
+;     -- Output Ports                         ; 12                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -364,7 +346,7 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; clk   ; G21   ; 6        ; 41           ; 15           ; 0            ; 54                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; reset ; F1    ; 1        ; 0            ; 23           ; 0            ; 272                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; reset ; F1    ; 1        ; 0            ; 23           ; 0            ; 273                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -381,6 +363,7 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 ; LCD[5] ; B21   ; 6        ; 41           ; 26           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LCD[6] ; D20   ; 6        ; 41           ; 27           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LCD[7] ; C20   ; 6        ; 41           ; 27           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; LED    ; J1    ; 1        ; 0            ; 20           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; lcdEn  ; E21   ; 6        ; 41           ; 23           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; lcdRS  ; F22   ; 6        ; 41           ; 22           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; lcdRW  ; E22   ; 6        ; 41           ; 23           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -418,7 +401,7 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 5 / 33 ( 15 % )  ; 2.5V          ; --           ;
+; 1        ; 6 / 33 ( 18 % )  ; 2.5V          ; --           ;
 ; 2        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
 ; 3        ; 0 / 46 ( 0 % )   ; 2.5V          ; --           ;
 ; 4        ; 0 / 41 ( 0 % )   ; 2.5V          ; --           ;
@@ -654,7 +637,7 @@ The pin-out file can be found in E:/quartus_workspace/rob_processor/proc.pin.
 ; H20      ; 253        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H21      ; 246        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H22      ; 245        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J1       ; 29         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J1       ; 29         ; 1        ; LED                                                       ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; J2       ; 28         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J3       ; 27         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J4       ; 24         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -927,15 +910,15 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name          ; Library Name ;
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
-; |proc                       ; 3402 (0)    ; 2601 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 801 (0)      ; 1165 (0)          ; 1436 (36)        ; |proc                        ;              ;
+; |proc                       ; 3412 (0)    ; 2600 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 14   ; 0            ; 812 (0)      ; 1165 (0)          ; 1435 (36)        ; |proc                        ;              ;
 ;    |AC:ac|                  ; 38 (38)     ; 37 (37)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 5 (5)             ; 32 (32)          ; |proc|AC:ac                  ;              ;
 ;    |ALU:alu|                ; 72 (72)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (54)      ; 0 (0)             ; 18 (18)          ; |proc|ALU:alu                ;              ;
-;    |ControlBlock:ctrlBlock| ; 134 (134)   ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 108 (108)    ; 1 (1)             ; 25 (25)          ; |proc|ControlBlock:ctrlBlock ;              ;
+;    |ControlBlock:ctrlBlock| ; 127 (127)   ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 101 (101)    ; 0 (0)             ; 26 (26)          ; |proc|ControlBlock:ctrlBlock ;              ;
 ;    |IR:ir|                  ; 37 (37)     ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 36 (36)          ; |proc|IR:ir                  ;              ;
-;    |LCD_Driver:lcd|         ; 105 (105)   ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 78 (78)      ; 1 (1)             ; 26 (26)          ; |proc|LCD_Driver:lcd         ;              ;
+;    |LCD_Driver:lcd|         ; 122 (122)   ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 95 (95)      ; 1 (1)             ; 26 (26)          ; |proc|LCD_Driver:lcd         ;              ;
 ;    |MAR:mar|                ; 27 (27)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 13 (13)           ; 13 (13)          ; |proc|MAR:mar                ;              ;
 ;    |MDR:mdr|                ; 37 (37)     ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 36 (36)          ; |proc|MDR:mdr                ;              ;
-;    |Memory:mem|             ; 2838 (2838) ; 2322 (2322)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 516 (516)    ; 1124 (1124)       ; 1198 (1198)      ; |proc|Memory:mem             ;              ;
+;    |Memory:mem|             ; 2839 (2839) ; 2322 (2322)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 517 (517)    ; 1125 (1125)       ; 1197 (1197)      ; |proc|Memory:mem             ;              ;
 ;    |PC:pc|                  ; 39 (39)     ; 37 (37)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 19 (19)           ; 18 (18)          ; |proc|PC:pc                  ;              ;
 ;    |clkDiv10Khz:U1|         ; 43 (43)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 1 (1)             ; 26 (26)          ; |proc|clkDiv10Khz:U1         ;              ;
 ;    |clkDiv:U0|              ; 50 (50)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 1 (1)             ; 26 (26)          ; |proc|clkDiv:U0              ;              ;
@@ -959,6 +942,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lcdRS  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; lcdRW  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; lcdEn  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; LED    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; reset  ; Input    ; (6) 2223 ps   ; --            ; --                    ; --  ; --   ;
 +--------+----------+---------------+---------------+-----------------------+-----+------+
@@ -1009,9 +993,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - PC:pc|PC[6]                       ; 0                 ; 6       ;
 ;      - PC:pc|PC[17]                      ; 0                 ; 6       ;
 ;      - PC:pc|PC[16]                      ; 0                 ; 6       ;
-;      - ControlBlock:ctrlBlock|count[3]~0 ; 0                 ; 6       ;
+;      - ControlBlock:ctrlBlock|lcdW~2     ; 0                 ; 6       ;
 ;      - ControlBlock:ctrlBlock|count[3]~1 ; 0                 ; 6       ;
-;      - ControlBlock:ctrlBlock|rPC~4      ; 0                 ; 6       ;
+;      - ControlBlock:ctrlBlock|count[3]~2 ; 0                 ; 6       ;
+;      - ControlBlock:ctrlBlock|count[3]~6 ; 0                 ; 6       ;
 ;      - PC:pc|PCout[17]~0                 ; 0                 ; 6       ;
 ;      - MDR:mdr|MDRout[16]~0              ; 0                 ; 6       ;
 ;      - MDR:mdr|MDRout[17]~1              ; 0                 ; 6       ;
@@ -1071,7 +1056,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - MDR:mdr|MDRout[17]~18             ; 0                 ; 6       ;
 ;      - AC:ac|ACout[17]~19                ; 0                 ; 6       ;
 ;      - IR:ir|IRout[17]~18                ; 0                 ; 6       ;
-;      - PC:pc|PC[11]~52                   ; 0                 ; 6       ;
+;      - PC:pc|PC[6]~52                    ; 0                 ; 6       ;
 ;      - Memory:mem|DataOut[15]~0          ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[113][16]~1         ; 0                 ; 6       ;
 ;      - MAR:mar|MARout[4]~0               ; 0                 ; 6       ;
@@ -1161,7 +1146,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Memory:mem|Mem[44][16]~79         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[47][16]~80         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem~81                 ; 0                 ; 6       ;
-;      - Memory:mem|Mem[21][17]~82         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[21][16]~82         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[25][16]~83         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[17][16]~84         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[29][16]~85         ; 0                 ; 6       ;
@@ -1169,7 +1154,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Memory:mem|Mem[26][16]~87         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[18][16]~88         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[30][16]~89         ; 0                 ; 6       ;
-;      - Memory:mem|Mem[20][14]~90         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[20][16]~90         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[24][16]~91         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[16][16]~92         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[28][16]~93         ; 0                 ; 6       ;
@@ -1178,21 +1163,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Memory:mem|Mem[19][16]~96         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[31][16]~97         ; 0                 ; 6       ;
 ;      - Memory:mem|Mem~98                 ; 0                 ; 6       ;
-;      - Memory:mem|Mem[5][9]~99           ; 0                 ; 6       ;
-;      - Memory:mem|Mem[6][0]~100          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[4][4]~101          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[7][3]~102          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[9][5]~103          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[10][7]~104         ; 0                 ; 6       ;
-;      - Memory:mem|Mem[8][10]~105         ; 0                 ; 6       ;
-;      - Memory:mem|Mem[11][8]~106         ; 0                 ; 6       ;
-;      - Memory:mem|Mem[1][3]~107          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[2][4]~108          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[0][2]~109          ; 0                 ; 6       ;
-;      - Memory:mem|Mem[3][7]~110          ; 0                 ; 6       ;
+;      - Memory:mem|Mem[5][6]~99           ; 0                 ; 6       ;
+;      - Memory:mem|Mem[6][10]~100         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[4][6]~101          ; 0                 ; 6       ;
+;      - Memory:mem|Mem[7][7]~102          ; 0                 ; 6       ;
+;      - Memory:mem|Mem[9][1]~103          ; 0                 ; 6       ;
+;      - Memory:mem|Mem[10][9]~104         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[8][3]~105          ; 0                 ; 6       ;
+;      - Memory:mem|Mem[11][7]~106         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[1][16]~107         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[2][6]~108          ; 0                 ; 6       ;
+;      - Memory:mem|Mem[0][10]~109         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[3][6]~110          ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[13][16]~111        ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[14][16]~112        ; 0                 ; 6       ;
-;      - Memory:mem|Mem[12][5]~113         ; 0                 ; 6       ;
+;      - Memory:mem|Mem[12][16]~113        ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[15][16]~114        ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[58][16]~115        ; 0                 ; 6       ;
 ;      - Memory:mem|Mem[54][16]~116        ; 0                 ; 6       ;
@@ -1246,170 +1231,170 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                      ;
-+------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                         ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; AC:ac|ACout[17]~1            ; LCCOMB_X24_Y14_N28 ; 37      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; ControlBlock:ctrlBlock|eALU  ; FF_X26_Y14_N17     ; 18      ; Latch enable            ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; ControlBlock:ctrlBlock|rPC~4 ; LCCOMB_X30_Y18_N18 ; 4       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; ControlBlock:ctrlBlock|wIR   ; FF_X30_Y18_N17     ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; IR:ir|IRout[17]~1            ; LCCOMB_X27_Y17_N22 ; 36      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; LCD_Driver:lcd|always0~1     ; LCCOMB_X30_Y22_N30 ; 18      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; LCD_Driver:lcd|bitNum[3]~6   ; LCCOMB_X36_Y22_N20 ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; LCD_Driver:lcd|count~6       ; LCCOMB_X36_Y22_N30 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; LCD_Driver:lcd|irst          ; FF_X32_Y22_N11     ; 28      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; MAR:mar|MARout[12]~1         ; LCCOMB_X19_Y12_N6  ; 26      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; MDR:mdr|MDRout[17]~1         ; LCCOMB_X27_Y13_N28 ; 36      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|DataOut[15]~0     ; LCCOMB_X27_Y13_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[0][2]~109     ; LCCOMB_X22_Y19_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[100][16]~10   ; LCCOMB_X28_Y11_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[101][16]~2    ; LCCOMB_X27_Y13_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[102][16]~6    ; LCCOMB_X28_Y11_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[103][16]~14   ; LCCOMB_X27_Y13_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[104][16]~59   ; LCCOMB_X19_Y12_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[105][16]~55   ; LCCOMB_X19_Y12_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[106][16]~57   ; LCCOMB_X19_Y12_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[107][16]~53   ; LCCOMB_X23_Y12_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[108][16]~51   ; LCCOMB_X23_Y12_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[109][16]~63   ; LCCOMB_X19_Y12_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[10][7]~104    ; LCCOMB_X22_Y19_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[110][16]~49   ; LCCOMB_X19_Y12_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[111][16]~61   ; LCCOMB_X23_Y12_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[112][16]~9    ; LCCOMB_X27_Y13_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[113][16]~1    ; LCCOMB_X27_Y13_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[114][16]~5    ; LCCOMB_X19_Y16_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[115][16]~13   ; LCCOMB_X26_Y19_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[116][16]~12   ; LCCOMB_X19_Y16_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[117][16]~4    ; LCCOMB_X19_Y16_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[118][16]~8    ; LCCOMB_X19_Y16_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[119][16]~16   ; LCCOMB_X27_Y13_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[11][8]~106    ; LCCOMB_X26_Y19_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[120][16]~58   ; LCCOMB_X24_Y12_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[121][16]~54   ; LCCOMB_X24_Y12_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[122][16]~60   ; LCCOMB_X24_Y12_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[123][16]~56   ; LCCOMB_X24_Y12_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[124][16]~50   ; LCCOMB_X32_Y15_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[125][16]~62   ; LCCOMB_X24_Y12_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[126][16]~52   ; LCCOMB_X32_Y15_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[127][16]~64   ; LCCOMB_X32_Y15_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[12][5]~113    ; LCCOMB_X22_Y19_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[13][16]~111   ; LCCOMB_X22_Y19_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[14][16]~112   ; LCCOMB_X22_Y19_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[15][16]~114   ; LCCOMB_X26_Y19_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[16][16]~92    ; LCCOMB_X23_Y15_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[17][16]~84    ; LCCOMB_X23_Y15_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[18][16]~88    ; LCCOMB_X23_Y15_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[19][16]~96    ; LCCOMB_X23_Y15_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[1][3]~107     ; LCCOMB_X22_Y19_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[20][14]~90    ; LCCOMB_X23_Y15_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[21][17]~82    ; LCCOMB_X23_Y15_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[22][16]~86    ; LCCOMB_X23_Y15_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[23][16]~94    ; LCCOMB_X23_Y15_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[24][16]~91    ; LCCOMB_X26_Y19_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[25][16]~83    ; LCCOMB_X26_Y19_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[26][16]~87    ; LCCOMB_X26_Y19_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[27][16]~95    ; LCCOMB_X26_Y19_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[28][16]~93    ; LCCOMB_X26_Y19_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[29][16]~85    ; LCCOMB_X26_Y19_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[2][4]~108     ; LCCOMB_X22_Y19_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[30][16]~89    ; LCCOMB_X26_Y19_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[31][16]~97    ; LCCOMB_X26_Y19_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[32][16]~75    ; LCCOMB_X19_Y16_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[33][16]~73    ; LCCOMB_X19_Y16_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[34][16]~74    ; LCCOMB_X19_Y16_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[35][16]~76    ; LCCOMB_X19_Y16_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[36][16]~67    ; LCCOMB_X19_Y16_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[37][16]~65    ; LCCOMB_X19_Y16_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[38][16]~66    ; LCCOMB_X19_Y16_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[39][16]~68    ; LCCOMB_X19_Y16_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[3][7]~110     ; LCCOMB_X22_Y19_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[40][16]~71    ; LCCOMB_X20_Y17_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[41][16]~69    ; LCCOMB_X19_Y19_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[42][16]~70    ; LCCOMB_X20_Y17_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[43][16]~72    ; LCCOMB_X20_Y17_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[44][16]~79    ; LCCOMB_X19_Y19_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[45][16]~77    ; LCCOMB_X20_Y17_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[46][16]~78    ; LCCOMB_X19_Y19_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[47][16]~80    ; LCCOMB_X20_Y17_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[48][16]~125   ; LCCOMB_X16_Y19_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[49][16]~121   ; LCCOMB_X16_Y19_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[4][4]~101     ; LCCOMB_X22_Y19_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[50][16]~117   ; LCCOMB_X16_Y19_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[51][16]~129   ; LCCOMB_X16_Y19_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[52][16]~123   ; LCCOMB_X16_Y19_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[53][16]~119   ; LCCOMB_X16_Y19_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[54][16]~116   ; LCCOMB_X16_Y19_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[55][16]~127   ; LCCOMB_X23_Y12_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[56][16]~124   ; LCCOMB_X20_Y18_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[57][16]~120   ; LCCOMB_X20_Y18_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[58][16]~115   ; LCCOMB_X20_Y18_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[59][16]~128   ; LCCOMB_X20_Y18_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[5][9]~99      ; LCCOMB_X22_Y19_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[60][16]~126   ; LCCOMB_X20_Y18_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[61][16]~122   ; LCCOMB_X20_Y18_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[62][16]~118   ; LCCOMB_X20_Y18_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[63][16]~130   ; LCCOMB_X20_Y18_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[64][16]~43    ; LCCOMB_X20_Y17_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[65][16]~39    ; LCCOMB_X19_Y12_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[66][16]~42    ; LCCOMB_X20_Y17_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[67][16]~38    ; LCCOMB_X20_Y17_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[68][16]~35    ; LCCOMB_X23_Y12_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[69][16]~47    ; LCCOMB_X20_Y17_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[6][0]~100     ; LCCOMB_X22_Y19_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[70][16]~34    ; LCCOMB_X31_Y10_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[71][16]~46    ; LCCOMB_X23_Y12_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[72][16]~27    ; LCCOMB_X24_Y12_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[73][16]~25    ; LCCOMB_X24_Y12_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[74][16]~19    ; LCCOMB_X23_Y12_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[75][16]~17    ; LCCOMB_X23_Y12_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[76][16]~23    ; LCCOMB_X23_Y12_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[77][16]~21    ; LCCOMB_X23_Y12_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[78][16]~31    ; LCCOMB_X23_Y12_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[79][16]~29    ; LCCOMB_X23_Y12_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[7][3]~102     ; LCCOMB_X22_Y19_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[80][16]~41    ; LCCOMB_X22_Y11_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[81][16]~37    ; LCCOMB_X22_Y11_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[82][16]~44    ; LCCOMB_X28_Y11_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[83][16]~40    ; LCCOMB_X28_Y11_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[84][16]~33    ; LCCOMB_X28_Y11_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[85][16]~45    ; LCCOMB_X28_Y11_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[86][16]~36    ; LCCOMB_X28_Y11_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[87][16]~48    ; LCCOMB_X28_Y11_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[88][16]~26    ; LCCOMB_X16_Y11_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[89][16]~28    ; LCCOMB_X16_Y11_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[8][10]~105    ; LCCOMB_X26_Y19_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[90][16]~18    ; LCCOMB_X28_Y11_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[91][16]~20    ; LCCOMB_X28_Y11_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[92][16]~22    ; LCCOMB_X28_Y11_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[93][16]~24    ; LCCOMB_X28_Y11_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[94][16]~30    ; LCCOMB_X28_Y11_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[95][16]~32    ; LCCOMB_X28_Y11_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[96][16]~11    ; LCCOMB_X27_Y13_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[97][16]~3     ; LCCOMB_X27_Y13_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[98][16]~7     ; LCCOMB_X28_Y11_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[99][16]~15    ; LCCOMB_X28_Y11_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; Memory:mem|Mem[9][5]~103     ; LCCOMB_X22_Y19_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; PC:pc|PC[11]~52              ; LCCOMB_X27_Y13_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; PC:pc|PCout[17]~0            ; LCCOMB_X27_Y13_N2  ; 19      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; clk                          ; PIN_G21            ; 54      ; Clock                   ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; clkDiv10Khz:U1|clkOut        ; FF_X26_Y26_N25     ; 27      ; Clock                   ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; clkDiv:U0|clkOut             ; FF_X33_Y24_N5      ; 2520    ; Clock                   ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; reset                        ; PIN_F1             ; 272     ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-+------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                           ;
++-----------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                              ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; AC:ac|ACout[17]~1                 ; LCCOMB_X27_Y18_N26 ; 37      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ControlBlock:ctrlBlock|count[3]~6 ; LCCOMB_X29_Y21_N12 ; 4       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ControlBlock:ctrlBlock|eALU       ; FF_X24_Y20_N5      ; 18      ; Latch enable            ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; ControlBlock:ctrlBlock|lcdW~2     ; LCCOMB_X29_Y21_N14 ; 1       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ControlBlock:ctrlBlock|wIR        ; FF_X28_Y21_N19     ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; IR:ir|IRout[17]~1                 ; LCCOMB_X28_Y18_N6  ; 36      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; LCD_Driver:lcd|always0~0          ; LCCOMB_X31_Y17_N6  ; 14      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; LCD_Driver:lcd|bitNum[0]~5        ; LCCOMB_X30_Y17_N20 ; 7       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; LCD_Driver:lcd|irst               ; FF_X33_Y19_N9      ; 27      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; MAR:mar|MARout[12]~1              ; LCCOMB_X21_Y14_N26 ; 26      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; MDR:mdr|MDRout[17]~1              ; LCCOMB_X26_Y18_N24 ; 36      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|DataOut[15]~0          ; LCCOMB_X26_Y18_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[0][10]~109         ; LCCOMB_X24_Y18_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[100][16]~10        ; LCCOMB_X24_Y13_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[101][16]~2         ; LCCOMB_X24_Y13_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[102][16]~6         ; LCCOMB_X24_Y13_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[103][16]~14        ; LCCOMB_X19_Y12_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[104][16]~59        ; LCCOMB_X21_Y14_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[105][16]~55        ; LCCOMB_X16_Y12_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[106][16]~57        ; LCCOMB_X19_Y12_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[107][16]~53        ; LCCOMB_X19_Y12_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[108][16]~51        ; LCCOMB_X23_Y13_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[109][16]~63        ; LCCOMB_X16_Y12_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[10][9]~104         ; LCCOMB_X24_Y18_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[110][16]~49        ; LCCOMB_X21_Y14_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[111][16]~61        ; LCCOMB_X19_Y12_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[112][16]~9         ; LCCOMB_X26_Y18_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[113][16]~1         ; LCCOMB_X26_Y18_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[114][16]~5         ; LCCOMB_X26_Y18_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[115][16]~13        ; LCCOMB_X16_Y18_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[116][16]~12        ; LCCOMB_X16_Y18_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[117][16]~4         ; LCCOMB_X26_Y18_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[118][16]~8         ; LCCOMB_X26_Y18_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[119][16]~16        ; LCCOMB_X16_Y18_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[11][7]~106         ; LCCOMB_X23_Y14_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[120][16]~58        ; LCCOMB_X16_Y14_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[121][16]~54        ; LCCOMB_X16_Y14_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[122][16]~60        ; LCCOMB_X16_Y14_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[123][16]~56        ; LCCOMB_X16_Y14_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[124][16]~50        ; LCCOMB_X16_Y14_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[125][16]~62        ; LCCOMB_X16_Y14_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[126][16]~52        ; LCCOMB_X16_Y14_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[127][16]~64        ; LCCOMB_X16_Y14_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[12][16]~113        ; LCCOMB_X23_Y14_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[13][16]~111        ; LCCOMB_X24_Y18_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[14][16]~112        ; LCCOMB_X23_Y14_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[15][16]~114        ; LCCOMB_X26_Y14_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[16][16]~92         ; LCCOMB_X23_Y14_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[17][16]~84         ; LCCOMB_X23_Y14_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[18][16]~88         ; LCCOMB_X23_Y14_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[19][16]~96         ; LCCOMB_X23_Y14_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[1][16]~107         ; LCCOMB_X24_Y18_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[20][16]~90         ; LCCOMB_X23_Y14_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[21][16]~82         ; LCCOMB_X23_Y14_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[22][16]~86         ; LCCOMB_X23_Y14_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[23][16]~94         ; LCCOMB_X23_Y14_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[24][16]~91         ; LCCOMB_X23_Y13_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[25][16]~83         ; LCCOMB_X23_Y13_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[26][16]~87         ; LCCOMB_X23_Y13_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[27][16]~95         ; LCCOMB_X23_Y13_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[28][16]~93         ; LCCOMB_X23_Y13_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[29][16]~85         ; LCCOMB_X23_Y13_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[2][6]~108          ; LCCOMB_X24_Y18_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[30][16]~89         ; LCCOMB_X23_Y13_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[31][16]~97         ; LCCOMB_X27_Y13_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[32][16]~75         ; LCCOMB_X21_Y14_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[33][16]~73         ; LCCOMB_X31_Y20_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[34][16]~74         ; LCCOMB_X28_Y16_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[35][16]~76         ; LCCOMB_X31_Y20_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[36][16]~67         ; LCCOMB_X28_Y16_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[37][16]~65         ; LCCOMB_X31_Y20_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[38][16]~66         ; LCCOMB_X28_Y16_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[39][16]~68         ; LCCOMB_X28_Y16_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[3][6]~110          ; LCCOMB_X24_Y18_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[40][16]~71         ; LCCOMB_X29_Y18_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[41][16]~69         ; LCCOMB_X30_Y15_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[42][16]~70         ; LCCOMB_X29_Y18_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[43][16]~72         ; LCCOMB_X30_Y15_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[44][16]~79         ; LCCOMB_X29_Y18_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[45][16]~77         ; LCCOMB_X29_Y18_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[46][16]~78         ; LCCOMB_X29_Y18_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[47][16]~80         ; LCCOMB_X28_Y14_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[48][16]~125        ; LCCOMB_X24_Y13_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[49][16]~121        ; LCCOMB_X24_Y13_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[4][6]~101          ; LCCOMB_X24_Y18_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[50][16]~117        ; LCCOMB_X24_Y13_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[51][16]~129        ; LCCOMB_X24_Y13_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[52][16]~123        ; LCCOMB_X24_Y13_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[53][16]~119        ; LCCOMB_X24_Y13_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[54][16]~116        ; LCCOMB_X24_Y13_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[55][16]~127        ; LCCOMB_X24_Y13_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[56][16]~124        ; LCCOMB_X28_Y14_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[57][16]~120        ; LCCOMB_X23_Y13_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[58][16]~115        ; LCCOMB_X28_Y14_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[59][16]~128        ; LCCOMB_X28_Y14_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[5][6]~99           ; LCCOMB_X24_Y18_N24 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[60][16]~126        ; LCCOMB_X23_Y13_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[61][16]~122        ; LCCOMB_X28_Y14_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[62][16]~118        ; LCCOMB_X28_Y14_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[63][16]~130        ; LCCOMB_X28_Y14_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[64][16]~43         ; LCCOMB_X23_Y13_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[65][16]~39         ; LCCOMB_X23_Y13_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[66][16]~42         ; LCCOMB_X23_Y13_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[67][16]~38         ; LCCOMB_X23_Y13_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[68][16]~35         ; LCCOMB_X23_Y13_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[69][16]~47         ; LCCOMB_X19_Y19_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[6][10]~100         ; LCCOMB_X24_Y18_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[70][16]~34         ; LCCOMB_X20_Y18_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[71][16]~46         ; LCCOMB_X20_Y18_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[72][16]~27         ; LCCOMB_X19_Y12_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[73][16]~25         ; LCCOMB_X19_Y12_N10 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[74][16]~19         ; LCCOMB_X19_Y12_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[75][16]~17         ; LCCOMB_X19_Y12_N28 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[76][16]~23         ; LCCOMB_X16_Y18_N12 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[77][16]~21         ; LCCOMB_X19_Y12_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[78][16]~31         ; LCCOMB_X19_Y12_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[79][16]~29         ; LCCOMB_X19_Y12_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[7][7]~102          ; LCCOMB_X24_Y18_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[80][16]~41         ; LCCOMB_X15_Y20_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[81][16]~37         ; LCCOMB_X15_Y20_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[82][16]~44         ; LCCOMB_X16_Y18_N26 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[83][16]~40         ; LCCOMB_X16_Y18_N8  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[84][16]~33         ; LCCOMB_X16_Y18_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[85][16]~45         ; LCCOMB_X16_Y18_N4  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[86][16]~36         ; LCCOMB_X19_Y22_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[87][16]~48         ; LCCOMB_X16_Y18_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[88][16]~26         ; LCCOMB_X16_Y18_N16 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[89][16]~28         ; LCCOMB_X16_Y18_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[8][3]~105          ; LCCOMB_X23_Y14_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[90][16]~18         ; LCCOMB_X16_Y18_N6  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[91][16]~20         ; LCCOMB_X16_Y18_N0  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[92][16]~22         ; LCCOMB_X16_Y18_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[93][16]~24         ; LCCOMB_X16_Y18_N14 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[94][16]~30         ; LCCOMB_X19_Y22_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[95][16]~32         ; LCCOMB_X16_Y18_N20 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[96][16]~11         ; LCCOMB_X24_Y13_N30 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[97][16]~3          ; LCCOMB_X24_Y13_N22 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[98][16]~7          ; LCCOMB_X24_Y13_N18 ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[99][16]~15         ; LCCOMB_X19_Y12_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; Memory:mem|Mem[9][1]~103          ; LCCOMB_X24_Y18_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; PC:pc|PC[6]~52                    ; LCCOMB_X26_Y18_N2  ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; PC:pc|PCout[17]~0                 ; LCCOMB_X26_Y18_N14 ; 19      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; clk                               ; PIN_G21            ; 54      ; Clock                   ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; clkDiv10Khz:U1|clkOut             ; FF_X39_Y21_N1      ; 26      ; Clock                   ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; clkDiv:U0|clkOut                  ; FF_X2_Y25_N7       ; 2520    ; Clock                   ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; reset                             ; PIN_F1             ; 273     ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
++-----------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                         ;
-+-----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                        ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; ControlBlock:ctrlBlock|eALU ; FF_X26_Y14_N17 ; 18      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-; clk                         ; PIN_G21        ; 54      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
-; clkDiv10Khz:U1|clkOut       ; FF_X26_Y26_N25 ; 27      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-; clkDiv:U0|clkOut            ; FF_X33_Y24_N5  ; 2520    ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
-+-----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                        ;
++-----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                        ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; ControlBlock:ctrlBlock|eALU ; FF_X24_Y20_N5 ; 18      ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
+; clk                         ; PIN_G21       ; 54      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; clkDiv10Khz:U1|clkOut       ; FF_X39_Y21_N1 ; 26      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; clkDiv:U0|clkOut            ; FF_X2_Y25_N7  ; 2520    ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
++-----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------+
@@ -1423,7 +1408,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MAR:mar|MARout[1]~reg0                 ; 385     ;
 ; MAR:mar|MARout[2]~reg0                 ; 385     ;
 ; MAR:mar|MARout[0]~reg0                 ; 384     ;
-; reset~input                            ; 272     ;
+; reset~input                            ; 273     ;
 ; Memory:mem|Mem[13][16]~0               ; 128     ;
 ; ALU:alu|alu_out[2]$latch               ; 120     ;
 ; ALU:alu|alu_out[1]$latch               ; 120     ;
@@ -1443,21 +1428,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:alu|alu_out[7]$latch               ; 119     ;
 ; ALU:alu|alu_out[8]$latch               ; 119     ;
 ; ALU:alu|alu_out[12]$latch              ; 119     ;
-; ControlBlock:ctrlBlock|count[1]        ; 46      ;
-; ControlBlock:ctrlBlock|count[0]        ; 40      ;
-; ControlBlock:ctrlBlock|count[2]        ; 40      ;
-; ControlBlock:ctrlBlock|count[3]        ; 38      ;
+; ControlBlock:ctrlBlock|count[1]        ; 48      ;
+; ControlBlock:ctrlBlock|count[2]        ; 45      ;
+; ControlBlock:ctrlBlock|count[3]        ; 41      ;
 ; AC:ac|ACout[17]~1                      ; 37      ;
-; ControlBlock:ctrlBlock|cALU[0]         ; 37      ;
 ; IR:ir|IRout[17]~1                      ; 36      ;
 ; MDR:mdr|MDRout[17]~1                   ; 36      ;
 ; ControlBlock:ctrlBlock|cALU[1]         ; 36      ;
+; ControlBlock:ctrlBlock|cALU[0]         ; 36      ;
 ; MAR:mar|MARout[6]~reg0                 ; 34      ;
-; LCD_Driver:lcd|irst                    ; 28      ;
+; ControlBlock:ctrlBlock|count[0]        ; 34      ;
+; LCD_Driver:lcd|irst                    ; 27      ;
 ; MAR:mar|MARout[12]~1                   ; 26      ;
-; LCD_Driver:lcd|LessThan0~1             ; 23      ;
-; ControlBlock:ctrlBlock|lcdLine~0       ; 20      ;
-; ControlBlock:ctrlBlock|instruction[15] ; 20      ;
+; LCD_Driver:lcd|count[0]                ; 25      ;
+; ControlBlock:ctrlBlock|lcdRst~2        ; 23      ;
+; LCD_Driver:lcd|count[1]                ; 23      ;
+; LCD_Driver:lcd|LessThan0~1             ; 22      ;
+; LCD_Driver:lcd|count[3]                ; 20      ;
+; LCD_Driver:lcd|count[2]                ; 20      ;
 ; PC:pc|PCout[17]~0                      ; 19      ;
 ; ControlBlock:ctrlBlock|rMAR~0          ; 19      ;
 ; Memory:mem|Mem[63][16]~130             ; 18      ;
@@ -1477,21 +1465,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Mem[54][16]~116             ; 18      ;
 ; Memory:mem|Mem[58][16]~115             ; 18      ;
 ; Memory:mem|Mem[15][16]~114             ; 18      ;
-; Memory:mem|Mem[12][5]~113              ; 18      ;
+; Memory:mem|Mem[12][16]~113             ; 18      ;
 ; Memory:mem|Mem[14][16]~112             ; 18      ;
 ; Memory:mem|Mem[13][16]~111             ; 18      ;
-; Memory:mem|Mem[3][7]~110               ; 18      ;
-; Memory:mem|Mem[0][2]~109               ; 18      ;
-; Memory:mem|Mem[2][4]~108               ; 18      ;
-; Memory:mem|Mem[1][3]~107               ; 18      ;
-; Memory:mem|Mem[11][8]~106              ; 18      ;
-; Memory:mem|Mem[8][10]~105              ; 18      ;
-; Memory:mem|Mem[10][7]~104              ; 18      ;
-; Memory:mem|Mem[9][5]~103               ; 18      ;
-; Memory:mem|Mem[7][3]~102               ; 18      ;
-; Memory:mem|Mem[4][4]~101               ; 18      ;
-; Memory:mem|Mem[6][0]~100               ; 18      ;
-; Memory:mem|Mem[5][9]~99                ; 18      ;
+; Memory:mem|Mem[3][6]~110               ; 18      ;
+; Memory:mem|Mem[0][10]~109              ; 18      ;
+; Memory:mem|Mem[2][6]~108               ; 18      ;
+; Memory:mem|Mem[1][16]~107              ; 18      ;
+; Memory:mem|Mem[11][7]~106              ; 18      ;
+; Memory:mem|Mem[8][3]~105               ; 18      ;
+; Memory:mem|Mem[10][9]~104              ; 18      ;
+; Memory:mem|Mem[9][1]~103               ; 18      ;
+; Memory:mem|Mem[7][7]~102               ; 18      ;
+; Memory:mem|Mem[4][6]~101               ; 18      ;
+; Memory:mem|Mem[6][10]~100              ; 18      ;
+; Memory:mem|Mem[5][6]~99                ; 18      ;
 ; Memory:mem|Mem[31][16]~97              ; 18      ;
 ; Memory:mem|Mem[19][16]~96              ; 18      ;
 ; Memory:mem|Mem[27][16]~95              ; 18      ;
@@ -1499,7 +1487,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Mem[28][16]~93              ; 18      ;
 ; Memory:mem|Mem[16][16]~92              ; 18      ;
 ; Memory:mem|Mem[24][16]~91              ; 18      ;
-; Memory:mem|Mem[20][14]~90              ; 18      ;
+; Memory:mem|Mem[20][16]~90              ; 18      ;
 ; Memory:mem|Mem[30][16]~89              ; 18      ;
 ; Memory:mem|Mem[18][16]~88              ; 18      ;
 ; Memory:mem|Mem[26][16]~87              ; 18      ;
@@ -1507,7 +1495,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Mem[29][16]~85              ; 18      ;
 ; Memory:mem|Mem[17][16]~84              ; 18      ;
 ; Memory:mem|Mem[25][16]~83              ; 18      ;
-; Memory:mem|Mem[21][17]~82              ; 18      ;
+; Memory:mem|Mem[21][16]~82              ; 18      ;
 ; Memory:mem|Mem[47][16]~80              ; 18      ;
 ; Memory:mem|Mem[44][16]~79              ; 18      ;
 ; Memory:mem|Mem[46][16]~78              ; 18      ;
@@ -1589,12 +1577,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Mem[101][16]~2              ; 18      ;
 ; Memory:mem|Mem[113][16]~1              ; 18      ;
 ; Memory:mem|DataOut[15]~0               ; 18      ;
-; PC:pc|PC[11]~52                        ; 18      ;
+; PC:pc|PC[6]~52                         ; 18      ;
 ; AC:ac|ACout[0]~en                      ; 18      ;
 ; PC:pc|PCout[0]~en                      ; 18      ;
-; LCD_Driver:lcd|always0~1               ; 18      ;
-; ControlBlock:ctrlBlock|instruction[16] ; 17      ;
-; LCD_Driver:lcd|bitNum[1]               ; 17      ;
+; LCD_Driver:lcd|bitNum[1]               ; 18      ;
 ; Memory:mem|Decoder0~9                  ; 16      ;
 ; Memory:mem|Decoder0~8                  ; 16      ;
 ; Memory:mem|Decoder0~7                  ; 16      ;
@@ -1611,29 +1597,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Mem~137                     ; 15      ;
 ; Memory:mem|Mem~136                     ; 15      ;
 ; Memory:mem|Mem~133                     ; 15      ;
-; LCD_Driver:lcd|count[0]                ; 15      ;
+; ControlBlock:ctrlBlock|instruction[15] ; 15      ;
 ; Memory:mem|Mem~147                     ; 14      ;
 ; Memory:mem|Mem~144                     ; 14      ;
 ; clkDiv:U0|Equal0~8                     ; 14      ;
-; LCD_Driver:lcd|count[1]                ; 14      ;
-; LCD_Driver:lcd|count[3]                ; 14      ;
-; LCD_Driver:lcd|count[2]                ; 14      ;
+; LCD_Driver:lcd|always0~0               ; 14      ;
+; LCD_Driver:lcd|bitNum[3]               ; 14      ;
 ; Memory:mem|Mem~154                     ; 13      ;
-; LCD_Driver:lcd|bitNum[3]               ; 13      ;
-; LCD_Driver:lcd|ienable                 ; 13      ;
 ; Memory:mem|Mem~151                     ; 12      ;
 ; Memory:mem|Mem~149                     ; 12      ;
 ; Memory:mem|Mem~145                     ; 12      ;
 ; Memory:mem|Mem~134                     ; 12      ;
 ; Memory:mem|Mem~156                     ; 11      ;
-; ControlBlock:ctrlBlock|lcdRst~0        ; 11      ;
-; ControlBlock:ctrlBlock|instruction[17] ; 11      ;
+; ControlBlock:ctrlBlock|instruction[16] ; 11      ;
 ; Memory:mem|Mem~131                     ; 10      ;
 ; Memory:mem|Mem~81                      ; 10      ;
-; ControlBlock:ctrlBlock|Mux23~0         ; 9       ;
-; ControlBlock:ctrlBlock|Equal2~0        ; 9       ;
+; ControlBlock:ctrlBlock|instruction[14] ; 9       ;
+; ControlBlock:ctrlBlock|instruction[13] ; 9       ;
 ; LCD_Driver:lcd|Decoder0~1              ; 9       ;
 ; LCD_Driver:lcd|bitNum[2]               ; 9       ;
+; LCD_Driver:lcd|ienable                 ; 9       ;
+; LCD_Driver:lcd|dataOut~29              ; 8       ;
 ; Memory:mem|Decoder0~23                 ; 8       ;
 ; Memory:mem|Decoder0~22                 ; 8       ;
 ; Memory:mem|Decoder0~21                 ; 8       ;
@@ -1651,90 +1635,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Decoder0~3                  ; 8       ;
 ; Memory:mem|Decoder0~1                  ; 8       ;
 ; Memory:mem|LessThan0~1                 ; 8       ;
-; ControlBlock:ctrlBlock|rPC~0           ; 8       ;
-; LCD_Driver:lcd|always0~0               ; 8       ;
+; ControlBlock:ctrlBlock|count~0         ; 8       ;
+; ControlBlock:ctrlBlock|instruction[17] ; 8       ;
+; LCD_Driver:lcd|Decoder0~3              ; 8       ;
+; LCD_Driver:lcd|dataOut[2]~16           ; 8       ;
+; LCD_Driver:lcd|bitNum[0]               ; 8       ;
 ; ControlBlock:ctrlBlock|Equal0~0        ; 7       ;
-; LCD_Driver:lcd|bitNum[3]~6             ; 7       ;
+; ControlBlock:ctrlBlock|Mux24~2         ; 7       ;
+; ControlBlock:ctrlBlock|Mux12~2         ; 7       ;
+; ControlBlock:ctrlBlock|Equal2~0        ; 7       ;
+; LCD_Driver:lcd|bitNum[0]~5             ; 7       ;
 ; clkDiv10Khz:U1|Equal0~8                ; 7       ;
-; LCD_Driver:lcd|bitNum[0]               ; 7       ;
-; ControlBlock:ctrlBlock|lcdRst          ; 7       ;
-; ControlBlock:ctrlBlock|instruction[14] ; 6       ;
-; ControlBlock:ctrlBlock|instruction[13] ; 6       ;
-; LCD_Driver:lcd|WideOr26~0              ; 6       ;
+; LCD_Driver:lcd|dataOut~28              ; 6       ;
+; LCD_Driver:lcd|cntCurPos[0]            ; 6       ;
+; LCD_Driver:lcd|bitNum[4]               ; 6       ;
 ; ControlBlock:ctrlBlock|rMAR            ; 6       ;
 ; ControlBlock:ctrlBlock|rMem            ; 6       ;
 ; ControlBlock:ctrlBlock|wIR             ; 6       ;
+; ControlBlock:ctrlBlock|lcdRst          ; 6       ;
 ; Memory:mem|Mem~132                     ; 5       ;
 ; Memory:mem|Mem~98                      ; 5       ;
-; LCD_Driver:lcd|Decoder0~0              ; 5       ;
-; LCD_Driver:lcd|dataOut~8               ; 5       ;
-; LCD_Driver:lcd|WideOr23~0              ; 5       ;
-; LCD_Driver:lcd|bitNum[4]               ; 5       ;
+; LCD_Driver:lcd|Decoder0~2              ; 5       ;
+; LCD_Driver:lcd|WideOr26~0              ; 5       ;
 ; LCD_Driver:lcd|bitNum[7]               ; 5       ;
-; LCD_Driver:lcd|cntCurPos[0]            ; 5       ;
+; ControlBlock:ctrlBlock|wMem            ; 5       ;
 ; ControlBlock:ctrlBlock|wMDRmem         ; 5       ;
-; ControlBlock:ctrlBlock|lcdW            ; 5       ;
 ; Memory:mem|Mem~155                     ; 4       ;
-; ControlBlock:ctrlBlock|Mux17~4         ; 4       ;
-; ControlBlock:ctrlBlock|rPC~4           ; 4       ;
-; ControlBlock:ctrlBlock|Mux12~0         ; 4       ;
+; ControlBlock:ctrlBlock|Equal3~0        ; 4       ;
+; ControlBlock:ctrlBlock|count[3]~6      ; 4       ;
+; LCD_Driver:lcd|cntCurPos[1]            ; 4       ;
+; LCD_Driver:lcd|Equal0~0                ; 4       ;
+; LCD_Driver:lcd|Decoder0~0              ; 4       ;
 ; LCD_Driver:lcd|bitNum[6]               ; 4       ;
 ; LCD_Driver:lcd|bitNum[5]               ; 4       ;
-; LCD_Driver:lcd|cntCurPos[1]            ; 4       ;
 ; ControlBlock:ctrlBlock|wMAR            ; 4       ;
-; ControlBlock:ctrlBlock|wMem            ; 4       ;
 ; ControlBlock:ctrlBlock|rIR             ; 4       ;
 ; ControlBlock:ctrlBlock|rAC             ; 4       ;
 ; Memory:mem|Mem~152                     ; 3       ;
 ; Memory:mem|Mem~150                     ; 3       ;
 ; Memory:mem|Mem~146                     ; 3       ;
 ; Memory:mem|Mem~135                     ; 3       ;
-; ControlBlock:ctrlBlock|Mux25~7         ; 3       ;
-; LCD_Driver:lcd|bitNum[3]~2             ; 3       ;
-; LCD_Driver:lcd|cntCurPos~1             ; 3       ;
+; ControlBlock:ctrlBlock|Mux17~4         ; 3       ;
+; ControlBlock:ctrlBlock|Mux13~0         ; 3       ;
+; LCD_Driver:lcd|Selector37~0            ; 3       ;
+; LCD_Driver:lcd|enableOut~3             ; 3       ;
 ; LCD_Driver:lcd|Equal0~1                ; 3       ;
-; LCD_Driver:lcd|Equal0~0                ; 3       ;
 ; LCD_Driver:lcd|dataOut[4]              ; 3       ;
 ; ControlBlock:ctrlBlock|wAC             ; 3       ;
 ; ControlBlock:ctrlBlock|rMDR            ; 3       ;
 ; ControlBlock:ctrlBlock|rPC             ; 3       ;
+; ControlBlock:ctrlBlock|eALU            ; 3       ;
 ; ControlBlock:ctrlBlock|Mux17~14        ; 2       ;
-; ControlBlock:ctrlBlock|Mux17~13        ; 2       ;
+; ControlBlock:ctrlBlock|lcdRst~3        ; 2       ;
+; LCD_Driver:lcd|cntCurPos~5             ; 2       ;
 ; Memory:mem|Mem~153                     ; 2       ;
-; ControlBlock:ctrlBlock|Mux6~2          ; 2       ;
-; ControlBlock:ctrlBlock|Mux17~9         ; 2       ;
-; ControlBlock:ctrlBlock|Mux17~8         ; 2       ;
-; ControlBlock:ctrlBlock|Mux17~7         ; 2       ;
+; ControlBlock:ctrlBlock|Mux17~6         ; 2       ;
 ; ControlBlock:ctrlBlock|Mux17~5         ; 2       ;
-; ControlBlock:ctrlBlock|lcdLine~1       ; 2       ;
+; ControlBlock:ctrlBlock|Mux21~6         ; 2       ;
+; ControlBlock:ctrlBlock|Mux21~2         ; 2       ;
 ; ControlBlock:ctrlBlock|Mux20~2         ; 2       ;
-; ControlBlock:ctrlBlock|Mux21~4         ; 2       ;
-; clkDiv:U0|count1[25]                   ; 2       ;
-; clkDiv:U0|count1[24]                   ; 2       ;
-; clkDiv:U0|count1[23]                   ; 2       ;
-; clkDiv:U0|count1[22]                   ; 2       ;
-; clkDiv:U0|count1[21]                   ; 2       ;
-; clkDiv:U0|count1[20]                   ; 2       ;
-; clkDiv:U0|count1[17]                   ; 2       ;
-; clkDiv:U0|count1[19]                   ; 2       ;
-; clkDiv:U0|count1[18]                   ; 2       ;
-; clkDiv:U0|count1[16]                   ; 2       ;
-; clkDiv:U0|count1[15]                   ; 2       ;
-; clkDiv:U0|count1[14]                   ; 2       ;
-; clkDiv:U0|count1[13]                   ; 2       ;
-; clkDiv:U0|count1[12]                   ; 2       ;
-; clkDiv:U0|count1[10]                   ; 2       ;
-; clkDiv:U0|count1[9]                    ; 2       ;
-; clkDiv:U0|count1[8]                    ; 2       ;
-; clkDiv:U0|count1[11]                   ; 2       ;
-; clkDiv:U0|count1[0]                    ; 2       ;
-; clkDiv:U0|count1[1]                    ; 2       ;
-; clkDiv:U0|count1[2]                    ; 2       ;
-; clkDiv:U0|count1[3]                    ; 2       ;
-; clkDiv:U0|count1[4]                    ; 2       ;
-; clkDiv:U0|count1[5]                    ; 2       ;
-; clkDiv:U0|count1[7]                    ; 2       ;
-; clkDiv:U0|count1[6]                    ; 2       ;
+; ControlBlock:ctrlBlock|Mux12~1         ; 2       ;
+; ControlBlock:ctrlBlock|lcdW~0          ; 2       ;
 ; aBus[17]~17                            ; 2       ;
 ; bBus[17]~17                            ; 2       ;
 ; aBus[0]~16                             ; 2       ;
@@ -1771,8 +1732,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bBus[15]~1                             ; 2       ;
 ; aBus[16]~0                             ; 2       ;
 ; bBus[16]~0                             ; 2       ;
-; ControlBlock:ctrlBlock|Mux24~1         ; 2       ;
-; LCD_Driver:lcd|count~6                 ; 2       ;
+; LCD_Driver:lcd|bitNum[7]~11            ; 2       ;
+; LCD_Driver:lcd|count~24                ; 2       ;
+; LCD_Driver:lcd|count~20                ; 2       ;
+; LCD_Driver:lcd|count[1]~18             ; 2       ;
+; LCD_Driver:lcd|count[1]~17             ; 2       ;
+; LCD_Driver:lcd|count~16                ; 2       ;
+; LCD_Driver:lcd|count[2]~12             ; 2       ;
+; LCD_Driver:lcd|count~11                ; 2       ;
 ; clkDiv10Khz:U1|count1[25]              ; 2       ;
 ; clkDiv10Khz:U1|count1[24]              ; 2       ;
 ; clkDiv10Khz:U1|count1[23]              ; 2       ;
@@ -1799,14 +1766,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clkDiv10Khz:U1|count1[1]               ; 2       ;
 ; clkDiv10Khz:U1|count1[0]               ; 2       ;
 ; clkDiv10Khz:U1|count1[3]               ; 2       ;
-; LCD_Driver:lcd|enableOut~3             ; 2       ;
-; LCD_Driver:lcd|dataOut~20              ; 2       ;
-; LCD_Driver:lcd|dataOut~10              ; 2       ;
-; LCD_Driver:lcd|LessThan0~0             ; 2       ;
+; clkDiv:U0|count1[25]                   ; 2       ;
+; clkDiv:U0|count1[24]                   ; 2       ;
+; clkDiv:U0|count1[23]                   ; 2       ;
+; clkDiv:U0|count1[22]                   ; 2       ;
+; clkDiv:U0|count1[21]                   ; 2       ;
+; clkDiv:U0|count1[20]                   ; 2       ;
+; clkDiv:U0|count1[17]                   ; 2       ;
+; clkDiv:U0|count1[19]                   ; 2       ;
+; clkDiv:U0|count1[18]                   ; 2       ;
+; clkDiv:U0|count1[16]                   ; 2       ;
+; clkDiv:U0|count1[15]                   ; 2       ;
+; clkDiv:U0|count1[14]                   ; 2       ;
+; clkDiv:U0|count1[13]                   ; 2       ;
+; clkDiv:U0|count1[12]                   ; 2       ;
+; clkDiv:U0|count1[10]                   ; 2       ;
+; clkDiv:U0|count1[9]                    ; 2       ;
+; clkDiv:U0|count1[8]                    ; 2       ;
+; clkDiv:U0|count1[11]                   ; 2       ;
+; clkDiv:U0|count1[0]                    ; 2       ;
+; clkDiv:U0|count1[1]                    ; 2       ;
+; clkDiv:U0|count1[2]                    ; 2       ;
+; clkDiv:U0|count1[3]                    ; 2       ;
+; clkDiv:U0|count1[4]                    ; 2       ;
+; clkDiv:U0|count1[5]                    ; 2       ;
+; clkDiv:U0|count1[7]                    ; 2       ;
+; clkDiv:U0|count1[6]                    ; 2       ;
 ; LCD_Driver:lcd|bit                     ; 2       ;
-; LCD_Driver:lcd|dataOut~7               ; 2       ;
+; LCD_Driver:lcd|LessThan0~0             ; 2       ;
+; LCD_Driver:lcd|dataOut~12              ; 2       ;
+; clkDiv:U0|clkOut                       ; 2       ;
 ; LCD_Driver:lcd|RS                      ; 2       ;
 ; LCD_Driver:lcd|dataOut[7]              ; 2       ;
+; LCD_Driver:lcd|dataOut[6]              ; 2       ;
 ; LCD_Driver:lcd|dataOut[3]              ; 2       ;
 ; LCD_Driver:lcd|dataOut[2]              ; 2       ;
 ; LCD_Driver:lcd|dataOut[1]              ; 2       ;
@@ -1829,30 +1821,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PC:pc|PC[15]                           ; 2       ;
 ; ControlBlock:ctrlBlock|incPC           ; 2       ;
 ; PC:pc|PC[16]                           ; 2       ;
-; ControlBlock:ctrlBlock|eALU            ; 2       ;
-; LCD_Driver:lcd|iline~0                 ; 2       ;
-; LCD_Driver:lcd|iline                   ; 2       ;
+; ControlBlock:ctrlBlock|lcdW            ; 2       ;
 ; LCD_Driver:lcd|enableOut               ; 2       ;
-; LCD_Driver:lcd|dataOut[6]              ; 2       ;
 ; LCD_Driver:lcd|dataOut[0]              ; 2       ;
-; ControlBlock:ctrlBlock|Mux21~9         ; 1       ;
+; LCD_Driver:lcd|count~20_wirecell       ; 1       ;
 ; ControlBlock:ctrlBlock|Mux4~6          ; 1       ;
+; ControlBlock:ctrlBlock|Mux4~5          ; 1       ;
+; ControlBlock:ctrlBlock|Mux15~15        ; 1       ;
+; LCD_Driver:lcd|dataOut[0]~30           ; 1       ;
 ; ControlBlock:ctrlBlock|Mux3~7          ; 1       ;
-; ControlBlock:ctrlBlock|Mux6~6          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux5~7          ; 1       ;
+; ControlBlock:ctrlBlock|Mux17~13        ; 1       ;
 ; ControlBlock:ctrlBlock|Mux20~4         ; 1       ;
-; ControlBlock:ctrlBlock|Mux25~11        ; 1       ;
+; LCD_Driver:lcd|cntCurPos~6             ; 1       ;
 ; LCD_Driver:lcd|bit~9                   ; 1       ;
 ; LCD_Driver:lcd|bit~8                   ; 1       ;
 ; LCD_Driver:lcd|bitNum[7]~14            ; 1       ;
-; LCD_Driver:lcd|count~10                ; 1       ;
-; LCD_Driver:lcd|RS~5                    ; 1       ;
-; LCD_Driver:lcd|dataOut~25              ; 1       ;
-; LCD_Driver:lcd|dataOut~24              ; 1       ;
-; ControlBlock:ctrlBlock|Mux4~5          ; 1       ;
+; LCD_Driver:lcd|count[3]~26             ; 1       ;
+; LCD_Driver:lcd|count[1]~25             ; 1       ;
 ; ControlBlock:ctrlBlock|Mux4~4          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux4~3          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux4~2          ; 1       ;
+; ControlBlock:ctrlBlock|lcdW~3          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux3~6          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux3~5          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux3~4          ; 1       ;
@@ -1877,10 +1867,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ControlBlock:ctrlBlock|Mux6~5          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux6~4          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux6~3          ; 1       ;
+; ControlBlock:ctrlBlock|Mux6~2          ; 1       ;
+; ControlBlock:ctrlBlock|Mux6~1          ; 1       ;
+; ControlBlock:ctrlBlock|Mux6~0          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux5~6          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux5~5          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux5~4          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux5~3          ; 1       ;
+; ControlBlock:ctrlBlock|Mux8~6          ; 1       ;
 ; ControlBlock:ctrlBlock|Mux5~2          ; 1       ;
 ; MAR:mar|MARout[6]~7                    ; 1       ;
 ; MAR:mar|MAR[6]                         ; 1       ;
@@ -2408,15 +2402,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Memory:mem|Mem[60][1]                  ; 1       ;
 ; Memory:mem|Mux16~52                    ; 1       ;
 ; Memory:mem|Mem[12][1]                  ; 1       ;
-; Memory:mem|Mem[44][1]                  ; 1       ;
-; Memory:mem|Mem[28][1]                  ; 1       ;
-; Memory:mem|Mux16~51                    ; 1       ;
-; Memory:mem|Mux16~50                    ; 1       ;
-; Memory:mem|Mem[55][1]                  ; 1       ;
-; Memory:mem|Mux16~49                    ; 1       ;
-; Memory:mem|Mem[7][1]                   ; 1       ;
-; Memory:mem|Mem[39][1]                  ; 1       ;
-; Memory:mem|Mem[23][1]                  ; 1       ;
 +----------------------------------------+---------+
 
 
@@ -2425,37 +2410,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------------------------+
 ; Interconnect Resource Type ; Usage                   ;
 +----------------------------+-------------------------+
-; Block interconnects        ; 5,986 / 47,787 ( 13 % ) ;
-; C16 interconnects          ; 80 / 1,804 ( 4 % )      ;
-; C4 interconnects           ; 3,974 / 31,272 ( 13 % ) ;
-; Direct links               ; 296 / 47,787 ( < 1 % )  ;
+; Block interconnects        ; 5,965 / 47,787 ( 12 % ) ;
+; C16 interconnects          ; 147 / 1,804 ( 8 % )     ;
+; C4 interconnects           ; 4,275 / 31,272 ( 14 % ) ;
+; Direct links               ; 288 / 47,787 ( < 1 % )  ;
 ; Global clocks              ; 4 / 20 ( 20 % )         ;
-; Local interconnects        ; 1,035 / 15,408 ( 7 % )  ;
-; R24 interconnects          ; 131 / 1,775 ( 7 % )     ;
-; R4 interconnects           ; 5,013 / 41,310 ( 12 % ) ;
+; Local interconnects        ; 1,057 / 15,408 ( 7 % )  ;
+; R24 interconnects          ; 96 / 1,775 ( 5 % )      ;
+; R4 interconnects           ; 4,560 / 41,310 ( 11 % ) ;
 +----------------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 14.35) ; Number of LABs  (Total = 237) ;
+; Number of Logic Elements  (Average = 14.22) ; Number of LABs  (Total = 240) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 4                             ;
-; 2                                           ; 0                             ;
-; 3                                           ; 3                             ;
-; 4                                           ; 2                             ;
+; 1                                           ; 7                             ;
+; 2                                           ; 2                             ;
+; 3                                           ; 5                             ;
+; 4                                           ; 1                             ;
 ; 5                                           ; 3                             ;
-; 6                                           ; 3                             ;
-; 7                                           ; 5                             ;
-; 8                                           ; 3                             ;
-; 9                                           ; 8                             ;
-; 10                                          ; 2                             ;
+; 6                                           ; 2                             ;
+; 7                                           ; 0                             ;
+; 8                                           ; 5                             ;
+; 9                                           ; 6                             ;
+; 10                                          ; 1                             ;
 ; 11                                          ; 2                             ;
-; 12                                          ; 4                             ;
-; 13                                          ; 5                             ;
-; 14                                          ; 5                             ;
-; 15                                          ; 16                            ;
+; 12                                          ; 5                             ;
+; 13                                          ; 3                             ;
+; 14                                          ; 12                            ;
+; 15                                          ; 14                            ;
 ; 16                                          ; 172                           ;
 +---------------------------------------------+-------------------------------+
 
@@ -2463,79 +2448,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.87) ; Number of LABs  (Total = 237) ;
+; LAB-wide Signals  (Average = 1.86) ; Number of LABs  (Total = 240) ;
 +------------------------------------+-------------------------------+
-; 1 Clock                            ; 231                           ;
-; 1 Clock enable                     ; 17                            ;
+; 1 Clock                            ; 233                           ;
+; 1 Clock enable                     ; 21                            ;
 ; 1 Sync. clear                      ; 10                            ;
-; 1 Sync. load                       ; 2                             ;
-; 2 Clock enables                    ; 184                           ;
+; 1 Sync. load                       ; 4                             ;
+; 2 Clock enables                    ; 179                           ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 25.30) ; Number of LABs  (Total = 237) ;
+; Number of Signals Sourced  (Average = 25.02) ; Number of LABs  (Total = 240) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 4                             ;
-; 2                                            ; 0                             ;
-; 3                                            ; 1                             ;
-; 4                                            ; 0                             ;
+; 1                                            ; 5                             ;
+; 2                                            ; 2                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 3                             ;
 ; 5                                            ; 0                             ;
-; 6                                            ; 3                             ;
+; 6                                            ; 5                             ;
 ; 7                                            ; 0                             ;
 ; 8                                            ; 1                             ;
 ; 9                                            ; 0                             ;
 ; 10                                           ; 3                             ;
-; 11                                           ; 1                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 0                             ;
-; 14                                           ; 6                             ;
+; 11                                           ; 0                             ;
+; 12                                           ; 1                             ;
+; 13                                           ; 1                             ;
+; 14                                           ; 1                             ;
 ; 15                                           ; 0                             ;
-; 16                                           ; 4                             ;
-; 17                                           ; 5                             ;
+; 16                                           ; 8                             ;
+; 17                                           ; 4                             ;
 ; 18                                           ; 16                            ;
-; 19                                           ; 8                             ;
-; 20                                           ; 9                             ;
-; 21                                           ; 7                             ;
-; 22                                           ; 11                            ;
-; 23                                           ; 7                             ;
-; 24                                           ; 9                             ;
+; 19                                           ; 7                             ;
+; 20                                           ; 8                             ;
+; 21                                           ; 4                             ;
+; 22                                           ; 13                            ;
+; 23                                           ; 4                             ;
+; 24                                           ; 7                             ;
 ; 25                                           ; 4                             ;
-; 26                                           ; 6                             ;
-; 27                                           ; 8                             ;
-; 28                                           ; 7                             ;
-; 29                                           ; 2                             ;
-; 30                                           ; 15                            ;
-; 31                                           ; 13                            ;
-; 32                                           ; 84                            ;
+; 26                                           ; 7                             ;
+; 27                                           ; 6                             ;
+; 28                                           ; 16                            ;
+; 29                                           ; 5                             ;
+; 30                                           ; 20                            ;
+; 31                                           ; 15                            ;
+; 32                                           ; 74                            ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 10.72) ; Number of LABs  (Total = 237) ;
+; Number of Signals Sourced Out  (Average = 10.55) ; Number of LABs  (Total = 240) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 0                             ;
-; 1                                                ; 4                             ;
+; 1                                                ; 8                             ;
 ; 2                                                ; 5                             ;
-; 3                                                ; 6                             ;
-; 4                                                ; 6                             ;
-; 5                                                ; 10                            ;
-; 6                                                ; 15                            ;
-; 7                                                ; 10                            ;
-; 8                                                ; 15                            ;
-; 9                                                ; 10                            ;
-; 10                                               ; 6                             ;
-; 11                                               ; 18                            ;
-; 12                                               ; 28                            ;
-; 13                                               ; 38                            ;
-; 14                                               ; 25                            ;
-; 15                                               ; 30                            ;
-; 16                                               ; 10                            ;
+; 3                                                ; 12                            ;
+; 4                                                ; 10                            ;
+; 5                                                ; 5                             ;
+; 6                                                ; 4                             ;
+; 7                                                ; 7                             ;
+; 8                                                ; 17                            ;
+; 9                                                ; 8                             ;
+; 10                                               ; 14                            ;
+; 11                                               ; 20                            ;
+; 12                                               ; 27                            ;
+; 13                                               ; 39                            ;
+; 14                                               ; 29                            ;
+; 15                                               ; 25                            ;
+; 16                                               ; 9                             ;
 ; 17                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
@@ -2543,42 +2528,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 24.68) ; Number of LABs  (Total = 237) ;
+; Number of Distinct Inputs  (Average = 24.37) ; Number of LABs  (Total = 240) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
 ; 2                                            ; 2                             ;
 ; 3                                            ; 1                             ;
-; 4                                            ; 5                             ;
-; 5                                            ; 1                             ;
+; 4                                            ; 6                             ;
+; 5                                            ; 3                             ;
 ; 6                                            ; 1                             ;
-; 7                                            ; 0                             ;
+; 7                                            ; 1                             ;
 ; 8                                            ; 2                             ;
-; 9                                            ; 2                             ;
+; 9                                            ; 5                             ;
 ; 10                                           ; 2                             ;
 ; 11                                           ; 3                             ;
-; 12                                           ; 2                             ;
-; 13                                           ; 2                             ;
-; 14                                           ; 2                             ;
-; 15                                           ; 4                             ;
+; 12                                           ; 1                             ;
+; 13                                           ; 4                             ;
+; 14                                           ; 3                             ;
+; 15                                           ; 5                             ;
 ; 16                                           ; 3                             ;
 ; 17                                           ; 6                             ;
-; 18                                           ; 6                             ;
+; 18                                           ; 8                             ;
 ; 19                                           ; 6                             ;
-; 20                                           ; 10                            ;
-; 21                                           ; 11                            ;
-; 22                                           ; 12                            ;
-; 23                                           ; 9                             ;
-; 24                                           ; 10                            ;
+; 20                                           ; 8                             ;
+; 21                                           ; 5                             ;
+; 22                                           ; 7                             ;
+; 23                                           ; 8                             ;
+; 24                                           ; 9                             ;
 ; 25                                           ; 12                            ;
-; 26                                           ; 11                            ;
+; 26                                           ; 9                             ;
 ; 27                                           ; 8                             ;
-; 28                                           ; 10                            ;
-; 29                                           ; 14                            ;
-; 30                                           ; 6                             ;
-; 31                                           ; 9                             ;
-; 32                                           ; 20                            ;
-; 33                                           ; 45                            ;
+; 28                                           ; 8                             ;
+; 29                                           ; 13                            ;
+; 30                                           ; 13                            ;
+; 31                                           ; 16                            ;
+; 32                                           ; 16                            ;
+; 33                                           ; 46                            ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -2639,9 +2624,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 13        ; 0            ; 13        ; 0            ; 0            ; 13        ; 13        ; 0            ; 13        ; 13        ; 0            ; 11           ; 0            ; 0            ; 2            ; 0            ; 11           ; 2            ; 0            ; 0            ; 0            ; 11           ; 0            ; 0            ; 0            ; 0            ; 0            ; 13        ; 0            ; 0            ;
+; Total Pass         ; 14        ; 0            ; 14        ; 0            ; 0            ; 14        ; 14        ; 0            ; 14        ; 14        ; 0            ; 12           ; 0            ; 0            ; 2            ; 0            ; 12           ; 2            ; 0            ; 0            ; 0            ; 12           ; 0            ; 0            ; 0            ; 0            ; 0            ; 14        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 13           ; 0         ; 13           ; 13           ; 0         ; 0         ; 13           ; 0         ; 0         ; 13           ; 2            ; 13           ; 13           ; 11           ; 13           ; 2            ; 11           ; 13           ; 13           ; 13           ; 2            ; 13           ; 13           ; 13           ; 13           ; 13           ; 0         ; 13           ; 13           ;
+; Total Inapplicable ; 0         ; 14           ; 0         ; 14           ; 14           ; 0         ; 0         ; 14           ; 0         ; 0         ; 14           ; 2            ; 14           ; 14           ; 12           ; 14           ; 2            ; 12           ; 14           ; 14           ; 14           ; 2            ; 14           ; 14           ; 14           ; 14           ; 14           ; 0         ; 14           ; 14           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; LCD[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LCD[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2654,6 +2639,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lcdRS              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; lcdRW              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; lcdEn              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; LED                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
@@ -2702,7 +2688,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 04 12:54:38 2012
+    Info: Processing started: Sun Mar 04 17:13:00 2012
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off proc -c proc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP3C16F484C6 for design "proc"
@@ -2784,6 +2770,7 @@ Info (176353): Automatically promoted node clkDiv:U0|clkOut
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node clkDiv:U0|clkOut~0
+        Info (176357): Destination node LED~output
 Info (176353): Automatically promoted node clkDiv10Khz:U1|clkOut 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
@@ -2791,8 +2778,9 @@ Info (176353): Automatically promoted node clkDiv10Khz:U1|clkOut
 Info (176353): Automatically promoted node ControlBlock:ctrlBlock|eALU 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node ControlBlock:ctrlBlock|Mux17~4
-        Info (176357): Destination node ControlBlock:ctrlBlock|Mux17~7
+        Info (176357): Destination node ControlBlock:ctrlBlock|Mux17~6
+        Info (176357): Destination node ControlBlock:ctrlBlock|Mux17~8
+        Info (176357): Destination node ControlBlock:ctrlBlock|Mux17~11
 Info (176233): Starting register packing
 Extra Info (176273): Performing register packing on registers with non-logic cell location assignments
 Extra Info (176274): Completed register packing on registers with non-logic cell location assignments
@@ -2802,17 +2790,6 @@ Extra Info (176248): Moving registers into I/O cells, Multiplier Blocks, and RAM
 Extra Info (176249): Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Warning (15705): Ignored locations or region assignments to the following nodes
-    Warning (15706): Node "LEDs[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDs[9]" is assigned to location or region, but does not exist in design
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -2821,18 +2798,17 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 10% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 50% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
+    Info (170196): Router estimated peak interconnect usage is 48% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:12
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info: Quartus II 32-bit Fitter was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 412 megabytes
-    Info: Processing ended: Sun Mar 04 12:54:58 2012
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 413 megabytes
+    Info: Processing ended: Sun Mar 04 17:13:19 2012
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 
