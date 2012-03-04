@@ -33,6 +33,7 @@
 vlog -reportprogress 300 -work work E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
 # -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	LCD_Driver_top_TestBench
@@ -42,5 +43,257 @@ vsim -voptargs=+acc work.LCD_Driver_top_TestBench
 # Loading work.LCD_top
 # Loading work.clkDiv
 # Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
 add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+run
+add wave -r /*
+run
+add wave -r /*
+run
+quit -sim
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
+vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver_top_TestBench
+# ** Warning: E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LCD_Driver_top_TestBench
+vsim -voptargs=+acc work.LCD_Driver_top_TestBench
+# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
+# Loading work.LCD_Driver_top_TestBench
+# Loading work.LCD_top
+# Loading work.clkDiv
+# Loading work.LCD_Driver
+# ** Warning: (vsim-3017) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /LCD_Driver_top_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v(22): [TFMPC] - Missing connection for port 'lineToggleBt'.
+add wave -r /*
+run
 run

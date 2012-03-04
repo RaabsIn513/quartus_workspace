@@ -1,5 +1,5 @@
 Flow report for LCD_top
-Sat Mar 03 22:02:19 2012
+Sun Mar 04 15:55:14 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -38,18 +38,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 03 22:02:19 2012         ;
+; Flow Status                        ; Successful - Sun Mar 04 15:55:14 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; LCD_top                                       ;
 ; Top-level Entity Name              ; LCD_top                                       ;
 ; Family                             ; Cyclone III                                   ;
 ; Device                             ; EP3C16F484C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 130 / 15,408 ( < 1 % )                        ;
-;     Total combinational functions  ; 119 / 15,408 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 63 / 15,408 ( < 1 % )                         ;
-; Total registers                    ; 63                                            ;
-; Total pins                         ; 34 / 347 ( 10 % )                             ;
+; Total logic elements               ; 162 / 15,408 ( 1 % )                          ;
+;     Total combinational functions  ; 151 / 15,408 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 67 / 15,408 ( < 1 % )                         ;
+; Total registers                    ; 67                                            ;
+; Total pins                         ; 24 / 347 ( 7 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                               ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2012 22:02:05 ;
+; Start date & time ; 03/04/2012 15:54:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCD_top             ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 202795272491843.133083012506240 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 202795272491843.133089449942388 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -90,12 +90,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 293 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 385 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 304 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 300 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 256 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 294 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 386 MB              ; 00:00:05                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 304 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 300 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 257 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

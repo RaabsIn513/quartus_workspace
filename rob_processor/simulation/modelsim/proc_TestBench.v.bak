@@ -1,12 +1,12 @@
 module proc_TestBench;
-  //clk, reset, LEDs
+  //proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn );
   
   reg clock, rst;
-  wire[9:0] lights;
+  wire[7:0] LCD;
+  wire lcdRS, lcdRW, lcdEn;
   
   initial begin
     clock <= 0;
-    #5  rst <= 1'b0;
     #20 rst <= 1'b1;
     #20 rst <= 1'b0;
   end

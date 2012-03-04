@@ -61,13 +61,37 @@
 # vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/ControlBlock.v}
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
 # -- Compiling module ControlBlock
-# ** Warning: E:/quartus_workspace/rob_processor/ControlBlock.v(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/quartus_workspace/rob_processor/ControlBlock.v(102): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	ControlBlock
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/clkDiv.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module clkDiv
+# 
+# Top level modules:
+# 	clkDiv
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/clkDiv10Khz.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module clkDiv10Khz
+# 
+# Top level modules:
+# 	clkDiv10Khz
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/LCD_Driver.v}
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module LCD_Driver
+# 
+# Top level modules:
+# 	LCD_Driver
 # 
 #  
 vlog -reportprogress 300 -work work E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc_TestBench
+# 
+# Top level modules:
+# 	proc_TestBench
+vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
 # -- Compiling module proc_TestBench
 # 
@@ -77,7 +101,10 @@ vsim -voptargs=+acc work.proc_TestBench
 # vsim -voptargs=+acc work.proc_TestBench 
 # Loading work.proc_TestBench
 # Loading work.proc
+# Loading work.clkDiv
+# Loading work.clkDiv10Khz
 # Loading work.ControlBlock
+# Loading work.LCD_Driver
 # Loading work.MAR
 # Loading work.Memory
 # Loading work.MDR
@@ -87,10 +114,139 @@ vsim -voptargs=+acc work.proc_TestBench
 # Loading work.ALU
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftfhxvr0".
+#           Attempting to use alternate WLF file "./wlftj55ig8".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfhxvr0
-# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(38): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#           Using alternate file: ./wlftj55ig8
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /proc_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Missing connection for port 'lcdRW'.
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Too few port connections. Expected 23, found 19.
+#         Region: /proc_TestBench/U0/ctrlBlock
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdLineSel'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdLine'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdRst'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdW'.
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(50): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#         Region: /proc_TestBench/U0/alu
+run
+restart
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /proc_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Missing connection for port 'lcdRW'.
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Too few port connections. Expected 23, found 19.
+#         Region: /proc_TestBench/U0/ctrlBlock
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdLineSel'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdLine'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdRst'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(32): [TFMPC] - Missing connection for port 'lcdW'.
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(50): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#         Region: /proc_TestBench/U0/alu
+run
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0 E:/quartus_workspace/rob_processor/ControlBlock.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ControlBlock
+# ** Warning: E:/quartus_workspace/rob_processor/ControlBlock.v(102): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ControlBlock
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0 E:/quartus_workspace/rob_processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.clkDiv
+# Loading work.clkDiv10Khz
+# Loading work.ControlBlock
+# Loading work.LCD_Driver
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.AC
+# Loading work.ALU
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 10
+#           Attempting to use alternate WLF file "./wlftw94g1m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftw94g1m
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /proc_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Missing connection for port 'lcdRW'.
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Too few port connections. Expected 23, found 19.
+#         Region: /proc_TestBench/U0/ctrlBlock
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdLineSel'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdLine'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdRst'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdW'.
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(75): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#         Region: /proc_TestBench/U0/alu
+add wave sim:/proc_TestBench/*
+run
+restart
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /proc_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Missing connection for port 'lcdRW'.
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Too few port connections. Expected 23, found 19.
+#         Region: /proc_TestBench/U0/ctrlBlock
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdLineSel'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdLine'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdRst'.
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/proc.v(57): [TFMPC] - Missing connection for port 'lcdW'.
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(75): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
+#         Region: /proc_TestBench/U0/alu
+run
+run -continue
+run -continue
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0 E:/quartus_workspace/rob_processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0 E:/quartus_workspace/rob_processor/ControlBlock.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module ControlBlock
+# ** Warning: E:/quartus_workspace/rob_processor/ControlBlock.v(102): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ControlBlock
+vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc_TestBench
+# 
+# Top level modules:
+# 	proc_TestBench
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.clkDiv
+# Loading work.clkDiv10Khz
+# Loading work.ControlBlock
+# Loading work.LCD_Driver
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.AC
+# Loading work.ALU
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 10
+#           Attempting to use alternate WLF file "./wlftz10tgc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz10tgc
+# ** Warning: (vsim-3017) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /proc_TestBench/U0
+# ** Warning: (vsim-3722) E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v(18): [TFMPC] - Missing connection for port 'lcdRW'.
+# ** Warning: (vsim-3015) E:/quartus_workspace/rob_processor/proc.v(75): [PCDPC] - Port size (19 or 19) does not match connection size (18) for port 'alu_out'. The port definition is at: E:/quartus_workspace/rob_processor/ALU.v(7).
 #         Region: /proc_TestBench/U0/alu
 add wave -r /*
 run
+# Can't move the Now cursor.

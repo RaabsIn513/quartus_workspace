@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proc
-Fri Mar 02 14:52:09 2012
+Sun Mar 04 12:54:37 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,17 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Editio
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "ALU:alu"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,20 +46,20 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Mar 02 14:52:09 2012             ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 04 12:54:37 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; proc                                          ;
 ; Top-level Entity Name              ; proc                                          ;
 ; Family                             ; Cyclone III                                   ;
-; Total logic elements               ; N/A until Partition Merge                     ;
-;     Total combinational functions  ; N/A until Partition Merge                     ;
-;     Dedicated logic registers      ; N/A until Partition Merge                     ;
-; Total registers                    ; N/A until Partition Merge                     ;
-; Total pins                         ; N/A until Partition Merge                     ;
-; Total virtual pins                 ; N/A until Partition Merge                     ;
-; Total memory bits                  ; N/A until Partition Merge                     ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                     ;
-; Total PLLs                         ; N/A until Partition Merge                     ;
+; Total logic elements               ; 4,586                                         ;
+;     Total combinational functions  ; 2,237                                         ;
+;     Dedicated logic registers      ; 2,601                                         ;
+; Total registers                    ; 2601                                          ;
+; Total pins                         ; 13                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
 +------------------------------------+-----------------------------------------------+
 
 
@@ -150,13 +159,284 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+
+; proc.v                           ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/proc.v         ;
+; MAR.v                            ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/MAR.v          ;
+; Memory.v                         ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/Memory.v       ;
+; MDR.v                            ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/MDR.v          ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/ALU.v          ;
+; IR.v                             ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/IR.v           ;
+; PC.v                             ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/PC.v           ;
+; AC.v                             ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/AC.v           ;
+; ControlBlock.v                   ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/ControlBlock.v ;
+; clkDiv.v                         ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/clkDiv.v       ;
+; clkDiv10Khz.v                    ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/clkDiv10Khz.v  ;
+; LCD_Driver.v                     ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/LCD_Driver.v   ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 4,586            ;
+;                                             ;                  ;
+; Total combinational functions               ; 2237             ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 1874             ;
+;     -- 3 input functions                    ; 148              ;
+;     -- <=2 input functions                  ; 215              ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 2146             ;
+;     -- arithmetic mode                      ; 91               ;
+;                                             ;                  ;
+; Total registers                             ; 2601             ;
+;     -- Dedicated logic registers            ; 2601             ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 13               ;
+; Maximum fan-out node                        ; clkDiv:U0|clkOut ;
+; Maximum fan-out                             ; 2521             ;
+; Total fan-out                               ; 16152            ;
+; Average fan-out                             ; 3.32             ;
++---------------------------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; |proc                       ; 2237 (36)         ; 2601 (0)     ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |proc                        ;              ;
+;    |AC:ac|                  ; 20 (20)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|AC:ac                  ;              ;
+;    |ALU:alu|                ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|ALU:alu                ;              ;
+;    |ControlBlock:ctrlBlock| ; 128 (128)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|ControlBlock:ctrlBlock ;              ;
+;    |IR:ir|                  ; 19 (19)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|IR:ir                  ;              ;
+;    |LCD_Driver:lcd|         ; 104 (104)         ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|LCD_Driver:lcd         ;              ;
+;    |MAR:mar|                ; 14 (14)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|MAR:mar                ;              ;
+;    |MDR:mdr|                ; 19 (19)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|MDR:mdr                ;              ;
+;    |Memory:mem|             ; 1714 (1714)       ; 2322 (2322)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Memory:mem             ;              ;
+;    |PC:pc|                  ; 20 (20)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|PC:pc                  ;              ;
+;    |clkDiv10Khz:U1|         ; 42 (42)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|clkDiv10Khz:U1         ;              ;
+;    |clkDiv:U0|              ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|clkDiv:U0              ;              ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; ALU:alu|alu_out[12]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[0]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[8]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[4]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[3]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[15]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[11]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[7]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[1]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[13]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[9]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[5]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[14]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[2]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[10]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[6]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[17]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; ALU:alu|alu_out[16]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                             ;                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++-----------------------------------------+--------------------------------------------+
+; Register name                           ; Reason for Removal                         ;
++-----------------------------------------+--------------------------------------------+
+; MAR:mar|MARout[0]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[1]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[2]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[3]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[4]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[5]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[6]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[7]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[8]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[9]~en                    ; Lost fanout                                ;
+; MAR:mar|MARout[10]~en                   ; Lost fanout                                ;
+; MAR:mar|MARout[11]~en                   ; Lost fanout                                ;
+; MAR:mar|MARout[12]~en                   ; Lost fanout                                ;
+; IR:ir|IRout[0]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[1]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[2]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[3]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[4]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[5]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[6]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[7]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[8]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[9]~en                       ; Lost fanout                                ;
+; IR:ir|IRout[10]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[11]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[12]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[13]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[14]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[15]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[16]~en                      ; Lost fanout                                ;
+; IR:ir|IRout[17]~en                      ; Lost fanout                                ;
+; MDR:mdr|MDRout[0]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[1]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[2]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[3]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[4]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[5]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[6]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[7]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[8]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[9]~en                    ; Lost fanout                                ;
+; MDR:mdr|MDRout[10]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[11]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[12]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[13]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[14]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[15]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[16]~en                   ; Lost fanout                                ;
+; MDR:mdr|MDRout[17]~en                   ; Lost fanout                                ;
+; LCD_Driver:lcd|cntCurPos[2..6]          ; Merged with LCD_Driver:lcd|cntCurPos[7]    ;
+; AC:ac|ACout[10]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[11]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[12]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[13]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[14]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[15]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[16]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[17]~en                      ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[1]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[2]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[3]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[4]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[5]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[6]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[7]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[8]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; AC:ac|ACout[9]~en                       ; Merged with AC:ac|ACout[0]~en              ;
+; PC:pc|PCout[10]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[11]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[12]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[13]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[14]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[15]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[16]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[17]~en                      ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[1]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[2]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[3]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[4]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[5]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[6]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[7]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[8]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; PC:pc|PCout[9]~en                       ; Merged with PC:pc|PCout[0]~en              ;
+; LCD_Driver:lcd|dataOut[5]               ; Merged with LCD_Driver:lcd|dataOut[4]      ;
+; LCD_Driver:lcd|count[5..7]              ; Merged with LCD_Driver:lcd|count[4]        ;
+; ControlBlock:ctrlBlock|lcdLineSel       ; Merged with ControlBlock:ctrlBlock|lcdLine ;
+; ControlBlock:ctrlBlock|wMDRbus          ; Merged with ControlBlock:ctrlBlock|cALU[2] ;
+; ControlBlock:ctrlBlock|wPC              ; Merged with ControlBlock:ctrlBlock|cALU[2] ;
+; ControlBlock:ctrlBlock|cALU[2]          ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:lcd|RW                       ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:lcd|cntCurPos[7]             ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:lcd|count[4]                 ; Stuck at GND due to stuck port data_in     ;
+; ControlBlock:ctrlBlock|lcdLine          ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:lcd|isetLine                 ; Stuck at GND due to stuck port data_in     ;
+; Total Number of Removed Registers = 101 ;                                            ;
++-----------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2601  ;
+; Number of registers using Synchronous Clear  ; 39    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2511  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                       ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------+----------------------------+
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; |proc|MDR:mdr|MDR[2]             ;                            ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; |proc|PC:pc|PC[11]               ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |proc|LCD_Driver:lcd|dataOut[1]  ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[21][17]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[20][14]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[12][5]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[11][8]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[10][7]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[9][5]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[8][10]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[7][3]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[6][0]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[5][9]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[4][4]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[3][7]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[2][4]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[1][3]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[0][2]       ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |proc|LCD_Driver:lcd|bitNum[3]   ;                            ;
+; 128:1              ; 18 bits   ; 1530 LEs      ; 1530 LEs             ; 0 LEs                  ; |proc|Memory:mem|DataOut[14]     ;                            ;
+; 15:1               ; 5 bits    ; 50 LEs        ; 35 LEs               ; 15 LEs                 ; |proc|ControlBlock:ctrlBlock|rPC ;                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |proc|LCD_Driver:lcd|dataOut     ;                            ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; |proc|ALU:alu|Mux9               ;                            ;
+; 33:1               ; 3 bits    ; 66 LEs        ; 24 LEs               ; 42 LEs                 ; |proc|LCD_Driver:lcd|dataOut     ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu"                                                                                                                          ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                        ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; alu_out ; Output ; Warning  ; Output or bidir port (19 bits) is wider than the port expression (18 bits) it drives; bit(s) "alu_out[18..18]" have no fanouts ;
+; ovf     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                            ;
+; AgtB    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                            ;
+; N       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                            ;
+; Z       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                            ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:20     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Mar 02 14:52:08 2012
+    Info: Processing started: Sun Mar 04 12:54:24 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proc -c proc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file proc.v
@@ -179,13 +459,184 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: ControlBlock
 Info (12021): Found 1 design units, including 1 entities, in source file clkdiv.v
     Info (12023): Found entity 1: clkDiv
-Error (10161): Verilog HDL error at proc.v(30): object "string" is not declared File: E:/quartus_workspace/rob_processor/proc.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file clkdiv10khz.v
+    Info (12023): Found entity 1: clkDiv10Khz
+Warning (10463): Verilog HDL Declaration warning at LCD_Driver.v(10): "bit" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_driver.v
+    Info (12023): Found entity 1: LCD_Driver
+Info (12127): Elaborating entity "proc" for the top level hierarchy
+Info (12128): Elaborating entity "clkDiv" for hierarchy "clkDiv:U0"
+Warning (10230): Verilog HDL assignment warning at clkDiv.v(14): truncated value with size 32 to match size of target (26)
+Info (12128): Elaborating entity "clkDiv10Khz" for hierarchy "clkDiv10Khz:U1"
+Warning (10230): Verilog HDL assignment warning at clkDiv10Khz.v(14): truncated value with size 32 to match size of target (26)
+Info (12128): Elaborating entity "ControlBlock" for hierarchy "ControlBlock:ctrlBlock"
+Info (12128): Elaborating entity "LCD_Driver" for hierarchy "LCD_Driver:lcd"
+Info (12128): Elaborating entity "MAR" for hierarchy "MAR:mar"
+Warning (10230): Verilog HDL assignment warning at MAR.v(31): truncated value with size 18 to match size of target (13)
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:mem"
+Info (12128): Elaborating entity "MDR" for hierarchy "MDR:mdr"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pc"
+Info (12128): Elaborating entity "IR" for hierarchy "IR:ir"
+Info (12128): Elaborating entity "AC" for hierarchy "AC:ac"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu"
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(17): variable "enable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(16): inferring latch(es) for variable "alu_out", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(43): variable "datA" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(43): variable "datB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (10041): Inferred latch for "alu_out[0]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[1]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[2]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[3]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[4]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[5]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[6]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[7]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[8]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[9]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[10]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[11]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[12]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[13]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[14]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[15]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[16]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[17]" at ALU.v(17)
+Info (10041): Inferred latch for "alu_out[18]" at ALU.v(17)
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "aBus[17]" into a selector
+    Warning (13048): Converted tri-state node "aBus[16]" into a selector
+    Warning (13048): Converted tri-state node "aBus[15]" into a selector
+    Warning (13048): Converted tri-state node "aBus[14]" into a selector
+    Warning (13048): Converted tri-state node "aBus[13]" into a selector
+    Warning (13048): Converted tri-state node "aBus[12]" into a selector
+    Warning (13048): Converted tri-state node "aBus[11]" into a selector
+    Warning (13048): Converted tri-state node "aBus[10]" into a selector
+    Warning (13048): Converted tri-state node "aBus[9]" into a selector
+    Warning (13048): Converted tri-state node "aBus[8]" into a selector
+    Warning (13048): Converted tri-state node "aBus[7]" into a selector
+    Warning (13048): Converted tri-state node "aBus[6]" into a selector
+    Warning (13048): Converted tri-state node "aBus[5]" into a selector
+    Warning (13048): Converted tri-state node "aBus[4]" into a selector
+    Warning (13048): Converted tri-state node "aBus[3]" into a selector
+    Warning (13048): Converted tri-state node "aBus[2]" into a selector
+    Warning (13048): Converted tri-state node "aBus[1]" into a selector
+    Warning (13048): Converted tri-state node "aBus[0]" into a selector
+    Warning (13048): Converted tri-state node "bBus[17]" into a selector
+    Warning (13048): Converted tri-state node "bBus[16]" into a selector
+    Warning (13048): Converted tri-state node "bBus[15]" into a selector
+    Warning (13048): Converted tri-state node "bBus[14]" into a selector
+    Warning (13048): Converted tri-state node "bBus[13]" into a selector
+    Warning (13048): Converted tri-state node "bBus[12]" into a selector
+    Warning (13048): Converted tri-state node "bBus[11]" into a selector
+    Warning (13048): Converted tri-state node "bBus[10]" into a selector
+    Warning (13048): Converted tri-state node "bBus[9]" into a selector
+    Warning (13048): Converted tri-state node "bBus[8]" into a selector
+    Warning (13048): Converted tri-state node "bBus[7]" into a selector
+    Warning (13048): Converted tri-state node "bBus[6]" into a selector
+    Warning (13048): Converted tri-state node "bBus[5]" into a selector
+    Warning (13048): Converted tri-state node "bBus[4]" into a selector
+    Warning (13048): Converted tri-state node "bBus[3]" into a selector
+    Warning (13048): Converted tri-state node "bBus[2]" into a selector
+    Warning (13048): Converted tri-state node "bBus[1]" into a selector
+    Warning (13048): Converted tri-state node "bBus[0]" into a selector
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[12]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[13]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[14]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[15]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[16]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "ALU:alu|alu_out[17]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:mar|MARout[12]" feeding internal logic into a wire
+Info (13005): Duplicate registers merged to single register
+Info (13005): Duplicate registers merged to single register
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "lcdRW" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 49 registers lost all their fanouts during netlist optimizations. The first 49 are displayed below.
+    Info (17050): Register "MAR:mar|MARout[0]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[1]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[2]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[3]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[4]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[5]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[6]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[7]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[8]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[9]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[10]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[11]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MAR:mar|MARout[12]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[0]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[1]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[2]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[3]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[4]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[5]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[6]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[7]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[8]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[9]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[10]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[11]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[12]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[13]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[14]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[15]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[16]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "IR:ir|IRout[17]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[0]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[1]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[2]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[3]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[4]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[5]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[6]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[7]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[8]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[9]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[10]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[11]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[12]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[13]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[14]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[15]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[16]~en" lost all its fanouts during netlist optimizations.
+    Info (17050): Register "MDR:mdr|MDRout[17]~en" lost all its fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file E:/quartus_workspace/rob_processor/proc.map.smsg
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 283 megabytes
-    Error: Processing ended: Fri Mar 02 14:52:09 2012
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+Info (21057): Implemented 4644 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 4631 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 304 megabytes
+    Info: Processing ended: Sun Mar 04 12:54:37 2012
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

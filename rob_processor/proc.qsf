@@ -72,6 +72,19 @@ set_location_assignment PIN_J3 -to LEDs[2]
 set_location_assignment PIN_J2 -to LEDs[1]
 set_location_assignment PIN_J1 -to LEDs[0]
 set_location_assignment PIN_G21 -to clk
-set_location_assignment PIN_J6 -to reset
+set_location_assignment PIN_F1 -to reset
 set_global_assignment -name VERILOG_FILE clkDiv.v
+set_global_assignment -name VERILOG_FILE clkDiv10Khz.v
+set_global_assignment -name VERILOG_FILE LCD_Driver.v
+set_location_assignment PIN_C20 -to LCD[7]
+set_location_assignment PIN_D20 -to LCD[6]
+set_location_assignment PIN_B21 -to LCD[5]
+set_location_assignment PIN_B22 -to LCD[4]
+set_location_assignment PIN_C21 -to LCD[3]
+set_location_assignment PIN_C22 -to LCD[2]
+set_location_assignment PIN_D21 -to LCD[1]
+set_location_assignment PIN_D22 -to LCD[0]
+set_location_assignment PIN_E21 -to lcdEn
+set_location_assignment PIN_F22 -to lcdRS
+set_location_assignment PIN_E22 -to lcdRW
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

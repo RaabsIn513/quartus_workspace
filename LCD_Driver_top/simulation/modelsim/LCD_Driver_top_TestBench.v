@@ -2,7 +2,7 @@ module LCD_Driver_top_TestBench;
   
   //module LCD_top( clk, switches, rstBt, LCD, LEDs, en, RS, RW );
   reg clock, reset;
-  reg[9:0] inData;
+  reg[17:0] inData;
   wire[7:0] dataOut;
   wire[9:0] LEDs;
   wire RS, RW, en;  
@@ -11,7 +11,7 @@ module LCD_Driver_top_TestBench;
     clock <= 1'b0;
     #5 reset <= 1'b0;
     #25 reset <= 1'b1;
-    #20 inData <= 10'b1011000011;
+    #20 inData <= 17'b000111000111000111;
   end
   
   always begin

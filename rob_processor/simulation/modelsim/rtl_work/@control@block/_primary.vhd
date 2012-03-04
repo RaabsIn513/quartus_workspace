@@ -20,6 +20,10 @@ entity ControlBlock is
         wAC             : out    vl_logic;
         cALU            : out    vl_logic_vector(2 downto 0);
         eALU            : out    vl_logic;
-        getInst         : in     vl_logic_vector(17 downto 0)
+        getInst         : in     vl_logic_vector(17 downto 0);
+        lcdLineSel      : out    vl_logic;
+        lcdLine         : out    vl_logic;
+        lcdRst          : out    vl_logic;
+        lcdW            : out    vl_logic
     );
 end ControlBlock;

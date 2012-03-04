@@ -238,42 +238,6 @@ PC:pc
 
 # end
 # entity
-ControlBlock
-# storage
-db|proc.(1).cnf
-db|proc.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-controlblock.v
-a1507028a0c89ed32bfbf4621b3f111a
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-ControlBlock:ctrlBlock
-}
-# macro_sequence
-
-# end
-# entity
 Memory
 # storage
 db|proc.(3).cnf
@@ -321,7 +285,7 @@ ON
 # case_sensitive
 # source_file
 clkdiv.v
-38fbd5e4a8756ada153af9e82179dae4
+4d774284cb21c7ab134de638a07d23ff
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -346,6 +310,42 @@ clkDiv:U0
 
 # end
 # entity
+clkDiv10Khz
+# storage
+db|proc.(10).cnf
+db|proc.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+clkdiv10khz.v
+1ba7c7dda2c492f48b574ced04ff133
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+clkDiv10Khz:U1
+}
+# macro_sequence
+
+# end
+# entity
 proc
 # storage
 db|proc.(0).cnf
@@ -357,7 +357,7 @@ ON
 # case_sensitive
 # source_file
 proc.v
-1dff36c3c464a17d5015dd30d0f9e6b2
+c2e7ba7ccc85281e9f5a2df6585db0
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -377,6 +377,78 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+ControlBlock
+# storage
+db|proc.(1).cnf
+db|proc.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+controlblock.v
+8b5b41c54d4f4c1e6e04e4527cc3d1
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ControlBlock:ctrlBlock
+}
+# macro_sequence
+
+# end
+# entity
+LCD_Driver
+# storage
+db|proc.(11).cnf
+db|proc.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lcd_driver.v
+2686cb44f91c1467e2bdeee5e427125
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+LCD_Driver:lcd
 }
 # macro_sequence
 

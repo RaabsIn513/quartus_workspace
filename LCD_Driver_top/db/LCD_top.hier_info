@@ -1,16 +1,6 @@
 |LCD_top
 clk => clk.IN1
-switches[0] => switches[0].IN1
-switches[1] => switches[1].IN1
-switches[2] => switches[2].IN1
-switches[3] => switches[3].IN1
-switches[4] => switches[4].IN1
-switches[5] => switches[5].IN1
-switches[6] => switches[6].IN1
-switches[7] => switches[7].IN1
-switches[8] => switches[8].IN1
-switches[9] => switches[9].IN1
-rstBt => _.IN1
+rstBt => rstBt.IN1
 lineToggleBt => line.OUTPUTSELECT
 lineToggleBt => lineChange.DATAIN
 
@@ -46,10 +36,18 @@ clkIn => count1[25].CLK
 
 
 |LCD_top|LCD_Driver:U1
-enable => ~NO_FANOUT~
+enable => ienable.OUTPUTSELECT
 clk => bit.CLK
 clk => RW~reg0.CLK
 clk => enableOut~reg0.CLK
+clk => cntCurPos[0].CLK
+clk => cntCurPos[1].CLK
+clk => cntCurPos[2].CLK
+clk => cntCurPos[3].CLK
+clk => cntCurPos[4].CLK
+clk => cntCurPos[5].CLK
+clk => cntCurPos[6].CLK
+clk => cntCurPos[7].CLK
 clk => RS~reg0.CLK
 clk => dataOut[0]~reg0.CLK
 clk => dataOut[1]~reg0.CLK
@@ -67,6 +65,7 @@ clk => bitNum[4].CLK
 clk => bitNum[5].CLK
 clk => bitNum[6].CLK
 clk => bitNum[7].CLK
+clk => ienable.CLK
 clk => iline.CLK
 clk => isetLine.CLK
 clk => irst.CLK
@@ -87,18 +86,26 @@ rst => count.OUTPUTSELECT
 rst => count.OUTPUTSELECT
 rst => count.OUTPUTSELECT
 rst => irst.OUTPUTSELECT
-dataIn[0] => Mux0.IN18
-dataIn[1] => Mux0.IN19
-dataIn[2] => Mux0.IN16
-dataIn[3] => Mux0.IN17
-dataIn[4] => Mux0.IN14
-dataIn[5] => Mux0.IN15
-dataIn[6] => Mux0.IN12
-dataIn[7] => Mux0.IN13
-dataIn[8] => Mux0.IN10
-dataIn[9] => Mux0.IN11
-line => iline.DATAIN
+dataIn[0] => Mux0.IN35
+dataIn[1] => Mux0.IN36
+dataIn[2] => Mux0.IN33
+dataIn[3] => Mux0.IN34
+dataIn[4] => Mux0.IN31
+dataIn[5] => Mux0.IN32
+dataIn[6] => Mux0.IN29
+dataIn[7] => Mux0.IN30
+dataIn[8] => Mux0.IN27
+dataIn[9] => Mux0.IN28
+dataIn[10] => Mux0.IN25
+dataIn[11] => Mux0.IN26
+dataIn[12] => Mux0.IN23
+dataIn[13] => Mux0.IN24
+dataIn[14] => Mux0.IN21
+dataIn[15] => Mux0.IN22
+dataIn[16] => Mux0.IN19
+dataIn[17] => Mux0.IN20
+line => iline.DATAB
 setLine => isetLine.OUTPUTSELECT
-setLine => iline.ENA
+setLine => iline.OUTPUTSELECT
 
 
