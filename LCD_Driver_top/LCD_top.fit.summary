@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sat Mar 03 13:27:54 2012
+Fitter Status : Successful - Sat Mar 03 20:21:24 2012
 Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition
 Revision Name : LCD_top
 Top-level Entity Name : LCD_top
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 116 / 15,408 ( < 1 % )
-    Total combinational functions : 107 / 15,408 ( < 1 % )
-    Dedicated logic registers : 56 / 15,408 ( < 1 % )
-Total registers : 56
+Total logic elements : 120 / 15,408 ( < 1 % )
+    Total combinational functions : 111 / 15,408 ( < 1 % )
+    Dedicated logic registers : 55 / 15,408 ( < 1 % )
+Total registers : 55
 Total pins : 33 / 347 ( 10 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )

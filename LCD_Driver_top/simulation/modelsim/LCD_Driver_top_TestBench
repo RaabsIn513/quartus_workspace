@@ -1,0 +1,15 @@
+module LCD_Driver_top_TestBench;
+  
+  //module LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut );
+  reg en, clock, reset;
+  reg[9:0] Indata;
+  wire[7:0] dataOut;
+  wire RS, RW, enableOut;
+  
+  
+  initial begin
+    #5 reset <= 1'b0;
+    #10 reset <= 1'b1;
+    #15 reset <= 1'b0;
+  
+endmodule

@@ -62,4 +62,5 @@ set_location_assignment PIN_C22 -to dataOut[2]
 set_location_assignment PIN_D21 -to dataOut[1]
 set_location_assignment PIN_D22 -to dataOut[0]
 set_location_assignment PIN_E21 -to enableOut
+set_global_assignment -name TEXT_FILE LCD_Driver_backup.txt
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
