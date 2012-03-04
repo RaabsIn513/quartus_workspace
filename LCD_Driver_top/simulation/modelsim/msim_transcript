@@ -36,12 +36,6 @@ vlog -reportprogress 300 -work work E:/quartus_workspace/LCD_Driver_top/simulati
 # 
 # Top level modules:
 # 	LCD_Driver_top_TestBench
-vlog -reportprogress 300 -work work E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
 vsim -voptargs=+acc work.LCD_Driver_top_TestBench
 # vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
 # Loading work.LCD_Driver_top_TestBench
@@ -50,4 +44,3 @@ vsim -voptargs=+acc work.LCD_Driver_top_TestBench
 # Loading work.LCD_Driver
 add wave -r /*
 run
-add wave -r /*

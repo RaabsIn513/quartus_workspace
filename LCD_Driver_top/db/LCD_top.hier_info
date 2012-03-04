@@ -11,6 +11,8 @@ switches[7] => switches[7].IN1
 switches[8] => switches[8].IN1
 switches[9] => switches[9].IN1
 rstBt => _.IN1
+lineToggleBt => line.OUTPUTSELECT
+lineToggleBt => lineChange.DATAIN
 
 
 |LCD_top|clkDiv:U0
@@ -47,8 +49,8 @@ clkIn => count1[25].CLK
 enable => ~NO_FANOUT~
 clk => bit.CLK
 clk => RW~reg0.CLK
-clk => RS~reg0.CLK
 clk => enableOut~reg0.CLK
+clk => RS~reg0.CLK
 clk => dataOut[0]~reg0.CLK
 clk => dataOut[1]~reg0.CLK
 clk => dataOut[2]~reg0.CLK
@@ -65,6 +67,8 @@ clk => bitNum[4].CLK
 clk => bitNum[5].CLK
 clk => bitNum[6].CLK
 clk => bitNum[7].CLK
+clk => iline.CLK
+clk => isetLine.CLK
 clk => irst.CLK
 clk => count[0].CLK
 clk => count[1].CLK
@@ -93,5 +97,8 @@ dataIn[6] => Mux0.IN12
 dataIn[7] => Mux0.IN13
 dataIn[8] => Mux0.IN10
 dataIn[9] => Mux0.IN11
+line => iline.DATAIN
+setLine => isetLine.OUTPUTSELECT
+setLine => iline.ENA
 
 

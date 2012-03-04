@@ -4,30 +4,30 @@ K3
 cModel Technology
 Z0 dE:\quartus_workspace\LCD_Driver_top\simulation\modelsim
 vclkDiv
-IS_>928?OoQM8:gDQJa;YI3
+IV9:j4TLTKX<g04`f=Gzce0
 VH9ofh2d>0ZTP0O0cLWeNH3
 Z1 dE:\quartus_workspace\LCD_Driver_top\simulation\modelsim
-w1330798812
+w1330825381
 8E:/quartus_workspace/LCD_Driver_top/clkDiv.v
 FE:/quartus_workspace/LCD_Driver_top/clkDiv.v
-L0 1
+L0 2
 Z2 OV;L;10.0c;49
 r1
 31
 Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0
 nclk@div
-!s100 IE@I]iHVFA72a4:RJcRdM1
+!s100 @hH]>[<DTOk<`kL>V__hz3
 !s85 0
-!s108 1330823191.618000
+!s108 1330825483.346000
 !s107 E:/quartus_workspace/LCD_Driver_top/clkDiv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|E:/quartus_workspace/LCD_Driver_top/clkDiv.v|
 !s101 -O0
 vLCD_Driver
-IoYUI:Aa^R8gdW^XOMZDz?0
+IJoCiiYeQ<W=IdjOgb:zlB3
 VodR^gOO=C[h;3k2Ma_d:Q1
 R1
-w1330822928
+w1330825147
 8E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
 FE:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
 L0 1
@@ -37,9 +37,9 @@ r1
 R3
 R4
 n@l@c@d_@driver
-!s100 ;g>dLUaac<V5eT1:b6c_e1
+!s100 Wk[CW`C>8X3^`DZeWz^me3
 !s85 0
-!s108 1330823191.592000
+!s108 1330825483.312000
 !s107 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v|
 !s101 -O0
@@ -56,17 +56,17 @@ R2
 r1
 !s85 0
 31
-!s108 1330823252.585000
+!s108 1330825487.190000
 !s107 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v|
 !s90 -reportprogress|300|-work|work|E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v|
 !s101 -O0
 o-work work -O0
 n@l@c@d_@driver_top_@test@bench
 vLCD_top
-If=^@DRTm_8CW;WTjeC9=d2
+Ia<[WfcG?iz18flHf:;?0Y2
 VM1OQIzNkXInzF9zO]V_0[1
 R1
-w1330822502
+w1330824427
 8E:/quartus_workspace/LCD_Driver_top/LCD_top.v
 FE:/quartus_workspace/LCD_Driver_top/LCD_top.v
 L0 1
@@ -76,9 +76,9 @@ r1
 R3
 n@l@c@d_top
 R4
-!s100 7naSaJXf=U^]Eon97KD503
+!s100 V20;3QWV8nhHff?f1]dQU0
 !s85 0
-!s108 1330823191.568000
+!s108 1330825483.277000
 !s107 E:/quartus_workspace/LCD_Driver_top/LCD_top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|E:/quartus_workspace/LCD_Driver_top/LCD_top.v|
 !s101 -O0
