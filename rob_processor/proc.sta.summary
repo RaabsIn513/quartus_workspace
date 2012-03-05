@@ -2,36 +2,44 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clkDiv:U0|clkOut'
-Slack : -8.012
-TNS   : -12597.379
-
 Type  : Slow 1200mV 85C Model Setup 'ControlBlock:ctrlBlock|eALU'
-Slack : -6.843
-TNS   : -101.411
+Slack : -5.776
+TNS   : -83.619
+
+Type  : Slow 1200mV 85C Model Setup 'clkDiv:U0|clkOut'
+Slack : -4.271
+TNS   : -1649.530
 
 Type  : Slow 1200mV 85C Model Setup 'clkDiv10Khz:U1|clkOut'
-Slack : -3.070
-TNS   : -64.002
+Slack : -3.155
+TNS   : -72.393
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.717
-TNS   : -86.277
+Slack : -2.685
+TNS   : -87.320
 
-Type  : Slow 1200mV 85C Model Hold 'clkDiv:U0|clkOut'
-Slack : -0.251
-TNS   : -0.657
+Type  : Slow 1200mV 85C Model Setup 'LCD_Driver:lcd|ienable'
+Slack : -0.710
+TNS   : -10.992
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.181
-TNS   : -0.318
+Slack : -0.306
+TNS   : -0.338
+
+Type  : Slow 1200mV 85C Model Hold 'clkDiv:U0|clkOut'
+Slack : -0.295
+TNS   : -0.295
 
 Type  : Slow 1200mV 85C Model Hold 'clkDiv10Khz:U1|clkOut'
-Slack : 0.358
+Slack : -0.191
+TNS   : -2.191
+
+Type  : Slow 1200mV 85C Model Hold 'LCD_Driver:lcd|ienable'
+Slack : 0.283
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ControlBlock:ctrlBlock|eALU'
-Slack : 1.737
+Slack : 1.413
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -40,46 +48,58 @@ TNS   : -57.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDiv:U0|clkOut'
 Slack : -1.000
-TNS   : -2520.000
+TNS   : -503.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDiv10Khz:U1|clkOut'
 Slack : -1.000
 TNS   : -26.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ControlBlock:ctrlBlock|eALU'
-Slack : 0.402
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD_Driver:lcd|ienable'
+Slack : 0.361
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'clkDiv:U0|clkOut'
-Slack : -7.125
-TNS   : -11172.613
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ControlBlock:ctrlBlock|eALU'
+Slack : 0.378
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'ControlBlock:ctrlBlock|eALU'
-Slack : -6.123
-TNS   : -91.265
+Slack : -5.104
+TNS   : -74.520
+
+Type  : Slow 1200mV 0C Model Setup 'clkDiv:U0|clkOut'
+Slack : -3.777
+TNS   : -1445.339
 
 Type  : Slow 1200mV 0C Model Setup 'clkDiv10Khz:U1|clkOut'
-Slack : -2.640
-TNS   : -54.814
+Slack : -2.773
+TNS   : -63.023
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.355
-TNS   : -71.171
+Slack : -2.305
+TNS   : -71.973
 
-Type  : Slow 1200mV 0C Model Hold 'clkDiv:U0|clkOut'
-Slack : -0.227
-TNS   : -0.744
+Type  : Slow 1200mV 0C Model Setup 'LCD_Driver:lcd|ienable'
+Slack : -0.633
+TNS   : -9.732
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.194
-TNS   : -0.337
+Slack : -0.309
+TNS   : -0.350
+
+Type  : Slow 1200mV 0C Model Hold 'clkDiv:U0|clkOut'
+Slack : -0.242
+TNS   : -0.242
 
 Type  : Slow 1200mV 0C Model Hold 'clkDiv10Khz:U1|clkOut'
-Slack : 0.312
+Slack : -0.172
+TNS   : -1.611
+
+Type  : Slow 1200mV 0C Model Hold 'LCD_Driver:lcd|ienable'
+Slack : 0.363
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ControlBlock:ctrlBlock|eALU'
-Slack : 1.610
+Slack : 1.304
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -88,62 +108,78 @@ TNS   : -57.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDiv:U0|clkOut'
 Slack : -1.000
-TNS   : -2520.000
+TNS   : -503.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDiv10Khz:U1|clkOut'
 Slack : -1.000
 TNS   : -26.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ControlBlock:ctrlBlock|eALU'
-Slack : 0.443
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD_Driver:lcd|ienable'
+Slack : 0.431
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'clkDiv:U0|clkOut'
-Slack : -4.443
-TNS   : -6269.384
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ControlBlock:ctrlBlock|eALU'
+Slack : 0.434
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'ControlBlock:ctrlBlock|eALU'
-Slack : -3.769
-TNS   : -54.021
+Slack : -3.059
+TNS   : -42.550
+
+Type  : Fast 1200mV 0C Model Setup 'clkDiv:U0|clkOut'
+Slack : -2.121
+TNS   : -797.516
 
 Type  : Fast 1200mV 0C Model Setup 'clkDiv10Khz:U1|clkOut'
-Slack : -1.403
-TNS   : -25.484
+Slack : -1.379
+TNS   : -30.399
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.057
-TNS   : -25.611
+Slack : -1.066
+TNS   : -26.488
+
+Type  : Fast 1200mV 0C Model Setup 'LCD_Driver:lcd|ienable'
+Slack : -0.090
+TNS   : -0.715
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.231
-TNS   : -0.377
-
-Type  : Fast 1200mV 0C Model Hold 'clkDiv:U0|clkOut'
-Slack : -0.167
-TNS   : -0.167
+Slack : -0.291
+TNS   : -0.455
 
 Type  : Fast 1200mV 0C Model Hold 'clkDiv10Khz:U1|clkOut'
-Slack : 0.184
+Slack : -0.288
+TNS   : -4.360
+
+Type  : Fast 1200mV 0C Model Hold 'clkDiv:U0|clkOut'
+Slack : -0.234
+TNS   : -0.234
+
+Type  : Fast 1200mV 0C Model Hold 'LCD_Driver:lcd|ienable'
+Slack : 0.263
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ControlBlock:ctrlBlock|eALU'
-Slack : 0.974
+Slack : 0.734
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -60.017
+TNS   : -60.022
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDiv:U0|clkOut'
 Slack : -1.000
-TNS   : -2520.000
+TNS   : -503.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDiv10Khz:U1|clkOut'
 Slack : -1.000
 TNS   : -26.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ControlBlock:ctrlBlock|eALU'
-Slack : 0.394
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD_Driver:lcd|ienable'
+Slack : 0.355
 TNS   : 0.000
 
 ------------------------------------------------------------

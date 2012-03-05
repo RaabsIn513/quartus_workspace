@@ -26,18 +26,35 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 	wire[17:0] aluOutBus;
 	wire[12:0] MAR_to_mem;
 	wire[17:0] mem_to_MDR;
-	wire ireset;
+	reg ireset;
 	wire PB_up, PB_state;
 	
 	clkDiv U0( clk, slowClk );
 	clkDiv10Khz U1( clk, lcdClk );
 	
-	PushButton_Debouncer(clk, reset, PB_state, PB_up, ireset);
-	
+	always @( clk ) begin
+		if( reset <= 1'b1 ) begin
+			ireset <= 1'b1;
+		end
+		else if( reset <= 1'b0 ) begin
+			ireset <= 1'b0;
+		end
+		else begin
+		  ireset <= 1'b0;
+		 end
+	end
+	//PushButton_Debouncer U2(clk, reset, PB_state, PB_up, ireset);
+  /*	
 	always @ ( slowClk ) begin
 		LED <= slowClk;
+		if( ~reset ) begin
+			ireset <= 1'b1;
+		end
+		else begin
+			ireset <= 1'b0;
+		end
 	end
-	
+	*/
 	// -------------------- SLOWCLK for DE0 board -----------------------------------------------------	
 //	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
 //	ControlBlock ctrlBlock( slowClk, ireset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
@@ -61,10 +78,10 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 //	ALU	 alu( aBus, bBus, aluCtrl, aluEn, aluOutBus, ovf, AgtB, Neg, Zero );
 		
 	// ------------ FAST CLK FOR DEBUG -----------------------------------------------
-	//	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
+	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
 	ControlBlock ctrlBlock( clk, ireset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
 	
-	//	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
+	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
 	LCD_Driver lcd( lcdW, clk, lcdRst, mem_to_MDR, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
 	
 	//MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);

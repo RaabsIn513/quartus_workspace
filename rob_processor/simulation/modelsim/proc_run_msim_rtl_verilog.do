@@ -17,5 +17,4 @@ vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/qua
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/clkDiv.v}
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/clkDiv10Khz.v}
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/LCD_Driver.v}
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor {E:/quartus_workspace/rob_processor/PushButton_Debouncer.v}
 

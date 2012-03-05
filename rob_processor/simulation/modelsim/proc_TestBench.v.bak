@@ -1,21 +1,21 @@
 module proc_TestBench;
-  //proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn );
+  //proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
   
   reg clock, rst;
   wire[7:0] LCD;
-  wire lcdRS, lcdRW, lcdEn;
+  wire lcdRW, lcdEn, LEDtb, lcdRS;
   
   initial begin
-    clock <= 0;
-    #20 rst <= 1'b1;
+    #2 clock <= 1'b0;
+    #10 rst <= 1'b1;
     #20 rst <= 1'b0;
   end
   
   always begin
-    #10 clock <= !clock;
+    #5 clock <= !clock;
   end
-  
-  proc U0(.clk(clock), .reset(rst), .LEDs(lights) );
+  //proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
+  proc U0( clock, rst, LCD, lcdRS, lcdRW, lcdEn, LEDtb );
 
   
 endmodule

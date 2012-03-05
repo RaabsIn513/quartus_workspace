@@ -6,7 +6,7 @@ entity ALU is
         datB            : in     vl_logic_vector(17 downto 0);
         ctrl            : in     vl_logic_vector(2 downto 0);
         enable          : in     vl_logic;
-        alu_out         : out    vl_logic_vector(18 downto 0);
+        alu_out         : out    vl_logic_vector(17 downto 0);
         ovf             : out    vl_logic;
         AgtB            : out    vl_logic;
         N               : out    vl_logic;

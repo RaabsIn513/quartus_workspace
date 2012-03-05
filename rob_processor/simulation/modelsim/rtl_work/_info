@@ -19,15 +19,15 @@ Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0
 n@a@c
 !s100 ;Go=@`:ilb_c:N66JnB802
 !s85 0
-!s108 1330898590.083000
+!s108 1330925559.033000
 !s107 E:/quartus_workspace/rob_processor/AC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/AC.v|
 !s101 -O0
 vALU
-IZ4F`=fm<zIC^nA4n7AIiD3
-VdA8PhhVFEnDYRoh2c5AlL3
+I3n?33kQ[gJmQ9?Pm^91nz3
+VZVXSa[bFWA54;ZD]Onci13
 R1
-w1330440628
+w1330916478
 8E:/quartus_workspace/rob_processor/ALU.v
 FE:/quartus_workspace/rob_processor/ALU.v
 L0 1
@@ -37,17 +37,17 @@ r1
 R3
 R4
 n@a@l@u
-!s100 >R0b>hoL<QNd1FLo^8_5f1
+!s100 G>_RFYVUD0TPSbZAe3]km0
 !s85 0
-!s108 1330898589.969000
+!s108 1330925558.643000
 !s107 E:/quartus_workspace/rob_processor/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/ALU.v|
 !s101 -O0
 vclkDiv
-IaMC2JC6QfH_;Q?HOK2:_W3
+IMRKHF`?RaOkKFBHlABFEL0
 VH9ofh2d>0ZTP0O0cLWeNH3
 R1
-w1330830908
+w1330918852
 8E:/quartus_workspace/rob_processor/clkDiv.v
 FE:/quartus_workspace/rob_processor/clkDiv.v
 L0 1
@@ -57,17 +57,17 @@ r1
 R3
 R4
 nclk@div
-!s100 ZAiQ>X7SOOPhd1NL:T<g?2
+!s100 3h?h7nVzfzV3>kK^fbzOQ1
 !s85 0
-!s108 1330898590.257000
+!s108 1330925559.095000
 !s107 E:/quartus_workspace/rob_processor/clkDiv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/clkDiv.v|
 !s101 -O0
 vclkDiv10Khz
-Iek<=[X2iD;B5_KMAC>k:42
+Iig:D7hljEhjaH8lbJi?_m2
 VW937eIHjGNmK_aASSHhVR3
 R1
-w1330830899
+w1330916104
 8E:/quartus_workspace/rob_processor/clkDiv10Khz.v
 FE:/quartus_workspace/rob_processor/clkDiv10Khz.v
 L0 1
@@ -77,32 +77,32 @@ r1
 R3
 R4
 nclk@div10@khz
-!s100 bLfe25kPHXh7DjD1G=Z0B2
+!s100 4L0YJ9DfE=PicV@95jm`>3
 !s85 0
-!s108 1330898590.290000
+!s108 1330925559.111000
 !s107 E:/quartus_workspace/rob_processor/clkDiv10Khz.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/clkDiv10Khz.v|
 !s101 -O0
 vControlBlock
-Ia4W2gDLG:85hD<3ecm]C43
+!s100 1>2BF>1:KmCeRFz9ToIO<1
+Ic5OZYl2b8eSXL^1M7SGQ00
 VPAn]YakOi2E9=ZV9F5U;N1
 R1
-w1330896236
+w1330924975
 8E:/quartus_workspace/rob_processor/ControlBlock.v
 FE:/quartus_workspace/rob_processor/ControlBlock.v
 L0 1
 R2
 r1
-31
-R3
-R4
-n@control@block
-!s100 kBVkjXmeGIVC;h86[464e0
 !s85 0
-!s108 1330898776.900000
+31
+!s108 1330926013.174000
 !s107 E:/quartus_workspace/rob_processor/ControlBlock.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|-O0|E:/quartus_workspace/rob_processor/ControlBlock.v|
 !s101 -O0
+R3
+R4
+n@control@block
 vIR
 I29=h@`2mi4;=5ojQUbz6g3
 V0eS6kh^69IJSV=oPz:XNz0
@@ -119,15 +119,15 @@ R4
 n@i@r
 !s100 e[G;2?6]7A68GV:F<oeRc3
 !s85 0
-!s108 1330898590.009000
+!s108 1330925558.674000
 !s107 E:/quartus_workspace/rob_processor/IR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/IR.v|
 !s101 -O0
 vLCD_Driver
-IQ[6[PDdg]^9Sc3b]C0W4T3
+IzgHUbF<aQ6fcRn;3k;aa13
 V@__:`fKO?5:E@<;C0<RdR2
 R1
-w1330894885
+w1330925333
 8E:/quartus_workspace/rob_processor/LCD_Driver.v
 FE:/quartus_workspace/rob_processor/LCD_Driver.v
 L0 1
@@ -137,17 +137,17 @@ r1
 R3
 R4
 n@l@c@d_@driver
-!s100 V8gk<ONMT_QQk7lbXQSe=1
+!s100 Oi>H8CLezB6`Z;[OlizDI2
 !s85 0
-!s108 1330898771.898000
+!s108 1330925559.142000
 !s107 E:/quartus_workspace/rob_processor/LCD_Driver.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|-O0|E:/quartus_workspace/rob_processor/LCD_Driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/LCD_Driver.v|
 !s101 -O0
 vMAR
-I74lBDnF2Z^ZjQ4[2zR7f@1
+I3RVG]boYCz[LSXRjDocX03
 VFU`lTIA8BPToAU^PCJZNd0
 R1
-w1330316225
+w1330916370
 8E:/quartus_workspace/rob_processor/MAR.v
 FE:/quartus_workspace/rob_processor/MAR.v
 L0 6
@@ -157,9 +157,9 @@ r1
 R3
 R4
 n@m@a@r
-!s100 M[hgY<AGDGoE=eZ_OZRg?2
+!s100 ?1LC84OB]Q]0fc?WEa=f>1
 !s85 0
-!s108 1330898589.886000
+!s108 1330925558.565000
 !s107 E:/quartus_workspace/rob_processor/MAR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/MAR.v|
 !s101 -O0
@@ -179,15 +179,15 @@ R4
 n@m@d@r
 !s100 _1ICF[5DMmhR>[LNA6gFI0
 !s85 0
-!s108 1330898589.944000
+!s108 1330925558.611000
 !s107 E:/quartus_workspace/rob_processor/MDR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/MDR.v|
 !s101 -O0
 vMemory
-IU2O5F<LKD6`bfN__[dM=z2
+IIn1QVlVSojWlUCR86QhE80
 VFiDTD7`@k=@4HkFc9`GmL2
 R1
-w1330534325
+w1330923994
 8E:/quartus_workspace/rob_processor/Memory.v
 FE:/quartus_workspace/rob_processor/Memory.v
 L0 6
@@ -197,9 +197,9 @@ r1
 R3
 R4
 n@memory
-!s100 [i26G:SBdV;h2E=4GEYMo1
+!s100 h4J]0QQDPdk[]1]l@ZMYe1
 !s85 0
-!s108 1330898589.917000
+!s108 1330925558.596000
 !s107 E:/quartus_workspace/rob_processor/Memory.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/Memory.v|
 !s101 -O0
@@ -219,15 +219,15 @@ R4
 n@p@c
 !s100 ae=zS<3P`ke;:AfM`Xz>N3
 !s85 0
-!s108 1330898590.042000
+!s108 1330925559.001000
 !s107 E:/quartus_workspace/rob_processor/PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/PC.v|
 !s101 -O0
 vproc
-I]ImcB^4U1MOX0RF5o1BTQ1
+I@z?3:YC^hcYM8zjch^EA33
 Vij6B4Z4X3FnM2zDhWP21f0
 R1
-w1330898889
+w1330925477
 8E:/quartus_workspace/rob_processor/proc.v
 FE:/quartus_workspace/rob_processor/proc.v
 L0 1
@@ -236,48 +236,28 @@ r1
 31
 R3
 R4
-!s100 FGj>BiHUQ=YZ94]?dlLc82
+!s100 nMY>YBL3PA3SjfV5;HJza1
 !s85 0
-!s108 1330898892.507000
+!s108 1330926010.678000
 !s107 E:/quartus_workspace/rob_processor/proc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|-O0|E:/quartus_workspace/rob_processor/proc.v|
 !s101 -O0
 vproc_TestBench
-!s100 `RFgBz<=M7hV?<XcPjaJ71
-IF<VEPYI`Odb^Rf5Cl2lh[3
+IIJ0m<8hkLLj=1B`B5f[c93
 VE`LLbJK^hA4mEJ8L4`L^I0
 R1
-w1330878895
+w1330925983
 8E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
 FE:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
 L0 1
 R2
 r1
-!s85 0
 31
-!s108 1330898916.027000
-!s107 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
-!s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
-!s101 -O0
 o-work work -O0
 nproc_@test@bench
-vPushButton_Debouncer
-ILie8[ig6DO0b5[@zSk1h_3
-V2cF=XJl7C4I?ej<iMk1n00
-R1
-w1330897856
-8E:/quartus_workspace/rob_processor/PushButton_Debouncer.v
-FE:/quartus_workspace/rob_processor/PushButton_Debouncer.v
-L0 1
-R2
-r1
-31
-R3
-R4
-n@push@button_@debouncer
-!s100 ;RTbPzG`<NlYBYKL6UM>X0
+!s100 fA8mbIU=lH^PZE0eKj;fd0
 !s85 0
-!s108 1330898590.353000
-!s107 E:/quartus_workspace/rob_processor/PushButton_Debouncer.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/rob_processor|E:/quartus_workspace/rob_processor/PushButton_Debouncer.v|
+!s108 1330926007.386000
+!s107 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
+!s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v|
 !s101 -O0

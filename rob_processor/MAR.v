@@ -28,7 +28,7 @@ module MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
 		end
 	else
 		begin
-			MARout <= 18'dz;
+			MARout <= 13'dz;
 		end
 		
 	end
