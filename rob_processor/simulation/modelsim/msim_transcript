@@ -123,110 +123,22 @@ vsim -voptargs=+acc work.proc_TestBench
 add wave -r /*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftximswf".
+#           Attempting to use alternate WLF file "./wlftk5myei".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftximswf
+#           Using alternate file: ./wlftk5myei
 run
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-vsim -voptargs=+acc work.proc_TestBench
-# vsim -voptargs=+acc work.proc_TestBench 
-# Loading work.proc_TestBench
-# Loading work.proc
-# Loading work.clkDiv
-# Loading work.clkDiv10Khz
-# Loading work.ControlBlock
-# Loading work.LCD_Driver
-# Loading work.MAR
-# Loading work.Memory
-# Loading work.MDR
-# Loading work.PC
-# Loading work.IR
-# Loading work.AC
-# Loading work.ALU
-add wave -r /*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftsa0zhe".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftsa0zhe
-run
-vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module proc_TestBench
-# 
-# Top level modules:
-# 	proc_TestBench
-vsim -voptargs=+acc work.proc_TestBench
-# vsim -voptargs=+acc work.proc_TestBench 
-# Loading work.proc_TestBench
-# Loading work.proc
-# Loading work.clkDiv
-# Loading work.clkDiv10Khz
-# Loading work.ControlBlock
-# Loading work.LCD_Driver
-# Loading work.MAR
-# Loading work.Memory
-# Loading work.MDR
-# Loading work.PC
-# Loading work.IR
-# Loading work.AC
-# Loading work.ALU
-add wave -r /*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftvt49ve".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvt49ve
-run
-run
-vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module proc_TestBench
-# 
-# Top level modules:
-# 	proc_TestBench
-vsim -voptargs=+acc work.proc_TestBench
-# vsim -voptargs=+acc work.proc_TestBench 
-# Loading work.proc_TestBench
-# Loading work.proc
-# Loading work.clkDiv
-# Loading work.clkDiv10Khz
-# Loading work.ControlBlock
-# Loading work.LCD_Driver
-# Loading work.MAR
-# Loading work.Memory
-# Loading work.MDR
-# Loading work.PC
-# Loading work.IR
-# Loading work.AC
-# Loading work.ALU
-add wave -r /*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftjt6tde".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftjt6tde
-run
-run
-vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module proc_TestBench
-# 
-# Top level modules:
-# 	proc_TestBench
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0 E:/quartus_workspace/rob_processor/proc.v
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
 # -- Compiling module proc
 # 
 # Top level modules:
 # 	proc
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/rob_processor -O0 E:/quartus_workspace/rob_processor/ControlBlock.v
+vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module ControlBlock
+# -- Compiling module proc_TestBench
 # 
 # Top level modules:
-# 	ControlBlock
+# 	proc_TestBench
 vsim -voptargs=+acc work.proc_TestBench
 # vsim -voptargs=+acc work.proc_TestBench 
 # Loading work.proc_TestBench
@@ -245,17 +157,46 @@ vsim -voptargs=+acc work.proc_TestBench
 add wave -r /*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlftm625vy".
+#           Attempting to use alternate WLF file "./wlftenesa3".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftm625vy
+#           Using alternate file: ./wlftenesa3
 run
-# Can't move the Now cursor.
+restart
 run
-run
-run
-run
-run
-run
-run
-run
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.clkDiv
+# Loading work.clkDiv10Khz
+# Loading work.ControlBlock
+# Loading work.LCD_Driver
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.AC
+# Loading work.ALU
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.clkDiv
+# Loading work.clkDiv10Khz
+# Loading work.ControlBlock
+# Loading work.LCD_Driver
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.AC
+# Loading work.ALU
+add wave -r /*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 10
+#           Attempting to use alternate WLF file "./wlftqrxqm8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqrxqm8
 run

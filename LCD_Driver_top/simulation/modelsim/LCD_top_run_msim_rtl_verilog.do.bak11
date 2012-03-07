@@ -8,4 +8,5 @@ vmap work rtl_work
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/LCD_top.v}
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v}
 vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/clkDiv.v}
+vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v}
 

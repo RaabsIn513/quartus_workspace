@@ -22,42 +22,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-clkDiv
-# storage
-db|LCD_top.(1).cnf
-db|LCD_top.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-clkdiv.v
-8b92e521459061e4f24a767c63ec
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-clkDiv:U0
-}
-# macro_sequence
-
-# end
-# entity
 LCD_top
 # storage
 db|LCD_top.(0).cnf
@@ -69,7 +33,7 @@ ON
 # case_sensitive
 # source_file
 lcd_top.v
-949f773ce4611c9b0d736d234749b
+3912d0718f98cab8852699b9bfa97c8c
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -94,18 +58,18 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-LCD_Driver
+clkDiv
 # storage
-db|LCD_top.(2).cnf
-db|LCD_top.(2).cnf
+db|LCD_top.(1).cnf
+db|LCD_top.(1).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-lcd_driver.v
-2e3199c570b321861fe4c9763283bb49
+clkdiv.v
+f6f13680b1ebd712d5edd6583c12e4bd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -124,7 +88,79 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-LCD_Driver:U1
+clkDiv:clkDivSlow
+}
+# macro_sequence
+
+# end
+# entity
+LCD_Driver
+# storage
+db|LCD_top.(2).cnf
+db|LCD_top.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lcd_driver.v
+56cdd227a22b1adaab502bf39453fd1f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+LCD_Driver:driver
+}
+# macro_sequence
+
+# end
+# entity
+clkDiv1Hz
+# storage
+db|LCD_top.(3).cnf
+db|LCD_top.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+clkdiv1hz.v
+3a338a284eed1ddec582d53e37f19ba
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+clkDiv1Hz:clkDiv1Hz
 }
 # macro_sequence
 

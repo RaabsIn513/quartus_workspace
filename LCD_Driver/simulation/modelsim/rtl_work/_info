@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dE:\quartus_workspace\LCD_Driver\simulation\modelsim
 vLCD_Driver
-I`>YY7H?SO3<SjX5?lPSjo1
-V<jDCcIeHOMk][GQ3X6>Z50
+Izh5A:9b]VIGH>>h=OS]@m3
+VdH7QiRHSAZnSiW=I9?R;b1
 Z1 dE:\quartus_workspace\LCD_Driver\simulation\modelsim
-w1330820213
+w1331079641
 8E:/quartus_workspace/LCD_Driver/LCD_Driver.v
 FE:/quartus_workspace/LCD_Driver/LCD_Driver.v
 L0 1
@@ -16,9 +16,9 @@ r1
 31
 o-vlog01compat -work work -O0
 n@l@c@d_@driver
-!s100 eQkTQ8;n8]N?M13?^;Wgi0
+!s100 :KLohZ>l>Ed]BmHe;DJfj2
 !s85 0
-!s108 1330820239.570000
+!s108 1331079738.175000
 !s107 E:/quartus_workspace/LCD_Driver/LCD_Driver.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver|E:/quartus_workspace/LCD_Driver/LCD_Driver.v|
 !s101 -O0
@@ -36,7 +36,7 @@ R2
 r1
 !s85 0
 31
-!s108 1330820251.510000
+!s108 1331079836.345000
 !s107 E:/quartus_workspace/LCD_Driver/simulation/modelsim/LCD_Driver_TestBench.v|
 !s90 -reportprogress|300|-work|work|E:/quartus_workspace/LCD_Driver/simulation/modelsim/LCD_Driver_TestBench.v|
 !s101 -O0

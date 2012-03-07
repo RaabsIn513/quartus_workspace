@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dE:\quartus_workspace\LCD_Driver_top\simulation\modelsim
 vclkDiv
-IV9:j4TLTKX<g04`f=Gzce0
+I]GcmRT3Rj9Nk7:`?:f=9^0
 VH9ofh2d>0ZTP0O0cLWeNH3
 Z1 dE:\quartus_workspace\LCD_Driver_top\simulation\modelsim
-w1330825381
+w1331086645
 8E:/quartus_workspace/LCD_Driver_top/clkDiv.v
 FE:/quartus_workspace/LCD_Driver_top/clkDiv.v
 L0 2
@@ -17,17 +17,37 @@ r1
 Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0
 nclk@div
-!s100 @hH]>[<DTOk<`kL>V__hz3
+!s100 <`iOnQgIRb8J3;>M^[l?C3
 !s85 0
-!s108 1330887691.125000
+!s108 1331088538.058000
 !s107 E:/quartus_workspace/LCD_Driver_top/clkDiv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|E:/quartus_workspace/LCD_Driver_top/clkDiv.v|
 !s101 -O0
-vLCD_Driver
-I`2>8cO;lS<]e@V;1BG;RR0
-V@__:`fKO?5:E@<;C0<RdR2
+vclkDiv1Hz
+IfjNVhf?G_aY<:c9R:cn9g0
+V[bVj58DgfPRzF51<XP^@d0
 R1
-w1330893745
+w1331086695
+8E:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v
+FE:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v
+L0 2
+R2
+r1
+31
+R3
+R4
+nclk@div1@hz
+!s100 hGDm^_VA=88<g0;jJ8@3Z1
+!s85 0
+!s108 1331088538.081000
+!s107 E:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|E:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v|
+!s101 -O0
+vLCD_Driver
+IP9WlQk8::0P=Ra:5P@3U`2
+V:GaX2?Xm];Bd]:DbkIh[h1
+R1
+w1331089500
 8E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
 FE:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
 L0 1
@@ -37,18 +57,18 @@ r1
 R3
 R4
 n@l@c@d_@driver
-!s100 1Zl@8>8gI7OJ[HOg^GPK`2
+!s100 7AfB0YmWXP:ZPY79O562`3
 !s85 0
-!s108 1330894116.333000
+!s108 1331089527.052000
 !s107 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|-O0|E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v|
 !s101 -O0
 vLCD_Driver_top_TestBench
-!s100 ;FP^BPN:6z8fM65gFjo1?0
-Iek2a2No_4W7L>X^Lg86Q70
+!s100 N9=FN71cRM@ll_?C^iRHD3
+IH4;Z3AD:9deJ[Ub8h8;S<1
 V`6AJiogWhW`e<eFSHI54n2
 R1
-w1330884359
+w1331087644
 8E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
 FE:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
 L0 1
@@ -56,17 +76,17 @@ R2
 r1
 !s85 0
 31
-!s108 1330894118.630000
+!s108 1331089529.667000
 !s107 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v|
 !s90 -reportprogress|300|-work|work|-O0|E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v|
 !s101 -O0
 o-work work -O0
 n@l@c@d_@driver_top_@test@bench
 vLCD_top
-IC7aa7QFW5hC03^Tc4XO9]0
-V0N1^KF;AYhE[7S4[`6=5?3
+Iken6IHz1neQ<Fc5AZ8[?Z0
+VUdo@KT<T]kkUnL;=OZY8V2
 R1
-w1330884726
+w1331088063
 8E:/quartus_workspace/LCD_Driver_top/LCD_top.v
 FE:/quartus_workspace/LCD_Driver_top/LCD_top.v
 L0 1
@@ -74,11 +94,11 @@ R2
 r1
 31
 R3
-n@l@c@d_top
 R4
-!s100 Z1E6:0CiASC@gQIHEH4LU1
+n@l@c@d_top
+!s100 eR[zV6RgRfcEaXhCo`Zzb1
 !s85 0
-!s108 1330887691.014000
+!s108 1331089256.202000
 !s107 E:/quartus_workspace/LCD_Driver_top/LCD_top.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|E:/quartus_workspace/LCD_Driver_top/LCD_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_workspace/LCD_Driver_top|-O0|E:/quartus_workspace/LCD_Driver_top/LCD_top.v|
 !s101 -O0

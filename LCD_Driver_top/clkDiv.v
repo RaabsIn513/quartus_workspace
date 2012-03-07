@@ -21,7 +21,7 @@ module clkDiv( clkIn, clkOut );
 		//if( count1 == 26'd2500 ) begin			// 20kHz	// Little bit too fast for the LCD HD44780
 		//if( count1 == 26'd250 ) begin			// 20kHz
 		//if( count1 == 26'd25 ) begin			// 2MHz
-		//if( count1 == 26'd2 ) begin          // 25MHz
+		//if( count1 == 26'd1 ) begin          // 25MHz
 		
 			clkOut <= ~clkOut;
 			count1 <= 26'd0;

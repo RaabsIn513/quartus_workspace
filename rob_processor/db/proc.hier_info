@@ -1,12 +1,6 @@
 |proc
-clk => clk.IN2
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
+clk => clk.IN10
+reset => reset.IN7
 
 
 |proc|clkDiv:U0

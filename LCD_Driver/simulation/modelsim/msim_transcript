@@ -24,12 +24,3 @@ vlog -reportprogress 300 -work work E:/quartus_workspace/LCD_Driver/simulation/m
 # 
 # Top level modules:
 # 	LCD_Driver_TestBench
-vsim -voptargs=+acc work.LCD_Driver_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_TestBench 
-# Loading work.LCD_Driver_TestBench
-# Loading work.LCD_Driver
-add wave -r /*
-run
-run
-run
-run

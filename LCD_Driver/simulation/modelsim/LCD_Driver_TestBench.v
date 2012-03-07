@@ -2,22 +2,33 @@ module LCD_Driver_TestBench;
   
   //LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut );
   reg en, clock, reset;
-  reg[17:0] inData;
+  reg[17:0] inData[3:0];
   wire[7:0] outData;
   wire rs, rw, outEn;
+  reg[3:0] count;
   
   initial begin
     clock <= 1'b0;
     #5 reset <= 1'b0;
     #10 reset <= 1'b1;
     #15 reset <= 1'b0;
-    inData <= 18'b101010101010101011;
+    inData[0] <= 18'b101010101010101011;
+    inData[1] <= 18'b101010101010101010;
+    inData[2] <= 18'b101010101010101001;
+    inData[3] <= 18'b101010101010101000;
   end
+  
+  always begin
+    #50 count <= count + 4'd1;
+    if( count < 4'd4 ) begin
+      count <= 4'd0;
+    end
+  end  
   
   always begin
     #5 clock <= !clock;
   end
   
-  LCD_Driver U0( .enable(en), .clk(clock), .rst(reset), .dataIn(inData), .dataOut(outData), .RS(rs), .RW(rw), .enableOut(outEn) );
+  LCD_Driver U0( .clk(clock), .rst(reset), .dataIn(inData), .dataOut(outData), .RS(rs), .RW(rw), .enableOut(outEn) );
   
 endmodule
