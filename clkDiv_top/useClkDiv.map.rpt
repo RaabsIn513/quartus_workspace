@@ -1,5 +1,5 @@
 Analysis & Synthesis report for useClkDiv
-Tue Feb 21 21:18:03 2012
+Thu Mar 08 18:04:21 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,9 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Editio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "clkDiv:U0"
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +42,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 21 21:18:03 2012         ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 08 18:04:21 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; useClkDiv                                     ;
 ; Top-level Entity Name              ; useClkDiv                                     ;
 ; Family                             ; Cyclone III                                   ;
-; Total logic elements               ; 49                                            ;
-;     Total combinational functions  ; 49                                            ;
+; Total logic elements               ; 38                                            ;
+;     Total combinational functions  ; 38                                            ;
 ;     Dedicated logic registers      ; 27                                            ;
 ; Total registers                    ; 27                                            ;
 ; Total pins                         ; 2                                             ;
@@ -169,16 +170,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 49          ;
+; Estimated Total logic elements              ; 38          ;
 ;                                             ;             ;
-; Total combinational functions               ; 49          ;
+; Total combinational functions               ; 38          ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 8           ;
 ;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 41          ;
+;     -- <=2 input functions                  ; 30          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 24          ;
+;     -- normal mode                          ; 13          ;
 ;     -- arithmetic mode                      ; 25          ;
 ;                                             ;             ;
 ; Total registers                             ; 27          ;
@@ -188,8 +189,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 2           ;
 ; Maximum fan-out node                        ; clk50~input ;
 ; Maximum fan-out                             ; 27          ;
-; Total fan-out                               ; 170         ;
-; Average fan-out                             ; 2.13        ;
+; Total fan-out                               ; 148         ;
+; Average fan-out                             ; 2.14        ;
 +---------------------------------------------+-------------+
 
 
@@ -198,8 +199,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; |useClkDiv                 ; 49 (0)            ; 27 (0)       ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |useClkDiv           ;              ;
-;    |clkDiv:U0|             ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |useClkDiv|clkDiv:U0 ;              ;
+; |useClkDiv                 ; 38 (0)            ; 27 (0)       ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |useClkDiv           ;              ;
+;    |clkDiv:U0|             ; 38 (38)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |useClkDiv|clkDiv:U0 ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,6 +220,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------+
+; Port Connectivity Checks: "clkDiv:U0"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; freq[22..18] ; Input ; Info     ; Stuck at VCC ;
+; freq[14..11] ; Input ; Info     ; Stuck at VCC ;
+; freq[10..7]  ; Input ; Info     ; Stuck at GND ;
+; freq[5..0]   ; Input ; Info     ; Stuck at GND ;
+; freq[25]     ; Input ; Info     ; Stuck at GND ;
+; freq[24]     ; Input ; Info     ; Stuck at VCC ;
+; freq[23]     ; Input ; Info     ; Stuck at GND ;
+; freq[17]     ; Input ; Info     ; Stuck at GND ;
+; freq[16]     ; Input ; Info     ; Stuck at VCC ;
+; freq[15]     ; Input ; Info     ; Stuck at GND ;
+; freq[6]      ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -234,7 +254,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 21 21:18:01 2012
+    Info: Processing started: Thu Mar 08 18:04:20 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off useClkDiv -c useClkDiv
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file useclkdiv.v
@@ -243,17 +263,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file clkdiv.
     Info (12023): Found entity 1: clkDiv
 Info (12127): Elaborating entity "useClkDiv" for the top level hierarchy
 Info (12128): Elaborating entity "clkDiv" for hierarchy "clkDiv:U0"
-Warning (10230): Verilog HDL assignment warning at clkDiv.v(14): truncated value with size 32 to match size of target (26)
+Warning (10230): Verilog HDL assignment warning at clkDiv.v(15): truncated value with size 32 to match size of target (26)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 49 logic cells
+    Info (21061): Implemented 38 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 291 megabytes
-    Info: Processing ended: Tue Feb 21 21:18:03 2012
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 292 megabytes
+    Info: Processing ended: Thu Mar 08 18:04:21 2012
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:03
 
 

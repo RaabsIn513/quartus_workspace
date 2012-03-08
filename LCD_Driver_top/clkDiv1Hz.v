@@ -13,8 +13,9 @@ module clkDiv1Hz( clkIn, clkOut );
 	
 	always@(posedge clkIn) begin
 		count1 <= count1 + 1;
+		if( count1 == 26'd50000000 ) begin	
 		//if( count1 == 26'd25000000 ) begin	// 2Hz
-		if( count1 == 26'd12500000 ) begin		// 4Hz
+		//if( count1 == 26'd12500000 ) begin		// 4Hz
 		//if( count1 == 26'd2500000 ) begin		// 20Hz
 		//if( count1 == 26'd250000 ) begin		// 200Hz
 		//if( count1 == 26'd25000 ) begin		// 2kHz

@@ -30,49 +30,10 @@ vlog -reportprogress 300 -work work E:/quartus_workspace/clkDiv_top/simulation/m
 # 
 # Top level modules:
 # 	useClkDive_TestBench
-vlog -reportprogress 300 -work work E:/quartus_workspace/clkDiv_top/simulation/modelsim/useClkDiv_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module useClkDive_TestBench
-# 
-# Top level modules:
-# 	useClkDive_TestBench
-vsim -voptargs=+acc work.useClkDive_TestBench
-# vsim -voptargs=+acc work.useClkDive_TestBench 
-# Loading work.useClkDive_TestBench
-add wave -r sim:/useClkDive_TestBench/*
-add wave -r /*
-run
-vlog -work work -O0 E:/quartus_workspace/clkDiv_top/simulation/modelsim/useClkDiv_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module useClkDive_TestBench
-# 
-# Top level modules:
-# 	useClkDive_TestBench
 vsim -voptargs=+acc work.useClkDive_TestBench
 # vsim -voptargs=+acc work.useClkDive_TestBench 
 # Loading work.useClkDive_TestBench
 # Loading work.useClkDiv
 # Loading work.clkDiv
 add wave -r /*
-run
-vlog -work work -O0 E:/quartus_workspace/clkDiv_top/simulation/modelsim/useClkDiv_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module useClkDive_TestBench
-# 
-# Top level modules:
-# 	useClkDive_TestBench
-vsim -voptargs=+acc work.useClkDive_TestBench
-# vsim -voptargs=+acc work.useClkDive_TestBench 
-# Loading work.useClkDive_TestBench
-# Loading work.useClkDiv
-# Loading work.clkDiv
-add wave -r /*
-run
-run
-run
-run
-run
-run
-run
-run
 run

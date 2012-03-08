@@ -1,24 +1,10 @@
 |LCD_top
-clk => clk.IN2
-rstBt => count.OUTPUTSELECT
-rstBt => count.OUTPUTSELECT
-rstBt => count.OUTPUTSELECT
-rstBt => count.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => writeData.OUTPUTSELECT
+clk => clk.IN3
 rstBt => _.IN1
 rstBt => count.OUTPUTSELECT
 rstBt => count.OUTPUTSELECT
 rstBt => count.OUTPUTSELECT
 rstBt => count.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => cnt.OUTPUTSELECT
-rstBt => writeData.OUTPUTSELECT
 rstBt => myData[0][0].ENA
 rstBt => myData[0][1].ENA
 rstBt => myData[0][2].ENA
@@ -124,6 +110,36 @@ clkIn => count1[25].CLK
 
 
 |LCD_top|clkDiv1Hz:clkDiv1Hz
+clkIn => clkOut~reg0.CLK
+clkIn => count1[0].CLK
+clkIn => count1[1].CLK
+clkIn => count1[2].CLK
+clkIn => count1[3].CLK
+clkIn => count1[4].CLK
+clkIn => count1[5].CLK
+clkIn => count1[6].CLK
+clkIn => count1[7].CLK
+clkIn => count1[8].CLK
+clkIn => count1[9].CLK
+clkIn => count1[10].CLK
+clkIn => count1[11].CLK
+clkIn => count1[12].CLK
+clkIn => count1[13].CLK
+clkIn => count1[14].CLK
+clkIn => count1[15].CLK
+clkIn => count1[16].CLK
+clkIn => count1[17].CLK
+clkIn => count1[18].CLK
+clkIn => count1[19].CLK
+clkIn => count1[20].CLK
+clkIn => count1[21].CLK
+clkIn => count1[22].CLK
+clkIn => count1[23].CLK
+clkIn => count1[24].CLK
+clkIn => count1[25].CLK
+
+
+|LCD_top|clkDivRF:reClk
 clkIn => clkOut~reg0.CLK
 clkIn => count1[0].CLK
 clkIn => count1[1].CLK

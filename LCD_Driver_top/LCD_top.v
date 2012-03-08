@@ -7,7 +7,7 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 	reg[9:0] LEDs;
 	output en, RS, RW;
 	wire en, RS, RW;
-	wire slowClk, oneHzClk;
+	wire slowClk, oneHzClk, refreshClk;
 	reg line;
 	reg lineChange;
 	reg writeData;
@@ -17,10 +17,11 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 	
 	clkDiv clkDivSlow( clk, slowClk );
 	clkDiv1Hz clkDiv1Hz( clk, oneHzClk );
+	clkDivRF reClk( clk, refreshClk );
 	/* LCD_Driver ports for reference */
 	//LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
 	/* Use slowClk for use on DE0 board (10kHz) */
-	LCD_Driver driver(.lcdWrite(writeData), .clk(slowClk), .rst(~rstBt), .dataIn(myData[count]), .dataOut(LCD), .RS(RS), .RW(RW), .enableOut(en), .line(line), .setLine(lineChange));
+	LCD_Driver driver(.lcdWrite(refreshClk), .clk(slowClk), .rst(~rstBt), .dataIn(myData[count]), .dataOut(LCD), .RS(RS), .RW(RW), .enableOut(en), .line(line), .setLine(lineChange));
 	/* Use faster clock for simulation */
 	//LCD_Driver U1(.enable(rstBt), .clk(clk), .rst(~rstBt), .dataIn(myData), .dataOut(LCD), .RS(RS), .RW(RW), .enableOut(en), .line(line), .setLine(lineChange));
 
@@ -32,124 +33,22 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 			myData[3] <= 18'b111000111000111011;
 		end
 		LEDs[3:0] <= count;
-		LEDs[9:4] <= LCD[5:0];
+		LEDs[4] <= oneHzClk; 
 		
 	end
+	
 
 	always@( posedge oneHzClk ) begin
 		if( ~rstBt ) begin
 			count <= 4'd0;
-			cnt <= 4'd0;
-			writeData <= 1'b0;
 		end
-		if( rstBt ) begin
-			case( count )
-				4'd0:
-				begin
-					case( cnt )
-					4'd0:
-					begin
-						writeData <= 1'b1;
-						cnt <= cnt + 4'd1;
-					end
-					4'd1:
-					begin
-						writeData <= 1'b0;
-						cnt <= cnt + 4'd1;
-					end
-					4'd2:
-					begin
-						cnt <= 4'd0;
-						count <= count + 4'd1;
-					end
-				endcase
-				end
-				4'd1:
-				begin
-					case( cnt )
-					4'd0:
-					begin
-						writeData <= 1'b1;
-						cnt <= cnt + 4'd1;
-					end
-					4'd1:
-					begin
-						writeData <= 1'b0;
-						cnt <= cnt + 4'd1;
-					end
-					4'd2:
-					begin
-						cnt <= 4'd0;
-						count <= count + 4'd1;
-					end
-				endcase
-				end
-				4'd2:
-				begin
-					case( cnt )
-					4'd0:
-					begin
-						writeData <= 1'b1;
-						cnt <= cnt + 4'd1;
-					end
-					4'd1:
-					begin
-						writeData <= 1'b0;
-						cnt <= cnt + 4'd1;
-					end
-					4'd2:
-					begin
-						cnt <= 4'd0;
-						count <= count + 4'd1;
-					end
-				endcase
-				end
-				4'd3:
-				begin
-					case( cnt )
-					4'd0:
-					begin
-						writeData <= 1'b1;
-						cnt <= cnt + 4'd1;
-					end
-					4'd1:
-					begin
-						writeData <= 1'b0;
-						cnt <= cnt + 4'd1;
-					end
-					4'd2:
-					begin
-						cnt <= 4'd0;
-						count <= count + 4'd1;
-					end
-				endcase
-				end
-				4'd4:
-				begin
-					case( cnt )
-					4'd0:
-					begin
-						writeData <= 1'b1;
-						cnt <= cnt + 4'd1;
-					end
-					4'd1:
-					begin
-						writeData <= 1'b0;
-						cnt <= cnt + 4'd1;
-					end
-					4'd2:
-					begin
-						cnt <= 4'd0;
-						count <= count + 4'd1;
-					end
-				endcase
-				end
-				4'd5:
-				begin
-					count <= 4'd0;
-					cnt <= 4'd0;
-				end
-			endcase
+		else begin
+			if(count == 4'd4 ) begin
+				count <= 4'd0;
+			end
+			else begin
+				count <= count + 4'd1;
+			end
 		end
 	end
 endmodule

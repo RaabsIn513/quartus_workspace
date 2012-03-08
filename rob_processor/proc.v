@@ -8,7 +8,8 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 	wire lcdRS, lcdEn, lcdRW;
 	reg LED;
 	
-	wire slowClk;									// slowClk - used to see the execution on the DE0 board better
+	wire slowClk,
+		refreshClk;									// slowClk - used to see the execution on the DE0 board better
 	
 	wire lcdLineSel, lcdLine;					// When lcdLineSel goes high, lcd cursor changes to lcdLine (0=line1, 1=line2)	
 	wire lcdRst, lcdW, lcdClk;					// lcdRst - lcd reset, lcdW - internal lcd enable, lcdClk - faster clock 10kHz
@@ -26,21 +27,24 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 	wire[17:0] aluOutBus;
 	wire[12:0] MAR_to_mem;
 	wire[17:0] mem_to_MDR;
-	reg ireset;
+	reg ireset, idk;
+	reg [17:0] aluPrev;
 	wire PB_up, PB_state;
-	
-	clkDiv U0( clk, slowClk );
-	clkDiv10Khz U1( clk, lcdClk );
 	
 	always @( slowClk ) begin
 		LED <= slowClk;
-	end		
-	// -------------------- SLOWCLK for DE0 board -----------------------------------------------------	
+	end
+	
+//	// -------------------- SLOWCLK for DE0 board -----------------------------------------------------	
+//	clkDivSel U0( clk, slowClk, 26'd1 );		// 1Hz
+//	clkDivSel U1( clk, lcdClk, 26'd10000 );	// 10kHz
+//	clkDivSel U2( clk, refreshClk, 26'd4 );	// 4Hz
+//	
 //	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
 //	ControlBlock ctrlBlock( slowClk, ~reset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
 //	
 //	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut );
-//	LCD_Driver lcd( lcdW, lcdClk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
+//	LCD_Driver lcd( refreshClk, lcdClk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
 //	
 //	//MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
 //	MAR 	 mar( marR, marW, slowClk, ~reset, aluOutBus[12:0], MAR_to_mem );
@@ -57,27 +61,30 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 //	//	ALU ( datA, datB, ctrl, enable, alu_out, ovf, AgtB, N, Z );
 //	ALU	 alu( aBus, bBus, aluCtrl, aluEn, aluOutBus, ovf, AgtB, Neg, Zero );
 		
-	// ------------ FAST CLK FOR DEBUG -----------------------------------------------
-	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
-	ControlBlock ctrlBlock( clk, ~reset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
+//	// ------------ FAST CLK FOR DEBUG -----------------------------------------------
+	clkDivSel U0( clk, slowClk, 26'd5_000 );			// 5kHz
+	clkDivSel U1( clk, lcdClk, 26'd50_000_000 );		// 50MHz
+	clkDivSel U2( clk, refreshClk, 26'd20_000 );		// 20kHz
 	
-	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
-	LCD_Driver lcd( lcdW, clk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
+	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
+	ControlBlock ctrlBlock( slowClk, ~reset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
+	
+	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut );
+	LCD_Driver lcd( refreshClk, lcdClk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
 	
 	//MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
-	MAR 	 mar( marR, marW, clk, ~reset, aluOutBus[12:0], MAR_to_mem );
+	MAR 	 mar( marR, marW, slowClk, ~reset, aluOutBus[12:0], MAR_to_mem );
 	//Memory(DataOut,DataIn,address,clk,rst,re_en,wr_en);
-	Memory mem( mem_to_MDR, aluOutBus, MAR_to_mem, clk, ~reset, memR, memW );
+	Memory mem( mem_to_MDR, aluOutBus, MAR_to_mem, slowClk, ~reset, memR, memW );
 	//MDR(re_MDR, wr_MDR_Mem, wr_MDR_Bus, clk, rst, MDRinMem, MDRinBus, MDRout);
-	MDR	 mdr( mdrR, mdrWmem, mdrWbus, clk, ~reset, mem_to_MDR, aluOutBus, bBus );
+	MDR	 mdr( mdrR, mdrWmem, mdrWbus, slowClk, ~reset, mem_to_MDR, aluOutBus, bBus );
 	//PC(re_PC,wr_PC, PCinc, clk,rst,PCin,PCout);
-	PC		 pc( pcR, pcW, pcInc, clk, ~reset, aluOutBus, bBus );
+	PC		 pc( pcR, pcW, pcInc, slowClk, ~reset, aluOutBus, bBus );
 	//IR(re_IR,wr_IR,clk,rst,IRin,IRout);
-	IR		 ir( irR, irW, clk, ~reset, aluOutBus, aBus );
+	IR		 ir( irR, irW, slowClk, ~reset, aluOutBus, aBus );
 	//AC(re_AC,wr_AC,clk,rst,ACin,ACout);
-	AC		 ac( acR, acW, clk, ~reset, aluOutBus, aBus );
+	AC		 ac( acR, acW, slowClk, ~reset, aluOutBus, aBus );
 	//	ALU ( datA, datB, ctrl, enable, alu_out, ovf, AgtB, N, Z );
-	ALU	 alu( aBus, bBus, aluCtrl, aluEn, aluOutBus, ovf, AgtB, Neg, Zero );
-
+	ALU	 alu( aBus, bBus, aluCtrl, aluEn, aluOutBus, ovf, AgtB, Neg, Zero );		
 	
 endmodule

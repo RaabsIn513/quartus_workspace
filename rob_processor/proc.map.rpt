@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proc
-Tue Mar 06 17:10:08 2012
+Thu Mar 08 18:06:25 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -18,10 +18,13 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Editio
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Port Connectivity Checks: "ALU:alu"
- 13. Port Connectivity Checks: "clkDiv10Khz:U1"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 13. Port Connectivity Checks: "ControlBlock:ctrlBlock"
+ 14. Port Connectivity Checks: "clkDivSel:U2"
+ 15. Port Connectivity Checks: "clkDivSel:U1"
+ 16. Port Connectivity Checks: "clkDivSel:U0"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,15 +50,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 06 17:10:08 2012         ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 08 18:06:25 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; proc                                          ;
 ; Top-level Entity Name              ; proc                                          ;
 ; Family                             ; Cyclone III                                   ;
-; Total logic elements               ; 1,071                                         ;
-;     Total combinational functions  ; 737                                           ;
-;     Dedicated logic registers      ; 556                                           ;
-; Total registers                    ; 556                                           ;
+; Total logic elements               ; 1,152                                         ;
+;     Total combinational functions  ; 800                                           ;
+;     Dedicated logic registers      ; 628                                           ;
+; Total registers                    ; 628                                           ;
 ; Total pins                         ; 14                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -174,39 +177,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; PC.v                             ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/PC.v           ;
 ; AC.v                             ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/AC.v           ;
 ; ControlBlock.v                   ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/ControlBlock.v ;
-; clkDiv.v                         ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/clkDiv.v       ;
-; clkDiv10Khz.v                    ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/clkDiv10Khz.v  ;
 ; LCD_Driver.v                     ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/LCD_Driver.v   ;
+; clkDivSel.v                      ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/rob_processor/clkDivSel.v    ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,071     ;
-;                                             ;           ;
-; Total combinational functions               ; 737       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 382       ;
-;     -- 3 input functions                    ; 166       ;
-;     -- <=2 input functions                  ; 189       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 671       ;
-;     -- arithmetic mode                      ; 66        ;
-;                                             ;           ;
-; Total registers                             ; 556       ;
-;     -- Dedicated logic registers            ; 556       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 14        ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 556       ;
-; Total fan-out                               ; 4079      ;
-; Average fan-out                             ; 3.09      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 1,152               ;
+;                                             ;                     ;
+; Total combinational functions               ; 800                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 396                 ;
+;     -- 3 input functions                    ; 160                 ;
+;     -- <=2 input functions                  ; 244                 ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 684                 ;
+;     -- arithmetic mode                      ; 116                 ;
+;                                             ;                     ;
+; Total registers                             ; 628                 ;
+;     -- Dedicated logic registers            ; 628                 ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 14                  ;
+; Maximum fan-out node                        ; clkDivSel:U0|clkOut ;
+; Maximum fan-out                             ; 505                 ;
+; Total fan-out                               ; 4384                ;
+; Average fan-out                             ; 3.01                ;
++---------------------------------------------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,17 +216,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
-; |proc                       ; 737 (36)          ; 556 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |proc                        ;              ;
+; |proc                       ; 800 (36)          ; 628 (0)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |proc                        ;              ;
 ;    |AC:ac|                  ; 20 (20)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|AC:ac                  ;              ;
 ;    |ALU:alu|                ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|ALU:alu                ;              ;
-;    |ControlBlock:ctrlBlock| ; 118 (118)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|ControlBlock:ctrlBlock ;              ;
+;    |ControlBlock:ctrlBlock| ; 116 (116)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|ControlBlock:ctrlBlock ;              ;
 ;    |IR:ir|                  ; 19 (19)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|IR:ir                  ;              ;
-;    |LCD_Driver:lcd|         ; 133 (133)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|LCD_Driver:lcd         ;              ;
+;    |LCD_Driver:lcd|         ; 126 (126)         ; 44 (44)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|LCD_Driver:lcd         ;              ;
 ;    |MAR:mar|                ; 14 (14)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|MAR:mar                ;              ;
 ;    |MDR:mdr|                ; 19 (19)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|MDR:mdr                ;              ;
 ;    |Memory:mem|             ; 237 (237)         ; 306 (306)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Memory:mem             ;              ;
 ;    |PC:pc|                  ; 20 (20)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|PC:pc                  ;              ;
-;    |clkDiv:U0|              ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|clkDiv:U0              ;              ;
+;    |clkDivSel:U0|           ; 42 (42)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|clkDivSel:U0           ;              ;
+;    |clkDivSel:U1|           ; 37 (37)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|clkDivSel:U1           ;              ;
+;    |clkDivSel:U2|           ; 42 (42)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|clkDivSel:U2           ;              ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -234,24 +238,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+-----------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
 +-----------------------------------------------------+-----------------------------+------------------------+
-; LCD_Driver:lcd|iDataIn[12]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[0]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[8]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[4]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[3]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[15]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[11]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[7]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[1]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[13]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[9]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[5]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[14]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[2]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[10]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[6]                           ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[17]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
-; LCD_Driver:lcd|iDataIn[16]                          ; LCD_Driver:lcd|ienable      ; yes                    ;
 ; ALU:alu|alu_out[12]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
 ; ALU:alu|alu_out[0]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
 ; ALU:alu|alu_out[8]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
@@ -270,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:alu|alu_out[6]$latch                            ; ControlBlock:ctrlBlock|eALU ; yes                    ;
 ; ALU:alu|alu_out[17]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
 ; ALU:alu|alu_out[16]$latch                           ; ControlBlock:ctrlBlock|eALU ; yes                    ;
-; Number of user-specified and inferred latches = 36  ;                             ;                        ;
+; Number of user-specified and inferred latches = 18  ;                             ;                        ;
 +-----------------------------------------------------+-----------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -370,14 +356,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ControlBlock:ctrlBlock|lcdLineSel       ; Merged with ControlBlock:ctrlBlock|cALU[2] ;
 ; ControlBlock:ctrlBlock|wMDRbus          ; Merged with ControlBlock:ctrlBlock|cALU[2] ;
 ; ControlBlock:ctrlBlock|wPC              ; Merged with ControlBlock:ctrlBlock|cALU[2] ;
-; ControlBlock:ctrlBlock|lcdW             ; Stuck at VCC due to stuck port data_in     ;
 ; ControlBlock:ctrlBlock|cALU[2]          ; Stuck at GND due to stuck port data_in     ;
 ; LCD_Driver:lcd|iline                    ; Stuck at GND due to stuck port data_in     ;
 ; LCD_Driver:lcd|RW                       ; Stuck at GND due to stuck port data_in     ;
 ; LCD_Driver:lcd|isetLine                 ; Stuck at GND due to stuck port data_in     ;
 ; LCD_Driver:lcd|cntCurPos[2]             ; Stuck at GND due to stuck port data_in     ;
 ; LCD_Driver:lcd|count[4]                 ; Stuck at GND due to stuck port data_in     ;
-; Total Number of Removed Registers = 103 ;                                            ;
+; Total Number of Removed Registers = 102 ;                                            ;
 +-----------------------------------------+--------------------------------------------+
 
 
@@ -386,47 +371,46 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 556   ;
+; Total registers                              ; 628   ;
 ; Number of registers using Synchronous Clear  ; 36    ;
 ; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 493   ;
+; Number of registers using Clock Enable       ; 508   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                            ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; |proc|MDR:mdr|MDR[4]                  ;                            ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; |proc|PC:pc|PC[13]                    ;                            ;
-; 16:1               ; 18 bits   ; 180 LEs       ; 180 LEs              ; 0 LEs                  ; |proc|Memory:mem|DataOut[7]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[14][2]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[13][0]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[12][12]          ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[11][5]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[10][9]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[9][1]            ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[8][8]            ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[7][8]            ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[6][8]            ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[5][10]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[4][12]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[3][1]            ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[2][15]           ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[1][3]            ;                            ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[0][6]            ;                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |proc|LCD_Driver:lcd|bitNum[7]        ;                            ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; |proc|ControlBlock:ctrlBlock|lcdRst   ;                            ;
-; 15:1               ; 5 bits    ; 50 LEs        ; 35 LEs               ; 15 LEs                 ; |proc|ControlBlock:ctrlBlock|count[3] ;                            ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; |proc|LCD_Driver:lcd|dataOut[3]       ;                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |proc|LCD_Driver:lcd|dataOut          ;                            ;
-; 7:1                ; 18 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; |proc|ALU:alu|Mux14                   ;                            ;
-; 33:1               ; 3 bits    ; 66 LEs        ; 24 LEs               ; 42 LEs                 ; |proc|LCD_Driver:lcd|dataOut          ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                       ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------+----------------------------+
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; |proc|MDR:mdr|MDR[10]            ;                            ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; |proc|PC:pc|PC[16]               ;                            ;
+; 16:1               ; 18 bits   ; 180 LEs       ; 180 LEs              ; 0 LEs                  ; |proc|Memory:mem|DataOut[13]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[14][16]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[13][9]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[12][14]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[11][17]     ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[10][8]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[9][16]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[8][7]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[7][11]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[6][8]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[5][8]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[4][8]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[3][17]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[2][5]       ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[1][16]      ;                            ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; |proc|Memory:mem|Mem[0][1]       ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |proc|LCD_Driver:lcd|bitNum[7]   ;                            ;
+; 15:1               ; 5 bits    ; 50 LEs        ; 35 LEs               ; 15 LEs                 ; |proc|ControlBlock:ctrlBlock|rPC ;                            ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; |proc|LCD_Driver:lcd|dataOut[4]  ;                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |proc|LCD_Driver:lcd|dataOut     ;                            ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; |proc|ALU:alu|Mux17              ;                            ;
+; 33:1               ; 3 bits    ; 66 LEs        ; 24 LEs               ; 42 LEs                 ; |proc|LCD_Driver:lcd|dataOut     ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------+----------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -441,13 +425,61 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "clkDiv10Khz:U1"                                                                       ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; clkOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlBlock:ctrlBlock"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; lcdW ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "clkDivSel:U2"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; freq[11..9]  ; Input ; Info     ; Stuck at VCC ;
+; freq[25..15] ; Input ; Info     ; Stuck at GND ;
+; freq[13..12] ; Input ; Info     ; Stuck at GND ;
+; freq[8..6]   ; Input ; Info     ; Stuck at GND ;
+; freq[4..0]   ; Input ; Info     ; Stuck at GND ;
+; freq[14]     ; Input ; Info     ; Stuck at VCC ;
+; freq[5]      ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "clkDivSel:U1"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; freq[23..19] ; Input ; Info     ; Stuck at VCC ;
+; freq[15..12] ; Input ; Info     ; Stuck at VCC ;
+; freq[11..8]  ; Input ; Info     ; Stuck at GND ;
+; freq[6..0]   ; Input ; Info     ; Stuck at GND ;
+; freq[25]     ; Input ; Info     ; Stuck at VCC ;
+; freq[24]     ; Input ; Info     ; Stuck at GND ;
+; freq[18]     ; Input ; Info     ; Stuck at GND ;
+; freq[17]     ; Input ; Info     ; Stuck at VCC ;
+; freq[16]     ; Input ; Info     ; Stuck at GND ;
+; freq[7]      ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "clkDivSel:U0"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; freq[9..7]   ; Input ; Info     ; Stuck at VCC ;
+; freq[25..13] ; Input ; Info     ; Stuck at GND ;
+; freq[11..10] ; Input ; Info     ; Stuck at GND ;
+; freq[6..4]   ; Input ; Info     ; Stuck at GND ;
+; freq[2..0]   ; Input ; Info     ; Stuck at GND ;
+; freq[12]     ; Input ; Info     ; Stuck at VCC ;
+; freq[3]      ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -465,7 +497,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 06 17:10:00 2012
+    Info: Processing started: Thu Mar 08 18:06:19 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proc -c proc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file proc.v
@@ -494,31 +526,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file lcd_dri
     Info (12023): Found entity 1: LCD_Driver
 Info (12021): Found 1 design units, including 1 entities, in source file pushbutton_debouncer.v
     Info (12023): Found entity 1: PushButton_Debouncer
+Info (12021): Found 1 design units, including 1 entities, in source file clkdivmed.v
+    Info (12023): Found entity 1: clkDivMed
+Info (12021): Found 1 design units, including 1 entities, in source file clkdivsel.v
+    Info (12023): Found entity 1: clkDivSel
 Info (12127): Elaborating entity "proc" for the top level hierarchy
-Info (12128): Elaborating entity "clkDiv" for hierarchy "clkDiv:U0"
-Info (12128): Elaborating entity "clkDiv10Khz" for hierarchy "clkDiv10Khz:U1"
+Info (12128): Elaborating entity "clkDivSel" for hierarchy "clkDivSel:U0"
 Info (12128): Elaborating entity "ControlBlock" for hierarchy "ControlBlock:ctrlBlock"
+Warning (10036): Verilog HDL or VHDL warning at ControlBlock.v(23): object "LCDcnt" assigned a value but never read
 Info (12128): Elaborating entity "LCD_Driver" for hierarchy "LCD_Driver:lcd"
-Warning (10235): Verilog HDL Always Construct warning at LCD_Driver.v(17): variable "ienable" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10240): Verilog HDL Always Construct warning at LCD_Driver.v(16): inferring latch(es) for variable "iDataIn", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "iDataIn[0]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[1]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[2]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[3]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[4]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[5]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[6]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[7]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[8]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[9]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[10]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[11]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[12]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[13]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[14]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[15]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[16]" at LCD_Driver.v(16)
-Info (10041): Inferred latch for "iDataIn[17]" at LCD_Driver.v(16)
 Info (12128): Elaborating entity "MAR" for hierarchy "MAR:mar"
 Info (12128): Elaborating entity "Memory" for hierarchy "Memory:mem"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:mdr"
@@ -672,14 +688,14 @@ Info (17049): 49 registers lost all their fanouts during netlist optimizations. 
     Info (17050): Register "MDR:mdr|MDRout[17]~en" lost all its fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file E:/quartus_workspace/rob_processor/proc.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-Info (21057): Implemented 1130 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1210 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 1116 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info (21061): Implemented 1196 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 76 warnings
     Info: Peak virtual memory: 297 megabytes
-    Info: Processing ended: Tue Mar 06 17:10:08 2012
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Thu Mar 08 18:06:25 2012
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 

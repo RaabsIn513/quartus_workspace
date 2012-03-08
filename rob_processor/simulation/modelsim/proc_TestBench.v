@@ -8,7 +8,7 @@ module proc_TestBench;
   initial begin
     #2 clock <= 1'b0;
     #10 rst <= 1'b0;
-    #20 rst <= 1'b1;
+    #1000050 rst <= 1'b1;
   end
   
   always begin

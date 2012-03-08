@@ -5,7 +5,7 @@ module useClkDiv(clk50, LED );
 	reg LED;
 	wire slowClk;
 	
-	clkDiv U0( clk50, slowClk );
+	clkDiv U0( clk50, slowClk, 26'd25_000_000 );
 	
 	always@( slowClk ) begin
 		LED <= slowClk;
