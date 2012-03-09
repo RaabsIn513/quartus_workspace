@@ -51,14 +51,77 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-clkDiv:clkDivSlow
+# macro_sequence
+
+# end
+# entity
+clkDiv1Hz
+# storage
+db|LCD_top.(3).cnf
+db|LCD_top.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+clkdiv1hz.v
+4373d3e5d57cca1cbf3665a43710dd22
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
 }
 # macro_sequence
 
 # end
 # entity
-LCD_Driver
+clkDivRF
+# storage
+db|LCD_top.(4).cnf
+db|LCD_top.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+clkdifrf.v
+288cc859a07c1ed4ddb11ddd9992748
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+clkDivSel
 # storage
 db|LCD_top.(2).cnf
 db|LCD_top.(2).cnf
@@ -68,8 +131,46 @@ ON
 }
 # case_sensitive
 # source_file
+clkdivsel.v
+be18a9969a91c9d84a859cdb5ee76b78
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+clkDivSel:U0
+clkDivSel:U1
+clkDivSel:U3
+}
+# macro_sequence
+
+# end
+# entity
+LCD_Driver
+# storage
+db|LCD_top.(5).cnf
+db|LCD_top.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
 lcd_driver.v
-c5e376e9a0b136abb8406a80ccac8b3c
+bd4df0957a8cc699522a9a3fce48ab83
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -105,7 +206,7 @@ ON
 # case_sensitive
 # source_file
 lcd_top.v
-b426f59b53b8e9ebd8bed5993927a
+e91e38b3fb8479f3ddd235c6eabc289
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -125,78 +226,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
-}
-# macro_sequence
-
-# end
-# entity
-clkDiv1Hz
-# storage
-db|LCD_top.(3).cnf
-db|LCD_top.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-clkdiv1hz.v
-4373d3e5d57cca1cbf3665a43710dd22
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-clkDiv1Hz:clkDiv1Hz
-}
-# macro_sequence
-
-# end
-# entity
-clkDivRF
-# storage
-db|LCD_top.(4).cnf
-db|LCD_top.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-clkdifrf.v
-288cc859a07c1ed4ddb11ddd9992748
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-clkDivRF:reClk
 }
 # macro_sequence
 

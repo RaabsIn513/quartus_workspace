@@ -3,62 +3,62 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.610
-TNS   : -136.738
+Slack : -3.533
+TNS   : -144.441
 
-Type  : Slow 1200mV 85C Model Setup 'clkDiv:clkDivSlow|clkOut'
-Slack : -3.076
-TNS   : -69.357
+Type  : Slow 1200mV 85C Model Setup 'clkDivSel:U0|clkOut'
+Slack : -2.863
+TNS   : -63.995
 
-Type  : Slow 1200mV 85C Model Setup 'clkDiv1Hz:clkDiv1Hz|clkOut'
-Slack : -0.414
-TNS   : -0.933
+Type  : Slow 1200mV 85C Model Setup 'clkDivSel:U1|clkOut'
+Slack : -0.552
+TNS   : -1.431
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.219
-TNS   : -0.451
+Slack : -0.142
+TNS   : -0.401
 
-Type  : Slow 1200mV 85C Model Hold 'clkDiv1Hz:clkDiv1Hz|clkOut'
-Slack : 0.358
+Type  : Slow 1200mV 85C Model Hold 'clkDivSel:U0|clkOut'
+Slack : 0.357
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'clkDiv:clkDivSlow|clkOut'
-Slack : 0.359
+Type  : Slow 1200mV 85C Model Hold 'clkDivSel:U1|clkOut'
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -89.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDiv:clkDivSlow|clkOut'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDivSel:U0|clkOut'
 Slack : -1.000
 TNS   : -29.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDiv1Hz:clkDiv1Hz|clkOut'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkDivSel:U1|clkOut'
 Slack : -1.000
 TNS   : -4.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.118
-TNS   : -112.069
+Slack : -3.040
+TNS   : -119.236
 
-Type  : Slow 1200mV 0C Model Setup 'clkDiv:clkDivSlow|clkOut'
-Slack : -2.633
-TNS   : -60.951
+Type  : Slow 1200mV 0C Model Setup 'clkDivSel:U0|clkOut'
+Slack : -2.465
+TNS   : -54.751
 
-Type  : Slow 1200mV 0C Model Setup 'clkDiv1Hz:clkDiv1Hz|clkOut'
-Slack : -0.257
-TNS   : -0.446
+Type  : Slow 1200mV 0C Model Setup 'clkDivSel:U1|clkOut'
+Slack : -0.385
+TNS   : -0.948
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.197
-TNS   : -0.483
+Slack : -0.160
+TNS   : -0.418
 
-Type  : Slow 1200mV 0C Model Hold 'clkDiv:clkDivSlow|clkOut'
+Type  : Slow 1200mV 0C Model Hold 'clkDivSel:U0|clkOut'
 Slack : 0.312
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'clkDiv1Hz:clkDiv1Hz|clkOut'
+Type  : Slow 1200mV 0C Model Hold 'clkDivSel:U1|clkOut'
 Slack : 0.313
 TNS   : 0.000
 
@@ -66,47 +66,47 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -89.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDiv:clkDivSlow|clkOut'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDivSel:U0|clkOut'
 Slack : -1.000
 TNS   : -29.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDiv1Hz:clkDiv1Hz|clkOut'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkDivSel:U1|clkOut'
 Slack : -1.000
 TNS   : -4.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.655
-TNS   : -42.625
+Slack : -1.669
+TNS   : -48.284
 
-Type  : Fast 1200mV 0C Model Setup 'clkDiv:clkDivSlow|clkOut'
-Slack : -1.319
-TNS   : -29.088
+Type  : Fast 1200mV 0C Model Setup 'clkDivSel:U0|clkOut'
+Slack : -1.137
+TNS   : -23.674
 
-Type  : Fast 1200mV 0C Model Setup 'clkDiv1Hz:clkDiv1Hz|clkOut'
-Slack : 0.213
+Type  : Fast 1200mV 0C Model Setup 'clkDivSel:U1|clkOut'
+Slack : 0.131
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.184
-TNS   : -0.533
+Slack : -0.203
+TNS   : -0.487
 
-Type  : Fast 1200mV 0C Model Hold 'clkDiv:clkDivSlow|clkOut'
+Type  : Fast 1200mV 0C Model Hold 'clkDivSel:U0|clkOut'
 Slack : 0.185
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clkDiv1Hz:clkDiv1Hz|clkOut'
+Type  : Fast 1200mV 0C Model Hold 'clkDivSel:U1|clkOut'
 Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -93.816
+TNS   : -93.799
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDiv:clkDivSlow|clkOut'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDivSel:U0|clkOut'
 Slack : -1.000
 TNS   : -29.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDiv1Hz:clkDiv1Hz|clkOut'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkDivSel:U1|clkOut'
 Slack : -1.000
 TNS   : -4.000
 

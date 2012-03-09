@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD_top
-Thu Mar 08 17:34:03 2012
+Thu Mar 08 23:00:37 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -14,11 +14,13 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Editio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "clkDivSel:U3"
+ 12. Port Connectivity Checks: "clkDivSel:U1"
+ 13. Port Connectivity Checks: "clkDivSel:U0"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +46,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 08 17:34:03 2012         ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 08 23:00:37 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; LCD_top                                       ;
 ; Top-level Entity Name              ; LCD_top                                       ;
 ; Family                             ; Cyclone III                                   ;
-; Total logic elements               ; 267                                           ;
-;     Total combinational functions  ; 260                                           ;
+; Total logic elements               ; 270                                           ;
+;     Total combinational functions  ; 265                                           ;
 ;     Dedicated logic registers      ; 119                                           ;
 ; Total registers                    ; 119                                           ;
 ; Total pins                         ; 23                                            ;
@@ -164,9 +166,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+--------------------------------------------------+
 ; LCD_top.v                        ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/LCD_Driver_top/LCD_top.v    ;
 ; LCD_Driver.v                     ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v ;
-; clkDiv.v                         ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/LCD_Driver_top/clkDiv.v     ;
-; clkDiv1Hz.v                      ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v  ;
-; clkDifRF.v                       ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/LCD_Driver_top/clkDifRF.v   ;
+; clkDivSel.v                      ; yes             ; User Verilog HDL File  ; E:/quartus_workspace/LCD_Driver_top/clkDivSel.v  ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------+
 
 
@@ -175,16 +175,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 267       ;
+; Estimated Total logic elements              ; 270       ;
 ;                                             ;           ;
-; Total combinational functions               ; 260       ;
+; Total combinational functions               ; 265       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 96        ;
-;     -- 3 input functions                    ; 27        ;
-;     -- <=2 input functions                  ; 137       ;
+;     -- 4 input functions                    ; 99        ;
+;     -- 3 input functions                    ; 30        ;
+;     -- <=2 input functions                  ; 136       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 178       ;
+;     -- normal mode                          ; 183       ;
 ;     -- arithmetic mode                      ; 82        ;
 ;                                             ;           ;
 ; Total registers                             ; 119       ;
@@ -194,22 +194,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 23        ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 86        ;
-; Total fan-out                               ; 1029      ;
-; Average fan-out                             ; 2.42      ;
+; Total fan-out                               ; 1046      ;
+; Average fan-out                             ; 2.43      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                  ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
-; |LCD_top                   ; 260 (7)           ; 119 (9)      ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |LCD_top                     ;              ;
-;    |LCD_Driver:driver|     ; 113 (113)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|LCD_Driver:driver   ;              ;
-;    |clkDiv1Hz:clkDiv1Hz|   ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDiv1Hz:clkDiv1Hz ;              ;
-;    |clkDiv:clkDivSlow|     ; 42 (42)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDiv:clkDivSlow   ;              ;
-;    |clkDivRF:reClk|        ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivRF:reClk      ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; |LCD_top                   ; 265 (7)           ; 119 (9)      ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |LCD_top                   ;              ;
+;    |LCD_Driver:driver|     ; 118 (118)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|LCD_Driver:driver ;              ;
+;    |clkDivSel:U0|          ; 42 (42)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivSel:U0      ;              ;
+;    |clkDivSel:U1|          ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivSel:U1      ;              ;
+;    |clkDivSel:U3|          ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivSel:U3      ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -305,16 +305,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+--------------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; myData[0][2]  ; Stuck at GND              ; LCD_Driver:driver|iDataIn[2]           ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -325,7 +315,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -335,12 +325,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                            ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |LCD_top|count[2]                     ;                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |LCD_top|LCD_Driver:driver|bitNum[6]  ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |LCD_top|count[3]                     ;                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; |LCD_top|LCD_Driver:driver|iDataIn[1] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |LCD_top|LCD_Driver:driver|bitNum[4]  ;                            ;
 ; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; |LCD_top|LCD_Driver:driver|dataOut[1] ;                            ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; |LCD_top|LCD_Driver:driver|dataOut    ;                            ;
 ; 33:1               ; 3 bits    ; 66 LEs        ; 24 LEs               ; 42 LEs                 ; |LCD_top|LCD_Driver:driver|dataOut    ;                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "clkDivSel:U3"      ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; freq[25..3] ; Input ; Info     ; Stuck at GND ;
+; freq[1..0]  ; Input ; Info     ; Stuck at GND ;
+; freq[2]     ; Input ; Info     ; Stuck at VCC ;
++-------------+-------+----------+--------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "clkDivSel:U1"      ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; freq[25..1] ; Input ; Info     ; Stuck at GND ;
+; freq[0]     ; Input ; Info     ; Stuck at VCC ;
++-------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "clkDivSel:U0"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; freq[10..8]  ; Input ; Info     ; Stuck at VCC ;
+; freq[25..14] ; Input ; Info     ; Stuck at GND ;
+; freq[12..11] ; Input ; Info     ; Stuck at GND ;
+; freq[7..5]   ; Input ; Info     ; Stuck at GND ;
+; freq[3..0]   ; Input ; Info     ; Stuck at GND ;
+; freq[13]     ; Input ; Info     ; Stuck at VCC ;
+; freq[4]      ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -358,7 +385,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 08 17:34:00 2012
+    Info: Processing started: Thu Mar 08 23:00:34 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD_top -c LCD_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_top.v
@@ -371,14 +398,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file clkdiv1
     Info (12023): Found entity 1: clkDiv1Hz
 Info (12021): Found 1 design units, including 1 entities, in source file clkdifrf.v
     Info (12023): Found entity 1: clkDivRF
+Info (12021): Found 1 design units, including 1 entities, in source file clkdivsel.v
+    Info (12023): Found entity 1: clkDivSel
 Info (12127): Elaborating entity "LCD_top" for the top level hierarchy
 Warning (10034): Output port "LEDs[9..5]" at LCD_top.v(5) has no driver
-Info (12128): Elaborating entity "clkDiv" for hierarchy "clkDiv:clkDivSlow"
-Warning (10230): Verilog HDL assignment warning at clkDiv.v(15): truncated value with size 32 to match size of target (26)
-Info (12128): Elaborating entity "clkDiv1Hz" for hierarchy "clkDiv1Hz:clkDiv1Hz"
-Warning (10230): Verilog HDL assignment warning at clkDiv1Hz.v(15): truncated value with size 32 to match size of target (26)
-Info (12128): Elaborating entity "clkDivRF" for hierarchy "clkDivRF:reClk"
-Warning (10230): Verilog HDL assignment warning at clkDifRF.v(15): truncated value with size 32 to match size of target (26)
+Info (12128): Elaborating entity "clkDivSel" for hierarchy "clkDivSel:U0"
+Warning (10230): Verilog HDL assignment warning at clkDivSel.v(16): truncated value with size 32 to match size of target (26)
 Info (12128): Elaborating entity "LCD_Driver" for hierarchy "LCD_Driver:driver"
 Info (13005): Duplicate registers merged to single register
 Warning (13024): Output pins are stuck at VCC or GND
@@ -390,13 +415,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "RW" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-Info (21057): Implemented 290 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 293 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 267 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info (21061): Implemented 270 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 294 megabytes
-    Info: Processing ended: Thu Mar 08 17:34:03 2012
+    Info: Processing ended: Thu Mar 08 23:00:37 2012
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

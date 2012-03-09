@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Mar 08 17:34:03 2012
+Analysis & Synthesis Status : Successful - Thu Mar 08 23:00:37 2012
 Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition
 Revision Name : LCD_top
 Top-level Entity Name : LCD_top
 Family : Cyclone III
-Total logic elements : 267
-    Total combinational functions : 260
+Total logic elements : 270
+    Total combinational functions : 265
     Dedicated logic registers : 119
 Total registers : 119
 Total pins : 23

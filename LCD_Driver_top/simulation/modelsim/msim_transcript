@@ -22,18 +22,12 @@
 # 
 # Top level modules:
 # 	LCD_Driver
-# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/clkDiv.v}
+# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/clkDivSel.v}
 # Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module clkDiv
+# -- Compiling module clkDivSel
 # 
 # Top level modules:
-# 	clkDiv
-# vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top {E:/quartus_workspace/LCD_Driver_top/clkDiv1Hz.v}
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module clkDiv1Hz
-# 
-# Top level modules:
-# 	clkDiv1Hz
+# 	clkDivSel
 # 
 #  
 vlog -reportprogress 300 -work work E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
@@ -46,149 +40,9 @@ vsim -voptargs=+acc work.LCD_Driver_top_TestBench
 # vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
 # Loading work.LCD_Driver_top_TestBench
 # Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
+# Loading work.clkDivSel
 # Loading work.LCD_Driver
 add wave -r /*
 run
-vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
 run
-vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver
-# 
-# Top level modules:
-# 	LCD_Driver
-vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
-run
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver
-# 
-# Top level modules:
-# 	LCD_Driver
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_top.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_top
-# 
-# Top level modules:
-# 	LCD_top
-vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
-run
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver
-# 
-# Top level modules:
-# 	LCD_Driver
-vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
-run
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver
-# 
-# Top level modules:
-# 	LCD_Driver
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver
-# 
-# Top level modules:
-# 	LCD_Driver
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
-run
-vlog -vlog01compat -work work +incdir+E:/quartus_workspace/LCD_Driver_top -O0 E:/quartus_workspace/LCD_Driver_top/LCD_Driver.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver
-# 
-# Top level modules:
-# 	LCD_Driver
-vlog -work work -O0 E:/quartus_workspace/LCD_Driver_top/simulation/modelsim/LCD_Driver_top_TestBench.v
-# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
-# -- Compiling module LCD_Driver_top_TestBench
-# 
-# Top level modules:
-# 	LCD_Driver_top_TestBench
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
-run
-vsim -voptargs=+acc work.LCD_Driver_top_TestBench
-# vsim -voptargs=+acc work.LCD_Driver_top_TestBench 
-# Loading work.LCD_Driver_top_TestBench
-# Loading work.LCD_top
-# Loading work.clkDiv
-# Loading work.clkDiv1Hz
-# Loading work.LCD_Driver
-add wave -r /*
 run

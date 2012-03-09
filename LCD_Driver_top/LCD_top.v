@@ -7,7 +7,7 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 	reg[9:0] LEDs;
 	output en, RS, RW;
 	wire en, RS, RW;
-	wire slowClk, oneHzClk, refreshClk;
+	wire lcdClk, changeClk, refreshClk;
 	reg line;
 	reg lineChange;
 	reg writeData;
@@ -15,13 +15,16 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 	reg[17:0] myData[3:0];
 	
 	
-	clkDiv clkDivSlow( clk, slowClk );
-	clkDiv1Hz clkDiv1Hz( clk, oneHzClk );
-	clkDivRF reClk( clk, refreshClk );
+	clkDivSel U0( clk, lcdClk, 26'd10_000 );
+	clkDivSel U1( clk, changeClk, 26'd1  );
+	clkDivSel U3( clk, refreshClk, 26'd4 );
+//	clkDivSel U0( clk, lcdClk, 26'd50_000_000 );
+//	clkDivSel U1( clk, changeClk, 26'd5_000  );
+//	clkDivSel U3( clk, refreshClk, 26'd20_000 );
 	/* LCD_Driver ports for reference */
 	//LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
 	/* Use slowClk for use on DE0 board (10kHz) */
-	LCD_Driver driver(.lcdWrite(refreshClk), .clk(slowClk), .rst(~rstBt), .dataIn(myData[count]), .dataOut(LCD), .RS(RS), .RW(RW), .enableOut(en), .line(line), .setLine(lineChange));
+	LCD_Driver driver(.lcdWrite(refreshClk), .clk(lcdClk), .rst(~rstBt), .dataIn(myData[count]), .dataOut(LCD), .RS(RS), .RW(RW), .enableOut(en), .line(line), .setLine(lineChange));
 	/* Use faster clock for simulation */
 	//LCD_Driver U1(.enable(rstBt), .clk(clk), .rst(~rstBt), .dataIn(myData), .dataOut(LCD), .RS(RS), .RW(RW), .enableOut(en), .line(line), .setLine(lineChange));
 
@@ -33,12 +36,11 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 			myData[3] <= 18'b111000111000111011;
 		end
 		LEDs[3:0] <= count;
-		LEDs[4] <= oneHzClk; 
+		LEDs[4] <= changeClk; 
 		
 	end
 	
-
-	always@( posedge oneHzClk ) begin
+	always@( posedge changeClk ) begin
 		if( ~rstBt ) begin
 			count <= 4'd0;
 		end

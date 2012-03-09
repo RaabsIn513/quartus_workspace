@@ -18,12 +18,18 @@ module LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line,
 		if( rst ) begin								//External reset signal (rst) needs to go high for a short period
 			count <= 8'd0;
 			irst <= 1'b1;									//Interal reset signal (irst) stays high until it finishes procedure
+			iDataIn <= 18'd0;
 		end
 		
-		if( lcdWrite ) begin							// if lcdWrite, store data at input port dataIn. signal ienable high
-			iDataIn <= dataIn;
-			ienable <= 1'b1;
-		end
+		//if( lcdWrite ) begin							// if lcdWrite, store data at input port dataIn. signal ienable high
+//			if( iDataIn == dataIn ) begin			// if dataIn is already equal to our internal data, don't do anything
+//				ienable <= 1'b0;
+//			end
+			if( iDataIn != dataIn ) begin 	// New data, take it in and use it!
+				iDataIn <= dataIn;
+				ienable <= 1'b1;
+			end
+		//end
 		
 		// Trigger to set top or bottom line
 		if( setLine ) begin

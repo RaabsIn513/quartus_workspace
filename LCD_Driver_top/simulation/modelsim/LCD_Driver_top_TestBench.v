@@ -8,8 +8,8 @@ module LCD_Driver_top_TestBench;
   
   initial begin
     clock <= 1'b0;
-    #5 reset <= 1'b0;
-    #265 reset <= 1'b1;
+    #10 reset <= 1'b0;
+    #100050 reset <= 1'b1;
   end
   
   always begin
