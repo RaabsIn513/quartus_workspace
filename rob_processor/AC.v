@@ -9,6 +9,7 @@ module AC(re_AC,wr_AC,clk,rst,ACin,ACout);
 	begin
 	if(rst)               	//Reset condition
 		begin
+			AC <= 17'd0;
 			ACout <= 17'd0;
 		end
 	

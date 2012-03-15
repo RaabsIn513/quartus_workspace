@@ -77,6 +77,42 @@ rstBt => myData[3][14].ENA
 rstBt => myData[3][15].ENA
 rstBt => myData[3][16].ENA
 rstBt => myData[3][17].ENA
+rstBt => myData[4][0].ENA
+rstBt => myData[4][1].ENA
+rstBt => myData[4][2].ENA
+rstBt => myData[4][3].ENA
+rstBt => myData[4][4].ENA
+rstBt => myData[4][5].ENA
+rstBt => myData[4][6].ENA
+rstBt => myData[4][7].ENA
+rstBt => myData[4][8].ENA
+rstBt => myData[4][9].ENA
+rstBt => myData[4][10].ENA
+rstBt => myData[4][11].ENA
+rstBt => myData[4][12].ENA
+rstBt => myData[4][13].ENA
+rstBt => myData[4][14].ENA
+rstBt => myData[4][15].ENA
+rstBt => myData[4][16].ENA
+rstBt => myData[4][17].ENA
+rstBt => myData[5][0].ENA
+rstBt => myData[5][1].ENA
+rstBt => myData[5][2].ENA
+rstBt => myData[5][3].ENA
+rstBt => myData[5][4].ENA
+rstBt => myData[5][5].ENA
+rstBt => myData[5][6].ENA
+rstBt => myData[5][7].ENA
+rstBt => myData[5][8].ENA
+rstBt => myData[5][9].ENA
+rstBt => myData[5][10].ENA
+rstBt => myData[5][11].ENA
+rstBt => myData[5][12].ENA
+rstBt => myData[5][13].ENA
+rstBt => myData[5][14].ENA
+rstBt => myData[5][15].ENA
+rstBt => myData[5][16].ENA
+rstBt => myData[5][17].ENA
 
 
 |LCD_top|clkDivSel:U0
@@ -248,7 +284,7 @@ freq[25] => Div0.IN26
 
 
 |LCD_top|LCD_Driver:driver
-lcdWrite => always0.IN1
+lcdWrite => ~NO_FANOUT~
 clk => ZeroOne.CLK
 clk => RW~reg0.CLK
 clk => enableOut~reg0.CLK

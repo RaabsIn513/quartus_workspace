@@ -12,7 +12,7 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 	reg lineChange;
 	reg writeData;
 	reg[3:0] count, cnt;
-	reg[17:0] myData[3:0];
+	reg[17:0] myData[5:0];
 	
 	
 	clkDivSel U0( clk, lcdClk, 26'd10_000 );
@@ -30,10 +30,13 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 
 	always @( posedge clk ) begin
 		if( ~rstBt ) begin
-			myData[0] <= 18'b000111000111000000;
-			myData[1] <= 18'b111000111000111001;
-			myData[2] <= 18'b000111000111000010;
-			myData[3] <= 18'b111000111000111011;
+			myData[0] <= 18'b000000000000000000;	// PC = 0
+			myData[1] <= 18'b001010000000001101;	// load contents of 13
+			myData[2] <= 18'b000000000000101010;	// contents of 13 (now AC) is 42
+			myData[3] <= 18'b000000000000000010;	// PC = 1
+			myData[4] <= 18'b000010000000001110;	// add contents of 14 to AC
+			myData[5] <= 18'b000010000000101101;	// result is 45 stored to AC
+			myData[6] <= 18'b010100000000001111;	// store contenst of AC to 15
 		end
 		LEDs[3:0] <= count;
 		LEDs[4] <= changeClk; 
@@ -45,7 +48,7 @@ module LCD_top( clk, rstBt, LCD, LEDs, en, RS, RW );
 			count <= 4'd0;
 		end
 		else begin
-			if(count == 4'd4 ) begin
+			if(count == 4'd6 ) begin
 				count <= 4'd0;
 			end
 			else begin

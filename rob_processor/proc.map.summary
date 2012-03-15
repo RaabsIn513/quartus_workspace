@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Mar 08 18:06:25 2012
+Analysis & Synthesis Status : Successful - Fri Mar 09 13:39:03 2012
 Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition
 Revision Name : proc
 Top-level Entity Name : proc
 Family : Cyclone III
-Total logic elements : 1,152
-    Total combinational functions : 800
-    Dedicated logic registers : 628
-Total registers : 628
+Total logic elements : 1,057
+    Total combinational functions : 705
+    Dedicated logic registers : 595
+Total registers : 595
 Total pins : 14
 Total virtual pins : 0
 Total memory bits : 0

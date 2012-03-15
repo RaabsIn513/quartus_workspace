@@ -1,6 +1,6 @@
-module LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
+module LCD_Driver( clk, rst, dataIn, dataOut, RS, RW, enableOut, line, setLine );
 
-	input lcdWrite, clk, rst, line, setLine;	// line = 0 is top, line = 1 is bottom of the 2x16 char disp
+	input clk, rst, line, setLine;	// line = 0 is top, line = 1 is bottom of the 2x16 char disp
 	input[17:0] dataIn;							// for my rob_processor project
 	output enableOut, RS, RW;
 	output[7:0] dataOut;
@@ -15,14 +15,19 @@ module LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line,
 		
 	always @( negedge clk ) begin
 		// Trigger for reset
-		if( rst ) begin								//External reset signal (rst) needs to go high for a short period
+		if( rst ) begin									//External reset signal (rst) needs to go high for a short period
 			count <= 8'd0;
 			irst <= 1'b1;									//Interal reset signal (irst) stays high until it finishes procedure
+			iDataIn <= 18'd0;
 		end
 		
-		if( lcdWrite ) begin							// if lcdWrite, store data at input port dataIn. signal ienable high
-			iDataIn <= dataIn;
-			ienable <= 1'b1;
+		
+		// If we're allowing new data to be read from dataIn
+		if( ~ienable ) begin
+			if( iDataIn != dataIn ) begin 			// And its new data, take it in and use it!
+				iDataIn <= dataIn;
+				ienable <= 1'b1;
+			end
 		end
 		
 		// Trigger to set top or bottom line
@@ -224,8 +229,8 @@ module LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line,
 		end
 		
 		
-		// Writing bits
-		if( ~irst && ~isetLine && ienable && ~lcdWrite ) begin	// Don't interfear reset procedure
+		// Writing 18 bits
+		if( ~irst && ~isetLine && ienable ) begin	// Don't interfear reset procedure
 					
 			if( bitNum < 8'd18 ) begin							// Make sure we're within the dataIn
 				case( count )										// We're writing the binary value of each bit to the LCD

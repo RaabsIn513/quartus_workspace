@@ -1,5 +1,5 @@
 Fitter report for LCD_top
-Thu Mar 08 23:00:44 2012
+Fri Mar 09 13:57:16 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -66,17 +66,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 08 23:00:44 2012         ;
+; Fitter Status                      ; Successful - Fri Mar 09 13:57:16 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; LCD_top                                       ;
 ; Top-level Entity Name              ; LCD_top                                       ;
 ; Family                             ; Cyclone III                                   ;
 ; Device                             ; EP3C16F484C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 272 / 15,408 ( 2 % )                          ;
-;     Total combinational functions  ; 265 / 15,408 ( 2 % )                          ;
-;     Dedicated logic registers      ; 119 / 15,408 ( < 1 % )                        ;
-; Total registers                    ; 119                                           ;
+; Total logic elements               ; 242 / 15,408 ( 2 % )                          ;
+;     Total combinational functions  ; 235 / 15,408 ( 2 % )                          ;
+;     Dedicated logic registers      ; 97 / 15,408 ( < 1 % )                         ;
+; Total registers                    ; 97                                            ;
 ; Total pins                         ; 23 / 347 ( 7 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                           ;
@@ -210,8 +210,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 444 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 444 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 392 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 392 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -234,7 +234,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 434     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 382     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -250,23 +250,23 @@ The pin-out file can be found in E:/quartus_workspace/LCD_Driver_top/LCD_top.pin
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Total logic elements                        ; 272 / 15,408 ( 2 % )       ;
-;     -- Combinational with no register       ; 153                        ;
+; Total logic elements                        ; 242 / 15,408 ( 2 % )       ;
+;     -- Combinational with no register       ; 145                        ;
 ;     -- Register only                        ; 7                          ;
-;     -- Combinational with a register        ; 112                        ;
+;     -- Combinational with a register        ; 90                         ;
 ;                                             ;                            ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 99                         ;
-;     -- 3 input functions                    ; 30                         ;
-;     -- <=2 input functions                  ; 136                        ;
+;     -- 4 input functions                    ; 103                        ;
+;     -- 3 input functions                    ; 31                         ;
+;     -- <=2 input functions                  ; 101                        ;
 ;     -- Register only                        ; 7                          ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 183                        ;
-;     -- arithmetic mode                      ; 82                         ;
+;     -- normal mode                          ; 178                        ;
+;     -- arithmetic mode                      ; 57                         ;
 ;                                             ;                            ;
-; Total registers*                            ; 119 / 17,068 ( < 1 % )     ;
-;     -- Dedicated logic registers            ; 119 / 15,408 ( < 1 % )     ;
+; Total registers*                            ; 97 / 17,068 ( < 1 % )      ;
+;     -- Dedicated logic registers            ; 97 / 15,408 ( < 1 % )      ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )          ;
 ;                                             ;                            ;
 ; Total LABs:  partially or completely used   ; 25 / 963 ( 3 % )           ;
@@ -289,84 +289,84 @@ The pin-out file can be found in E:/quartus_workspace/LCD_Driver_top/LCD_top.pin
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%               ;
 ; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%               ;
 ; Maximum fan-out node                        ; clk~inputclkctrl           ;
-; Maximum fan-out                             ; 86                         ;
+; Maximum fan-out                             ; 59                         ;
 ; Highest non-global fan-out signal           ; LCD_Driver:driver|count[2] ;
-; Highest non-global fan-out                  ; 25                         ;
-; Total fan-out                               ; 1060                       ;
-; Average fan-out                             ; 2.36                       ;
+; Highest non-global fan-out                  ; 26                         ;
+; Total fan-out                               ; 967                        ;
+; Average fan-out                             ; 2.43                       ;
 +---------------------------------------------+----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+------------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                          ;
-+---------------------------------------------+-----------------------+--------------------------------+
-; Statistic                                   ; Top                   ; hard_block:auto_generated_inst ;
-+---------------------------------------------+-----------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                   ; Low                            ;
-;                                             ;                       ;                                ;
-; Total logic elements                        ; 272 / 15408 ( 1 % )   ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 153                   ; 0                              ;
-;     -- Register only                        ; 7                     ; 0                              ;
-;     -- Combinational with a register        ; 112                   ; 0                              ;
-;                                             ;                       ;                                ;
-; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 99                    ; 0                              ;
-;     -- 3 input functions                    ; 30                    ; 0                              ;
-;     -- <=2 input functions                  ; 136                   ; 0                              ;
-;     -- Register only                        ; 7                     ; 0                              ;
-;                                             ;                       ;                                ;
-; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 183                   ; 0                              ;
-;     -- arithmetic mode                      ; 82                    ; 0                              ;
-;                                             ;                       ;                                ;
-; Total registers                             ; 119                   ; 0                              ;
-;     -- Dedicated logic registers            ; 119 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- I/O registers                        ; 0                     ; 0                              ;
-;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 25 / 963 ( 2 % )      ; 0 / 963 ( 0 % )                ;
-;                                             ;                       ;                                ;
-; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 23                    ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 112 ( 0 % )       ; 0 / 112 ( 0 % )                ;
-; Total memory bits                           ; 0                     ; 0                              ;
-; Total RAM block bits                        ; 0                     ; 0                              ;
-; Clock control block                         ; 3 / 24 ( 12 % )       ; 0 / 24 ( 0 % )                 ;
-;                                             ;                       ;                                ;
-; Connections                                 ;                       ;                                ;
-;     -- Input Connections                    ; 0                     ; 0                              ;
-;     -- Registered Input Connections         ; 0                     ; 0                              ;
-;     -- Output Connections                   ; 0                     ; 0                              ;
-;     -- Registered Output Connections        ; 0                     ; 0                              ;
-;                                             ;                       ;                                ;
-; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1055                  ; 5                              ;
-;     -- Registered Connections               ; 409                   ; 0                              ;
-;                                             ;                       ;                                ;
-; External Connections                        ;                       ;                                ;
-;     -- Top                                  ; 0                     ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
-;                                             ;                       ;                                ;
-; Partition Interface                         ;                       ;                                ;
-;     -- Input Ports                          ; 2                     ; 0                              ;
-;     -- Output Ports                         ; 21                    ; 0                              ;
-;     -- Bidir Ports                          ; 0                     ; 0                              ;
-;                                             ;                       ;                                ;
-; Registered Ports                            ;                       ;                                ;
-;     -- Registered Input Ports               ; 0                     ; 0                              ;
-;     -- Registered Output Ports              ; 0                     ; 0                              ;
-;                                             ;                       ;                                ;
-; Port Connectivity                           ;                       ;                                ;
-;     -- Input Ports driven by GND            ; 0                     ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                     ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                     ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                     ; 0                              ;
-;     -- Input Ports with no Source           ; 0                     ; 0                              ;
-;     -- Output Ports with no Source          ; 0                     ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                     ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                     ; 0                              ;
-+---------------------------------------------+-----------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 242 / 15408 ( 1 % )  ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 145                  ; 0                              ;
+;     -- Register only                        ; 7                    ; 0                              ;
+;     -- Combinational with a register        ; 90                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 103                  ; 0                              ;
+;     -- 3 input functions                    ; 31                   ; 0                              ;
+;     -- <=2 input functions                  ; 101                  ; 0                              ;
+;     -- Register only                        ; 7                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 178                  ; 0                              ;
+;     -- arithmetic mode                      ; 57                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 97                   ; 0                              ;
+;     -- Dedicated logic registers            ; 97 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- I/O registers                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 25 / 963 ( 2 % )     ; 0 / 963 ( 0 % )                ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 23                   ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 112 ( 0 % )      ; 0 / 112 ( 0 % )                ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 3 / 24 ( 12 % )      ; 0 / 24 ( 0 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 962                  ; 5                              ;
+;     -- Registered Connections               ; 394                  ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 2                    ; 0                              ;
+;     -- Output Ports                         ; 21                   ; 0                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -374,8 +374,8 @@ The pin-out file can be found in E:/quartus_workspace/LCD_Driver_top/LCD_top.pin
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; clk   ; G21   ; 6        ; 41           ; 15           ; 0            ; 86                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; rstBt ; F1    ; 1        ; 0            ; 23           ; 0            ; 13                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; clk   ; G21   ; 6        ; 41           ; 15           ; 0            ; 59                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; rstBt ; F1    ; 1        ; 0            ; 23           ; 0            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -948,11 +948,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
-; |LCD_top                   ; 272 (12)    ; 119 (9)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 23   ; 0            ; 153 (3)      ; 7 (5)             ; 112 (4)          ; |LCD_top                   ;              ;
-;    |LCD_Driver:driver|     ; 118 (118)   ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 89 (89)      ; 0 (0)             ; 29 (29)          ; |LCD_top|LCD_Driver:driver ;              ;
+; |LCD_top                   ; 242 (20)    ; 97 (9)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 23   ; 0            ; 145 (11)     ; 7 (5)             ; 90 (4)           ; |LCD_top                   ;              ;
+;    |LCD_Driver:driver|     ; 129 (129)   ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 95 (95)      ; 0 (0)             ; 34 (34)          ; |LCD_top|LCD_Driver:driver ;              ;
 ;    |clkDivSel:U0|          ; 43 (43)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 1 (1)             ; 26 (26)          ; |LCD_top|clkDivSel:U0      ;              ;
 ;    |clkDivSel:U1|          ; 50 (50)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 1 (1)             ; 26 (26)          ; |LCD_top|clkDivSel:U1      ;              ;
-;    |clkDivSel:U3|          ; 49 (49)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 27 (27)          ; |LCD_top|clkDivSel:U3      ;              ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1004,10 +1003,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - count~2                         ; 0                 ; 6       ;
 ;      - count~3                         ; 0                 ; 6       ;
 ;      - count~5                         ; 0                 ; 6       ;
-;      - LCD_Driver:driver|iDataIn[12]~0 ; 0                 ; 6       ;
-;      - LCD_Driver:driver|iDataIn[0]~1  ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[14]~0 ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[3]~1  ; 0                 ; 6       ;
 ;      - LCD_Driver:driver|iDataIn[1]~2  ; 0                 ; 6       ;
-;      - LCD_Driver:driver|Selector38~4  ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[5]~3  ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[15]~4 ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[13]~5 ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[2]~6  ; 0                 ; 6       ;
+;      - LCD_Driver:driver|iDataIn[0]~7  ; 0                 ; 6       ;
 +----------------------------------------+-------------------+---------+
 
 
@@ -1016,11 +1019,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                          ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; LCD_Driver:driver|always0~0   ; LCCOMB_X32_Y26_N6  ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; LCD_Driver:driver|bitNum[4]~2 ; LCCOMB_X31_Y26_N22 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                           ; PIN_G21            ; 86      ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; clkDivSel:U0|clkOut           ; FF_X16_Y4_N27      ; 29      ; Clock        ; yes    ; Global Clock         ; GCLK16           ; --                        ;
-; clkDivSel:U1|clkOut           ; FF_X16_Y1_N31      ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; LCD_Driver:driver|always0~0   ; LCCOMB_X30_Y27_N30 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; LCD_Driver:driver|bitNum[0]~2 ; LCCOMB_X30_Y27_N26 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                           ; PIN_G21            ; 59      ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; clkDivSel:U0|clkOut           ; FF_X9_Y13_N1       ; 34      ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; clkDivSel:U1|clkOut           ; FF_X17_Y4_N31      ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 +-------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1029,9 +1032,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                 ; PIN_G21       ; 86      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
-; clkDivSel:U0|clkOut ; FF_X16_Y4_N27 ; 29      ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
-; clkDivSel:U1|clkOut ; FF_X16_Y1_N31 ; 4       ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
+; clk                 ; PIN_G21       ; 59      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; clkDivSel:U0|clkOut ; FF_X9_Y13_N1  ; 34      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
+; clkDivSel:U1|clkOut ; FF_X17_Y4_N31 ; 4       ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +---------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1040,63 +1043,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+---------+
 ; Name                            ; Fan-Out ;
 +---------------------------------+---------+
-; LCD_Driver:driver|count[2]      ; 25      ;
-; LCD_Driver:driver|count[0]      ; 24      ;
-; LCD_Driver:driver|count[1]      ; 23      ;
-; LCD_Driver:driver|irst          ; 20      ;
-; LCD_Driver:driver|count[3]      ; 18      ;
+; LCD_Driver:driver|count[2]      ; 26      ;
+; LCD_Driver:driver|irst          ; 25      ;
+; LCD_Driver:driver|count[0]      ; 22      ;
+; LCD_Driver:driver|count[1]      ; 22      ;
+; LCD_Driver:driver|count[3]      ; 19      ;
+; rstBt~input                     ; 17      ;
+; count[0]                        ; 16      ;
 ; clkDivSel:U1|Equal0~8           ; 14      ;
-; clkDivSel:U3|Equal0~8           ; 14      ;
-; rstBt~input                     ; 13      ;
-; LCD_Driver:driver|bitNum[3]     ; 11      ;
-; count[0]                        ; 10      ;
-; LCD_Driver:driver|always0~0     ; 10      ;
-; LCD_Driver:driver|bitNum[1]     ; 10      ;
-; LCD_Driver:driver|bitNum[4]~2   ; 8       ;
-; LCD_Driver:driver|bitNum[4]~0   ; 8       ;
-; count[1]                        ; 8       ;
-; LCD_Driver:driver|bitNum[2]     ; 8       ;
+; count[2]                        ; 14      ;
+; LCD_Driver:driver|bitNum[1]     ; 14      ;
+; count[1]                        ; 11      ;
+; LCD_Driver:driver|LessThan0~1   ; 11      ;
+; LCD_Driver:driver|bitNum[2]     ; 11      ;
+; LCD_Driver:driver|Equal0~5      ; 9       ;
+; LCD_Driver:driver|bitNum[0]~2   ; 8       ;
+; LCD_Driver:driver|bitNum[0]~0   ; 8       ;
+; LCD_Driver:driver|always0~0     ; 8       ;
+; LCD_Driver:driver|Equal1~1      ; 8       ;
+; LCD_Driver:driver|bitNum[3]     ; 8       ;
+; LCD_Driver:driver|bitNum[4]     ; 8       ;
 ; clkDivSel:U0|Equal0~8           ; 7       ;
-; LCD_Driver:driver|LessThan0~1   ; 7       ;
-; LCD_Driver:driver|bitNum[4]     ; 7       ;
-; LCD_Driver:driver|iDataIn[0]    ; 6       ;
-; LCD_Driver:driver|ZeroOne~3     ; 6       ;
-; LCD_Driver:driver|dataOut~9     ; 6       ;
-; LCD_Driver:driver|Equal1~1      ; 6       ;
+; LCD_Driver:driver|dataOut~9     ; 7       ;
+; LCD_Driver:driver|ienable       ; 6       ;
 ; LCD_Driver:driver|bitNum[0]     ; 6       ;
 ; LCD_Driver:driver|cntCurPos[0]  ; 6       ;
-; LCD_Driver:driver|dataOut[1]~21 ; 5       ;
-; LCD_Driver:driver|bitNum[7]     ; 5       ;
-; LCD_Driver:driver|bitNum[6]     ; 5       ;
-; LCD_Driver:driver|bitNum[5]     ; 5       ;
+; LCD_Driver:driver|dataOut[2]~21 ; 5       ;
+; LCD_Driver:driver|Equal2~2      ; 5       ;
 ; LCD_Driver:driver|Selector46~0  ; 5       ;
-; LCD_Driver:driver|dataOut~23    ; 4       ;
-; LCD_Driver:driver|cntCurPos~2   ; 4       ;
-; LCD_Driver:driver|iDataIn[1]    ; 4       ;
-; LCD_Driver:driver|iDataIn[12]   ; 4       ;
+; LCD_Driver:driver|ZeroOne~8     ; 4       ;
+; LCD_Driver:driver|iDataIn[14]   ; 4       ;
+; LCD_Driver:driver|Decoder0~1    ; 4       ;
 ; LCD_Driver:driver|Selector37~2  ; 4       ;
 ; LCD_Driver:driver|count~4       ; 4       ;
-; count[2]                        ; 4       ;
-; LCD_Driver:driver|LessThan0~0   ; 4       ;
+; LCD_Driver:driver|Selector37~0  ; 4       ;
+; LCD_Driver:driver|bitNum[7]     ; 4       ;
+; LCD_Driver:driver|bitNum[6]     ; 4       ;
+; LCD_Driver:driver|bitNum[5]     ; 4       ;
 ; LCD_Driver:driver|cntCurPos[1]  ; 4       ;
-; LCD_Driver:driver|dataOut~8     ; 4       ;
-; LCD_Driver:driver|Equal0~1      ; 3       ;
-; LCD_Driver:driver|Decoder0~1    ; 3       ;
+; count[1]~0                      ; 3       ;
+; LCD_Driver:driver|Decoder0~2    ; 3       ;
+; LCD_Driver:driver|iDataIn[0]    ; 3       ;
+; LCD_Driver:driver|iDataIn[2]    ; 3       ;
+; LCD_Driver:driver|iDataIn[13]   ; 3       ;
+; LCD_Driver:driver|iDataIn[15]   ; 3       ;
+; LCD_Driver:driver|iDataIn[5]    ; 3       ;
+; LCD_Driver:driver|iDataIn[1]    ; 3       ;
+; LCD_Driver:driver|iDataIn[3]    ; 3       ;
 ; LCD_Driver:driver|count~7       ; 3       ;
-; LCD_Driver:driver|Selector0~0   ; 3       ;
+; LCD_Driver:driver|count~6       ; 3       ;
 ; LCD_Driver:driver|count~5       ; 3       ;
 ; LCD_Driver:driver|enableOut~3   ; 3       ;
 ; count[3]                        ; 3       ;
-; LCD_Driver:driver|Selector37~0  ; 3       ;
+; LCD_Driver:driver|dataOut~15    ; 3       ;
 ; LCD_Driver:driver|Decoder0~0    ; 3       ;
-; LCD_Driver:driver|LessThan0~2   ; 3       ;
-; clkDivSel:U3|clkOut             ; 3       ;
-; LCD_Driver:driver|ienable       ; 3       ;
-; LCD_Driver:driver|Equal2~2      ; 3       ;
-; LCD_Driver:driver|Equal2~1      ; 3       ;
 ; LCD_Driver:driver|Equal2~0      ; 3       ;
+; LCD_Driver:driver|dataOut~8     ; 3       ;
 ; LCD_Driver:driver|dataOut[4]    ; 3       ;
-; LCD_Driver:driver|ZeroOne~6     ; 2       ;
+; LCD_Driver:driver|dataOut[0]    ; 3       ;
+; LCD_Driver:driver|dataOut[2]~20 ; 2       ;
 ; clkDivSel:U1|count1[24]         ; 2       ;
 ; clkDivSel:U1|count1[25]         ; 2       ;
 ; clkDivSel:U1|count1[0]          ; 2       ;
@@ -1123,37 +1128,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clkDivSel:U1|count1[19]         ; 2       ;
 ; clkDivSel:U1|count1[20]         ; 2       ;
 ; clkDivSel:U1|count1[21]         ; 2       ;
-; count[3]~0                      ; 2       ;
-; clkDivSel:U3|count1[25]         ; 2       ;
-; clkDivSel:U3|count1[24]         ; 2       ;
-; clkDivSel:U3|count1[22]         ; 2       ;
-; clkDivSel:U3|count1[0]          ; 2       ;
-; clkDivSel:U3|count1[1]          ; 2       ;
-; clkDivSel:U3|count1[23]         ; 2       ;
-; clkDivSel:U3|count1[2]          ; 2       ;
-; clkDivSel:U3|count1[3]          ; 2       ;
-; clkDivSel:U3|count1[4]          ; 2       ;
-; clkDivSel:U3|count1[5]          ; 2       ;
-; clkDivSel:U3|count1[6]          ; 2       ;
-; clkDivSel:U3|count1[7]          ; 2       ;
-; clkDivSel:U3|count1[8]          ; 2       ;
-; clkDivSel:U3|count1[9]          ; 2       ;
-; clkDivSel:U3|count1[10]         ; 2       ;
-; clkDivSel:U3|count1[11]         ; 2       ;
-; clkDivSel:U3|count1[12]         ; 2       ;
-; clkDivSel:U3|count1[13]         ; 2       ;
-; clkDivSel:U3|count1[14]         ; 2       ;
-; clkDivSel:U3|count1[16]         ; 2       ;
-; clkDivSel:U3|count1[15]         ; 2       ;
-; clkDivSel:U3|count1[17]         ; 2       ;
-; clkDivSel:U3|count1[18]         ; 2       ;
-; clkDivSel:U3|count1[19]         ; 2       ;
-; clkDivSel:U3|count1[20]         ; 2       ;
-; clkDivSel:U3|count1[21]         ; 2       ;
-; LCD_Driver:driver|Equal3~0      ; 2       ;
-; LCD_Driver:driver|Mux0~3        ; 2       ;
-; LCD_Driver:driver|Add0~0        ; 2       ;
-; LCD_Driver:driver|count~6       ; 2       ;
+; Mux1~0                          ; 2       ;
+; Mux14~0                         ; 2       ;
+; Mux12~0                         ; 2       ;
+; Mux17~0                         ; 2       ;
+; Mux16~0                         ; 2       ;
+; LCD_Driver:driver|Equal3~1      ; 2       ;
+; LCD_Driver:driver|cntCurPos~3   ; 2       ;
+; LCD_Driver:driver|cntCurPos~2   ; 2       ;
+; LCD_Driver:driver|Add0~1        ; 2       ;
 ; clkDivSel:U0|count1[25]         ; 2       ;
 ; clkDivSel:U0|count1[24]         ; 2       ;
 ; clkDivSel:U0|count1[23]         ; 2       ;
@@ -1181,12 +1164,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clkDivSel:U0|count1[20]         ; 2       ;
 ; clkDivSel:U0|count1[21]         ; 2       ;
 ; clkDivSel:U1|clkOut             ; 2       ;
-; LCD_Driver:driver|Selector39~0  ; 2       ;
-; LCD_Driver:driver|dataOut~16    ; 2       ;
-; LCD_Driver:driver|dataOut[1]~13 ; 2       ;
-; LCD_Driver:driver|dataOut[1]~12 ; 2       ;
-; LCD_Driver:driver|Selector36~0  ; 2       ;
+; LCD_Driver:driver|Selector39~1  ; 2       ;
+; LCD_Driver:driver|dataOut[2]~12 ; 2       ;
 ; LCD_Driver:driver|ZeroOne       ; 2       ;
+; LCD_Driver:driver|dataOut~7     ; 2       ;
 ; LCD_Driver:driver|RS            ; 2       ;
 ; LCD_Driver:driver|dataOut[7]    ; 2       ;
 ; LCD_Driver:driver|dataOut[6]    ; 2       ;
@@ -1194,10 +1175,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Driver:driver|dataOut[2]    ; 2       ;
 ; LCD_Driver:driver|dataOut[1]    ; 2       ;
 ; LCD_Driver:driver|enableOut     ; 2       ;
-; LCD_Driver:driver|dataOut[0]    ; 2       ;
-; LCD_Driver:driver|cntCurPos~6   ; 1       ;
-; LCD_Driver:driver|Selector38~4  ; 1       ;
-; LCD_Driver:driver|Selector48~6  ; 1       ;
+; LCD_Driver:driver|ienable~3     ; 1       ;
+; LCD_Driver:driver|cntCurPos~5   ; 1       ;
+; LCD_Driver:driver|ZeroOne~9     ; 1       ;
+; LCD_Driver:driver|Selector36~4  ; 1       ;
 ; LCD_Driver:driver|dataOut~22    ; 1       ;
 ; clkDivSel:U1|count1~12          ; 1       ;
 ; clkDivSel:U1|count1~11          ; 1       ;
@@ -1212,23 +1193,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clkDivSel:U1|count1~2           ; 1       ;
 ; clkDivSel:U1|count1~1           ; 1       ;
 ; clkDivSel:U1|count1~0           ; 1       ;
-; clkDivSel:U3|count1~12          ; 1       ;
-; clkDivSel:U3|count1~11          ; 1       ;
-; clkDivSel:U3|count1~10          ; 1       ;
-; clkDivSel:U3|count1~9           ; 1       ;
-; clkDivSel:U3|count1~8           ; 1       ;
-; clkDivSel:U3|count1~7           ; 1       ;
-; clkDivSel:U3|count1~6           ; 1       ;
-; clkDivSel:U3|count1~5           ; 1       ;
-; clkDivSel:U3|count1~4           ; 1       ;
-; clkDivSel:U3|count1~3           ; 1       ;
-; clkDivSel:U3|count1~2           ; 1       ;
-; clkDivSel:U3|count1~1           ; 1       ;
-; clkDivSel:U3|count1~0           ; 1       ;
+; LCD_Driver:driver|iDataIn[0]~7  ; 1       ;
+; LCD_Driver:driver|iDataIn[2]~6  ; 1       ;
+; Mux14~1                         ; 1       ;
+; LCD_Driver:driver|iDataIn[13]~5 ; 1       ;
+; Mux4~0                          ; 1       ;
+; LCD_Driver:driver|iDataIn[15]~4 ; 1       ;
+; Mux2~0                          ; 1       ;
+; LCD_Driver:driver|iDataIn[5]~3  ; 1       ;
 ; LCD_Driver:driver|iDataIn[1]~2  ; 1       ;
-; LCD_Driver:driver|iDataIn[0]~1  ; 1       ;
-; LCD_Driver:driver|iDataIn[12]~0 ; 1       ;
-; LCD_Driver:driver|Equal0~2      ; 1       ;
+; LCD_Driver:driver|iDataIn[3]~1  ; 1       ;
+; LCD_Driver:driver|iDataIn[14]~0 ; 1       ;
 ; clkDivSel:U0|count1~5           ; 1       ;
 ; clkDivSel:U0|count1~4           ; 1       ;
 ; clkDivSel:U0|count1~3           ; 1       ;
@@ -1250,17 +1225,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Add0~0                          ; 1       ;
 ; count~2                         ; 1       ;
 ; count~1                         ; 1       ;
-; clkDivSel:U3|clkOut~0           ; 1       ;
-; clkDivSel:U3|Equal0~7           ; 1       ;
-; clkDivSel:U3|Equal0~6           ; 1       ;
-; clkDivSel:U3|Equal0~5           ; 1       ;
-; clkDivSel:U3|Equal0~4           ; 1       ;
-; clkDivSel:U3|Equal0~3           ; 1       ;
-; clkDivSel:U3|Equal0~2           ; 1       ;
-; clkDivSel:U3|Equal0~1           ; 1       ;
-; clkDivSel:U3|Equal0~0           ; 1       ;
-; LCD_Driver:driver|ienable~1     ; 1       ;
-; LCD_Driver:driver|ienable~0     ; 1       ;
+; LCD_Driver:driver|ienable~2     ; 1       ;
+; LCD_Driver:driver|Equal0~4      ; 1       ;
+; LCD_Driver:driver|Equal0~3      ; 1       ;
+; LCD_Driver:driver|Equal0~2      ; 1       ;
+; LCD_Driver:driver|Equal0~1      ; 1       ;
 ; LCD_Driver:driver|Equal0~0      ; 1       ;
 ; LCD_Driver:driver|bitNum[7]~6   ; 1       ;
 ; LCD_Driver:driver|bitNum[6]~5   ; 1       ;
@@ -1268,29 +1237,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Driver:driver|Add1~13       ; 1       ;
 ; LCD_Driver:driver|Add1~12       ; 1       ;
 ; LCD_Driver:driver|Add1~11       ; 1       ;
+; LCD_Driver:driver|Add1~10       ; 1       ;
 ; LCD_Driver:driver|bitNum[4]~3   ; 1       ;
-; LCD_Driver:driver|bitNum[4]~1   ; 1       ;
-; LCD_Driver:driver|Add1~8        ; 1       ;
-; LCD_Driver:driver|cntCurPos~5   ; 1       ;
+; LCD_Driver:driver|bitNum[0]~1   ; 1       ;
+; LCD_Driver:driver|Equal3~0      ; 1       ;
 ; LCD_Driver:driver|cntCurPos~4   ; 1       ;
-; LCD_Driver:driver|cntCurPos~3   ; 1       ;
-; LCD_Driver:driver|ZeroOne~5     ; 1       ;
-; LCD_Driver:driver|ZeroOne~4     ; 1       ;
+; LCD_Driver:driver|ZeroOne~7     ; 1       ;
+; LCD_Driver:driver|ZeroOne~6     ; 1       ;
 ; LCD_Driver:driver|Mux0~6        ; 1       ;
 ; LCD_Driver:driver|Mux0~5        ; 1       ;
 ; LCD_Driver:driver|Mux0~4        ; 1       ;
+; LCD_Driver:driver|Mux0~3        ; 1       ;
 ; LCD_Driver:driver|Mux0~2        ; 1       ;
 ; LCD_Driver:driver|Mux0~1        ; 1       ;
 ; LCD_Driver:driver|Mux0~0        ; 1       ;
+; LCD_Driver:driver|Add0~0        ; 1       ;
+; LCD_Driver:driver|ZeroOne~5     ; 1       ;
+; LCD_Driver:driver|ZeroOne~4     ; 1       ;
 ; LCD_Driver:driver|irst~0        ; 1       ;
 ; LCD_Driver:driver|Selector35~0  ; 1       ;
-; LCD_Driver:driver|Selector38~3  ; 1       ;
+; LCD_Driver:driver|Selector0~0   ; 1       ;
 ; LCD_Driver:driver|Selector38~2  ; 1       ;
+; LCD_Driver:driver|Selector38~1  ; 1       ;
+; LCD_Driver:driver|Selector38~0  ; 1       ;
 ; LCD_Driver:driver|Selector37~4  ; 1       ;
 ; LCD_Driver:driver|Selector37~3  ; 1       ;
 ; LCD_Driver:driver|Selector37~1  ; 1       ;
+; LCD_Driver:driver|Selector36~3  ; 1       ;
 ; LCD_Driver:driver|Selector36~2  ; 1       ;
-; LCD_Driver:driver|Selector36~1  ; 1       ;
 ; clkDivSel:U0|clkOut~0           ; 1       ;
 ; clkDivSel:U0|Equal0~7           ; 1       ;
 ; clkDivSel:U0|Equal0~6           ; 1       ;
@@ -1307,26 +1281,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Driver:driver|Selector48~4  ; 1       ;
 ; LCD_Driver:driver|Selector48~3  ; 1       ;
 ; LCD_Driver:driver|Selector48~2  ; 1       ;
+; LCD_Driver:driver|Selector48~1  ; 1       ;
+; LCD_Driver:driver|Selector48~0  ; 1       ;
 ; LCD_Driver:driver|enableOut~2   ; 1       ;
 ; LCD_Driver:driver|enableOut~1   ; 1       ;
+; LCD_Driver:driver|Selector39~5  ; 1       ;
 ; LCD_Driver:driver|Selector39~4  ; 1       ;
 ; LCD_Driver:driver|Selector39~3  ; 1       ;
 ; LCD_Driver:driver|Selector39~2  ; 1       ;
-; LCD_Driver:driver|Selector39~1  ; 1       ;
-; LCD_Driver:driver|ZeroOne~2     ; 1       ;
-; LCD_Driver:driver|dataOut~20    ; 1       ;
-; LCD_Driver:driver|dataOut[4]~19 ; 1       ;
-; LCD_Driver:driver|dataOut~18    ; 1       ;
+; LCD_Driver:driver|dataOut~19    ; 1       ;
+; LCD_Driver:driver|dataOut[4]~18 ; 1       ;
 ; LCD_Driver:driver|dataOut~17    ; 1       ;
-; LCD_Driver:driver|dataOut~15    ; 1       ;
+; LCD_Driver:driver|dataOut~16    ; 1       ;
 ; LCD_Driver:driver|dataOut~14    ; 1       ;
+; LCD_Driver:driver|dataOut~13    ; 1       ;
 ; LCD_Driver:driver|dataOut~11    ; 1       ;
 ; LCD_Driver:driver|dataOut~10    ; 1       ;
-; LCD_Driver:driver|Selector46~2  ; 1       ;
+; LCD_Driver:driver|LessThan0~0   ; 1       ;
+; LCD_Driver:driver|Selector46~3  ; 1       ;
+; LCD_Driver:driver|Selector39~0  ; 1       ;
+; LCD_Driver:driver|Equal2~1      ; 1       ;
 ; LCD_Driver:driver|Equal1~0      ; 1       ;
-; LCD_Driver:driver|WideOr27~0    ; 1       ;
+; LCD_Driver:driver|Selector46~2  ; 1       ;
 ; LCD_Driver:driver|Selector46~1  ; 1       ;
-; LCD_Driver:driver|dataOut~7     ; 1       ;
 ; clkDivSel:U0|clkOut             ; 1       ;
 ; LEDs[4]~reg0                    ; 1       ;
 ; LEDs[3]~reg0                    ; 1       ;
@@ -1384,57 +1361,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clkDivSel:U1|Add0~2             ; 1       ;
 ; clkDivSel:U1|Add0~1             ; 1       ;
 ; clkDivSel:U1|Add0~0             ; 1       ;
-; clkDivSel:U3|Add0~50            ; 1       ;
-; clkDivSel:U3|Add0~49            ; 1       ;
-; clkDivSel:U3|Add0~48            ; 1       ;
-; clkDivSel:U3|Add0~47            ; 1       ;
-; clkDivSel:U3|Add0~46            ; 1       ;
-; clkDivSel:U3|Add0~45            ; 1       ;
-; clkDivSel:U3|Add0~44            ; 1       ;
-; clkDivSel:U3|Add0~43            ; 1       ;
-; clkDivSel:U3|Add0~42            ; 1       ;
-; clkDivSel:U3|Add0~41            ; 1       ;
-; clkDivSel:U3|Add0~40            ; 1       ;
-; clkDivSel:U3|Add0~39            ; 1       ;
-; clkDivSel:U3|Add0~38            ; 1       ;
-; clkDivSel:U3|Add0~37            ; 1       ;
-; clkDivSel:U3|Add0~36            ; 1       ;
-; clkDivSel:U3|Add0~35            ; 1       ;
-; clkDivSel:U3|Add0~34            ; 1       ;
-; clkDivSel:U3|Add0~33            ; 1       ;
-; clkDivSel:U3|Add0~32            ; 1       ;
-; clkDivSel:U3|Add0~31            ; 1       ;
-; clkDivSel:U3|Add0~30            ; 1       ;
-; clkDivSel:U3|Add0~29            ; 1       ;
-; clkDivSel:U3|Add0~28            ; 1       ;
-; clkDivSel:U3|Add0~27            ; 1       ;
-; clkDivSel:U3|Add0~26            ; 1       ;
-; clkDivSel:U3|Add0~25            ; 1       ;
-; clkDivSel:U3|Add0~24            ; 1       ;
-; clkDivSel:U3|Add0~23            ; 1       ;
-; clkDivSel:U3|Add0~22            ; 1       ;
-; clkDivSel:U3|Add0~21            ; 1       ;
-; clkDivSel:U3|Add0~20            ; 1       ;
-; clkDivSel:U3|Add0~19            ; 1       ;
-; clkDivSel:U3|Add0~18            ; 1       ;
-; clkDivSel:U3|Add0~17            ; 1       ;
-; clkDivSel:U3|Add0~16            ; 1       ;
-; clkDivSel:U3|Add0~15            ; 1       ;
-; clkDivSel:U3|Add0~14            ; 1       ;
-; clkDivSel:U3|Add0~13            ; 1       ;
-; clkDivSel:U3|Add0~12            ; 1       ;
-; clkDivSel:U3|Add0~11            ; 1       ;
-; clkDivSel:U3|Add0~10            ; 1       ;
-; clkDivSel:U3|Add0~9             ; 1       ;
-; clkDivSel:U3|Add0~8             ; 1       ;
-; clkDivSel:U3|Add0~7             ; 1       ;
-; clkDivSel:U3|Add0~6             ; 1       ;
-; clkDivSel:U3|Add0~5             ; 1       ;
-; clkDivSel:U3|Add0~4             ; 1       ;
-; clkDivSel:U3|Add0~3             ; 1       ;
-; clkDivSel:U3|Add0~2             ; 1       ;
-; clkDivSel:U3|Add0~1             ; 1       ;
-; clkDivSel:U3|Add0~0             ; 1       ;
 ; clkDivSel:U0|Add0~50            ; 1       ;
 ; clkDivSel:U0|Add0~49            ; 1       ;
 ; clkDivSel:U0|Add0~48            ; 1       ;
@@ -1491,8 +1417,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Driver:driver|Add1~16       ; 1       ;
 ; LCD_Driver:driver|Add1~15       ; 1       ;
 ; LCD_Driver:driver|Add1~14       ; 1       ;
-; LCD_Driver:driver|Add1~10       ; 1       ;
 ; LCD_Driver:driver|Add1~9        ; 1       ;
+; LCD_Driver:driver|Add1~8        ; 1       ;
 ; LCD_Driver:driver|Add1~7        ; 1       ;
 ; LCD_Driver:driver|Add1~6        ; 1       ;
 ; LCD_Driver:driver|Add1~5        ; 1       ;
@@ -1515,87 +1441,86 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 309 / 47,787 ( < 1 % ) ;
-; C16 interconnects          ; 3 / 1,804 ( < 1 % )    ;
-; C4 interconnects           ; 91 / 31,272 ( < 1 % )  ;
-; Direct links               ; 130 / 47,787 ( < 1 % ) ;
+; Block interconnects        ; 270 / 47,787 ( < 1 % ) ;
+; C16 interconnects          ; 0 / 1,804 ( 0 % )      ;
+; C4 interconnects           ; 83 / 31,272 ( < 1 % )  ;
+; Direct links               ; 98 / 47,787 ( < 1 % )  ;
 ; Global clocks              ; 3 / 20 ( 15 % )        ;
-; Local interconnects        ; 160 / 15,408 ( 1 % )   ;
-; R24 interconnects          ; 10 / 1,775 ( < 1 % )   ;
-; R4 interconnects           ; 146 / 41,310 ( < 1 % ) ;
+; Local interconnects        ; 165 / 15,408 ( 1 % )   ;
+; R24 interconnects          ; 11 / 1,775 ( < 1 % )   ;
+; R4 interconnects           ; 137 / 41,310 ( < 1 % ) ;
 +----------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.88) ; Number of LABs  (Total = 25) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 6                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 15                           ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 9.68) ; Number of LABs  (Total = 25) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 9                            ;
+; 2                                          ; 0                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 0                            ;
+; 5                                          ; 0                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 0                            ;
+; 9                                          ; 1                            ;
+; 10                                         ; 1                            ;
+; 11                                         ; 0                            ;
+; 12                                         ; 0                            ;
+; 13                                         ; 0                            ;
+; 14                                         ; 0                            ;
+; 15                                         ; 0                            ;
+; 16                                         ; 13                           ;
++--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.92) ; Number of LABs  (Total = 25) ;
+; LAB-wide Signals  (Average = 0.96) ; Number of LABs  (Total = 25) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 17                           ;
+; 1 Clock                            ; 20                           ;
 ; 1 Clock enable                     ; 1                            ;
 ; 1 Sync. load                       ; 3                            ;
-; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 15.60) ; Number of LABs  (Total = 25) ;
+; Number of Signals Sourced  (Average = 13.56) ; Number of LABs  (Total = 25) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 5                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 4                            ;
+; 2                                            ; 5                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 1                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
+; 20                                           ; 3                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
+; 22                                           ; 2                            ;
 ; 23                                           ; 1                            ;
-; 24                                           ; 3                            ;
-; 25                                           ; 2                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 1                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 2                            ;
-; 28                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -1603,63 +1528,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.80) ; Number of LABs  (Total = 25) ;
+; Number of Signals Sourced Out  (Average = 6.04) ; Number of LABs  (Total = 25) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 6                            ;
+; 1                                               ; 9                            ;
 ; 2                                               ; 0                            ;
 ; 3                                               ; 1                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 3                            ;
-; 6                                               ; 0                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 1                            ;
 ; 7                                               ; 1                            ;
-; 8                                               ; 2                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 3                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 4                            ;
 ; 11                                              ; 1                            ;
-; 12                                              ; 2                            ;
-; 13                                              ; 3                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 2                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 1                            ;
+; 14                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.76) ; Number of LABs  (Total = 25) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 4                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 2                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 9.40) ; Number of LABs  (Total = 25) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 7                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 3                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 1                            ;
+; 17                                          ; 0                            ;
+; 18                                          ; 1                            ;
+; 19                                          ; 1                            ;
+; 20                                          ; 2                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 1                            ;
++---------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -1792,7 +1710,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 08 23:00:38 2012
+    Info: Processing started: Fri Mar 09 13:57:06 2012
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off LCD_top -c LCD_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP3C16F484C6 for design "LCD_top"
@@ -1881,15 +1799,15 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "switches[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "switches[8]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "switches[9]" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X31_Y20 to location X41_Y29
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X21_Y20 to location X30_Y29
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -1899,8 +1817,8 @@ Info (334004): Delay annotation completed successfully
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 386 megabytes
-    Info: Processing ended: Thu Mar 08 23:00:44 2012
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Fri Mar 09 13:57:16 2012
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
 
 

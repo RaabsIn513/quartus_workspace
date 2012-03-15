@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD_top
-Thu Mar 08 23:00:37 2012
+Fri Mar 09 13:57:04 2012
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
 
 
@@ -14,13 +14,14 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Editio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "clkDivSel:U3"
- 12. Port Connectivity Checks: "clkDivSel:U1"
- 13. Port Connectivity Checks: "clkDivSel:U0"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "clkDivSel:U3"
+ 13. Port Connectivity Checks: "clkDivSel:U1"
+ 14. Port Connectivity Checks: "clkDivSel:U0"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +47,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 08 23:00:37 2012         ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 09 13:57:04 2012         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 216 11/23/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; LCD_top                                       ;
 ; Top-level Entity Name              ; LCD_top                                       ;
 ; Family                             ; Cyclone III                                   ;
-; Total logic elements               ; 270                                           ;
-;     Total combinational functions  ; 265                                           ;
-;     Dedicated logic registers      ; 119                                           ;
-; Total registers                    ; 119                                           ;
+; Total logic elements               ; 240                                           ;
+;     Total combinational functions  ; 235                                           ;
+;     Dedicated logic registers      ; 97                                            ;
+; Total registers                    ; 97                                            ;
 ; Total pins                         ; 23                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -175,27 +176,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 270       ;
+; Estimated Total logic elements              ; 240       ;
 ;                                             ;           ;
-; Total combinational functions               ; 265       ;
+; Total combinational functions               ; 235       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 99        ;
-;     -- 3 input functions                    ; 30        ;
-;     -- <=2 input functions                  ; 136       ;
+;     -- 4 input functions                    ; 103       ;
+;     -- 3 input functions                    ; 31        ;
+;     -- <=2 input functions                  ; 101       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 183       ;
-;     -- arithmetic mode                      ; 82        ;
+;     -- normal mode                          ; 178       ;
+;     -- arithmetic mode                      ; 57        ;
 ;                                             ;           ;
-; Total registers                             ; 119       ;
-;     -- Dedicated logic registers            ; 119       ;
+; Total registers                             ; 97        ;
+;     -- Dedicated logic registers            ; 97        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 23        ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 86        ;
-; Total fan-out                               ; 1046      ;
-; Average fan-out                             ; 2.43      ;
+; Maximum fan-out                             ; 59        ;
+; Total fan-out                               ; 952       ;
+; Average fan-out                             ; 2.52      ;
 +---------------------------------------------+-----------+
 
 
@@ -204,105 +205,149 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; |LCD_top                   ; 265 (7)           ; 119 (9)      ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |LCD_top                   ;              ;
-;    |LCD_Driver:driver|     ; 118 (118)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|LCD_Driver:driver ;              ;
+; |LCD_top                   ; 235 (15)          ; 97 (9)       ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |LCD_top                   ;              ;
+;    |LCD_Driver:driver|     ; 129 (129)         ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|LCD_Driver:driver ;              ;
 ;    |clkDivSel:U0|          ; 42 (42)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivSel:U0      ;              ;
 ;    |clkDivSel:U1|          ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivSel:U1      ;              ;
-;    |clkDivSel:U3|          ; 49 (49)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCD_top|clkDivSel:U3      ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+----------------------------------------------+--------------------------------------------+
-; Register name                                ; Reason for Removal                         ;
-+----------------------------------------------+--------------------------------------------+
-; myData[0][0]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][1]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][2]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][3]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][4]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][5]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][6]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[0][7]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[0][8]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[0][9]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[0][10]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[0][11]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[0][12]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[0][13]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[0][14]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[0][15]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[0][16]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[0][17]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[1][0]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][1]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[1][2]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[1][3]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][4]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][5]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][6]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[1][7]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[1][8]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[1][9]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][10]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][11]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][12]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[1][13]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[1][14]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[1][15]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][16]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[1][17]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][0]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[2][1]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][2]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[2][3]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[2][4]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[2][5]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[2][6]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][7]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][8]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][9]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[2][10]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[2][11]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[2][12]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][13]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][14]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[2][15]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[2][16]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[2][17]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[3][0]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][1]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][2]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[3][3]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][4]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][5]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][6]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[3][7]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[3][8]                                 ; Stuck at GND due to stuck port data_in     ;
-; myData[3][9]                                 ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][10]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][11]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][12]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[3][13]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[3][14]                                ; Stuck at GND due to stuck port data_in     ;
-; myData[3][15]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][16]                                ; Stuck at VCC due to stuck port data_in     ;
-; myData[3][17]                                ; Stuck at VCC due to stuck port data_in     ;
-; LCD_Driver:driver|iline                      ; Stuck at GND due to stuck port data_in     ;
-; LCD_Driver:driver|cntCurPos[3..7]            ; Merged with LCD_Driver:driver|cntCurPos[2] ;
-; LCD_Driver:driver|dataOut[5]                 ; Merged with LCD_Driver:driver|dataOut[4]   ;
-; LCD_Driver:driver|iDataIn[3..5,9..11,15..17] ; Merged with LCD_Driver:driver|iDataIn[0]   ;
-; LCD_Driver:driver|iDataIn[6..8,13,14]        ; Merged with LCD_Driver:driver|iDataIn[12]  ;
-; LCD_Driver:driver|count[5..7]                ; Merged with LCD_Driver:driver|count[4]     ;
-; LCD_Driver:driver|iDataIn[2]                 ; Stuck at GND due to stuck port data_in     ;
-; LCD_Driver:driver|RW                         ; Stuck at GND due to stuck port data_in     ;
-; LCD_Driver:driver|isetLine                   ; Stuck at GND due to stuck port data_in     ;
-; LCD_Driver:driver|cntCurPos[2]               ; Stuck at GND due to stuck port data_in     ;
-; LCD_Driver:driver|count[4]                   ; Stuck at GND due to stuck port data_in     ;
-; Total Number of Removed Registers = 101      ;                                            ;
-+----------------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++-----------------------------------------+--------------------------------------------+
+; Register name                           ; Reason for Removal                         ;
++-----------------------------------------+--------------------------------------------+
+; myData[0][0]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][1]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][2]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][3]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][4]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][5]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][6]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][7]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][8]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][9]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[0][10]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][11]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][12]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][13]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][14]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][15]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][16]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[0][17]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[1][0]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[1][1]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][2]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[1][3]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[1][4]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][5]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][6]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][7]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][8]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][9]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[1][10]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[1][11]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[1][12]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[1][13]                           ; Stuck at VCC due to stuck port data_in     ;
+; myData[1][14]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[1][15]                           ; Stuck at VCC due to stuck port data_in     ;
+; myData[1][16]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[1][17]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][0]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][1]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[2][2]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][3]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[2][4]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][5]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[2][6]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][7]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][8]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][9]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[2][10]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][11]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][12]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][13]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][14]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][15]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][16]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[2][17]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][0]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][1]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[3][2]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[3][3]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[3][4]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][5]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][6]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][7]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][8]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][9]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[3][10]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][11]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][12]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][13]                           ; Stuck at VCC due to stuck port data_in     ;
+; myData[3][14]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][15]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][16]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[3][17]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][0]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[4][1]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[4][2]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[4][3]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[4][4]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[4][5]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[4][6]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[4][7]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[4][8]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[4][9]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[4][10]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][11]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][12]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][13]                           ; Stuck at VCC due to stuck port data_in     ;
+; myData[4][14]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][15]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][16]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[4][17]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[5][0]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[5][1]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[5][2]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[5][3]                            ; Stuck at VCC due to stuck port data_in     ;
+; myData[5][4]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[5][5]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[5][6]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[5][7]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[5][8]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[5][9]                            ; Stuck at GND due to stuck port data_in     ;
+; myData[5][10]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[5][11]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[5][12]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[5][13]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[5][14]                           ; Stuck at VCC due to stuck port data_in     ;
+; myData[5][15]                           ; Stuck at GND due to stuck port data_in     ;
+; myData[5][16]                           ; Stuck at VCC due to stuck port data_in     ;
+; myData[5][17]                           ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:driver|iline                 ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:driver|cntCurPos[2..6]       ; Merged with LCD_Driver:driver|cntCurPos[7] ;
+; LCD_Driver:driver|dataOut[5]            ; Merged with LCD_Driver:driver|dataOut[4]   ;
+; LCD_Driver:driver|count[5..7]           ; Merged with LCD_Driver:driver|count[4]     ;
+; LCD_Driver:driver|iDataIn[4,6..12,17]   ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:driver|RW                    ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:driver|isetLine              ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:driver|cntCurPos[7]          ; Stuck at GND due to stuck port data_in     ;
+; LCD_Driver:driver|iDataIn[16]           ; Merged with LCD_Driver:driver|iDataIn[14]  ;
+; LCD_Driver:driver|count[4]              ; Stuck at GND due to stuck port data_in     ;
+; Total Number of Removed Registers = 132 ;                                            ;
++-----------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; myData[0][0]  ; Stuck at GND              ; LCD_Driver:driver|iDataIn[17]          ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -310,7 +355,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 119   ;
+; Total registers                              ; 97    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -325,10 +370,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                            ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |LCD_top|count[3]                     ;                            ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; |LCD_top|LCD_Driver:driver|iDataIn[1] ;                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |LCD_top|LCD_Driver:driver|bitNum[4]  ;                            ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; |LCD_top|LCD_Driver:driver|dataOut[1] ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |LCD_top|count[1]                     ;                            ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |LCD_top|LCD_Driver:driver|iDataIn[1] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |LCD_top|LCD_Driver:driver|bitNum[0]  ;                            ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; |LCD_top|LCD_Driver:driver|dataOut[2] ;                            ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; |LCD_top|LCD_Driver:driver|dataOut    ;                            ;
 ; 33:1               ; 3 bits    ; 66 LEs        ; 24 LEs               ; 42 LEs                 ; |LCD_top|LCD_Driver:driver|dataOut    ;                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------+----------------------------+
@@ -375,7 +420,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -385,7 +430,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 08 23:00:34 2012
+    Info: Processing started: Fri Mar 09 13:56:58 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD_top -c LCD_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_top.v
@@ -406,6 +451,8 @@ Info (12128): Elaborating entity "clkDivSel" for hierarchy "clkDivSel:U0"
 Warning (10230): Verilog HDL assignment warning at clkDivSel.v(16): truncated value with size 32 to match size of target (26)
 Info (12128): Elaborating entity "LCD_Driver" for hierarchy "LCD_Driver:driver"
 Info (13005): Duplicate registers merged to single register
+Info (13005): Duplicate registers merged to single register
+Info (13005): Duplicate registers merged to single register
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDs[5]" is stuck at GND
     Warning (13410): Pin "LEDs[6]" is stuck at GND
@@ -415,14 +462,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "RW" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-Info (21057): Implemented 293 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 263 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 270 logic cells
+    Info (21061): Implemented 240 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 294 megabytes
-    Info: Processing ended: Thu Mar 08 23:00:37 2012
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Fri Mar 09 13:57:05 2012
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 

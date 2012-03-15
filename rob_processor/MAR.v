@@ -15,6 +15,7 @@ module MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
 	if(rst)               //Reset condition
 		begin
 			MARout<=13'd0;
+			MAR <= 13'd0;
 		end
 	
 	else if(re_MAR)  //Reading the MA value

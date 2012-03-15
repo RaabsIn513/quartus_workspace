@@ -10,6 +10,7 @@ module IR(re_IR,wr_IR,clk,rst,IRin,IRout);
 	if(rst)               	//Reset condition
 		begin
 			IRout <= 17'd0;
+			IR <= 17'd0;
 		end
 	
 	else if(re_IR)  			//Reading the Memory data value

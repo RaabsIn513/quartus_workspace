@@ -62,7 +62,7 @@ set_global_assignment -name VERILOG_FILE AC.v
 set_global_assignment -name VERILOG_FILE ControlBlock.v
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_G21 -to clk
-set_location_assignment PIN_F1 -to reset
+set_location_assignment PIN_J6 -to reset
 set_global_assignment -name VERILOG_FILE clkDiv.v
 set_global_assignment -name VERILOG_FILE clkDiv10Khz.v
 set_global_assignment -name VERILOG_FILE LCD_Driver.v

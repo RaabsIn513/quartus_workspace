@@ -38,13 +38,13 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 //	// -------------------- SLOWCLK for DE0 board -----------------------------------------------------	
 //	clkDivSel U0( clk, slowClk, 26'd1 );		// 1Hz
 //	clkDivSel U1( clk, lcdClk, 26'd10000 );	// 10kHz
-//	clkDivSel U2( clk, refreshClk, 26'd4 );	// 4Hz
 //	
 //	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
 //	ControlBlock ctrlBlock( slowClk, ~reset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
 //	
 //	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut );
-//	LCD_Driver lcd( refreshClk, lcdClk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
+//	LCD_Driver lcd( lcdClk, ~reset, 18'b000111000111000111, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
+//	//LCD_Driver lcd( lcdClk, ~reset, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
 //	
 //	//MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
 //	MAR 	 mar( marR, marW, slowClk, ~reset, aluOutBus[12:0], MAR_to_mem );
@@ -60,17 +60,16 @@ module proc( clk, reset, LCD, lcdRS, lcdRW, lcdEn, LED );
 //	AC		 ac( acR, acW, slowClk, ~reset, aluOutBus, aBus );
 //	//	ALU ( datA, datB, ctrl, enable, alu_out, ovf, AgtB, N, Z );
 //	ALU	 alu( aBus, bBus, aluCtrl, aluEn, aluOutBus, ovf, AgtB, Neg, Zero );
-		
+//		
 //	// ------------ FAST CLK FOR DEBUG -----------------------------------------------
 	clkDivSel U0( clk, slowClk, 26'd5_000 );			// 5kHz
 	clkDivSel U1( clk, lcdClk, 26'd50_000_000 );		// 50MHz
-	clkDivSel U2( clk, refreshClk, 26'd20_000 );		// 20kHz
 	
 	//ControlBlock( clk, reset, rMAR, wMAR, rMem, wMem, rMDR, wMDRmem, wMDRbus, rPC, wPC, incPC, rIR, wIR, rAC, wAC, cALU, eALU, getInst, lcdLineSel, lcdLine, lcdRst, lcdW );
 	ControlBlock ctrlBlock( slowClk, ~reset, marR, marW, memR, memW, mdrR, mdrWmem, mdrWbus, pcR, pcW, pcInc, irR, irW, acR, acW, aluCtrl, aluEn, aluOutBus, lcdLineSel, lcdLine, lcdRst, lcdW );
 	
 	//LCD_Driver(enable, clk, rst, dataIn, dataOut, RS, RW, enableOut );
-	LCD_Driver lcd( refreshClk, lcdClk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
+	LCD_Driver lcd( lcdClk, lcdRst, aluOutBus, LCD, lcdRS, lcdRW, lcdEn, lcdLine, lcdLineSel );
 	
 	//MAR(re_MAR, wr_MAR, clk, rst, MARin, MARout);
 	MAR 	 mar( marR, marW, slowClk, ~reset, aluOutBus[12:0], MAR_to_mem );

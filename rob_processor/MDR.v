@@ -10,6 +10,7 @@ module MDR(re_MDR, wr_MDR_Mem, wr_MDR_Bus, clk, rst, MDRinMem, MDRinBus, MDRout)
 	if(rst)               //Reset condition
 		begin
 			MDRout <= 18'd0;
+			MDR <= 18'd0;
 		end
 	
 	else if(re_MDR)  		//Reading the Memory data value

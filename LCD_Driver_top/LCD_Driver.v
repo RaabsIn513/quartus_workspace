@@ -231,7 +231,7 @@ module LCD_Driver( lcdWrite, clk, rst, dataIn, dataOut, RS, RW, enableOut, line,
 		
 		
 		// Writing bits
-		if( ~irst && ~isetLine && ienable && ~lcdWrite ) begin	// Don't interfear reset procedure
+		if( ~irst && ~isetLine && ienable ) begin	// Don't interfear reset procedure
 					
 			if( bitNum < 8'd18 ) begin							// Make sure we're within the dataIn
 				case( count )										// We're writing the binary value of each bit to the LCD

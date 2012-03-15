@@ -23,7 +23,7 @@ module ALU(
 				4: alu_out <= datA - datB; // 
 				5: alu_out <= datA | datB;
 				6: alu_out <= datA & datB;
-				default: alu_out = 18'dz;
+				default: alu_out <= 18'dz;
 			endcase
 		end
 		// Appropriate signals determined by the result.

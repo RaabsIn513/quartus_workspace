@@ -98,18 +98,93 @@ vsim -voptargs=+acc work.proc_TestBench
 # Loading work.IR
 # Loading work.AC
 # Loading work.ALU
-add wave sim:/proc_TestBench/*
+add wave -r /*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by:   Hostname:   ProcessID: 10
-#           Attempting to use alternate WLF file "./wlfty8yw7q".
+#           Attempting to use alternate WLF file "./wlftm53m8m".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfty8yw7q
+#           Using alternate file: ./wlftm53m8m
+run
+run
+run
+run
+run
+run
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.clkDivSel
+# Loading work.ControlBlock
+# Loading work.LCD_Driver
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.AC
+# Loading work.ALU
+add add -r /*
+# bad option "add": should be one of...
+#   add atv ?options? ?arg arg ...?
+#   add button text action ?disable? ?options? ?help?
+#   add dataflow ?options? ?arg arg ...?
+#   add lists ?options? ?arg arg ...?
+#   add log ?options? ?arg arg ...?
+#   add memory options ?arg arg ...?
+#   add message ?options? ?arg arg ...?
+#   add monitor ?options? ?arg arg ...?
+#   add schematic ?options? ?arg arg ...?
+#   add testbrowser ?options? ?arg arg ...?
+#   add virtual ?options? ?arg arg ...?
+#   add watch ?options? ?arg arg ...?
+#   add wave ?options? ?arg arg ...?
+vlog -work work -O0 E:/quartus_workspace/rob_processor/simulation/modelsim/proc_TestBench.v
+# Model Technology ModelSim ALTERA vlog 10.0c Compiler 2011.09 Sep 21 2011
+# -- Compiling module proc_TestBench
+# 
+# Top level modules:
+# 	proc_TestBench
+vsim -voptargs=+acc work.proc_TestBench
+# vsim -voptargs=+acc work.proc_TestBench 
+# Loading work.proc_TestBench
+# Loading work.proc
+# Loading work.clkDivSel
+# Loading work.ControlBlock
+# Loading work.LCD_Driver
+# Loading work.MAR
+# Loading work.Memory
+# Loading work.MDR
+# Loading work.PC
+# Loading work.IR
+# Loading work.AC
+# Loading work.ALU
 add wave -r /*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 10
+#           Attempting to use alternate WLF file "./wlftk62b66".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftk62b66
 run
 run
 run
-# Can't move the Now cursor.
-# Can't move the Now cursor.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run
